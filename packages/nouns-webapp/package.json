@@ -19,7 +19,7 @@
     "@nouns/sdk": "^0.4.0",
     "@reduxjs/toolkit": "^1.6.0",
     "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
+    "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^12.1.10",
     "@usedapp/coingecko": "0.5.1",
     "@usedapp/core": "npm:usedapp-core-fork",
