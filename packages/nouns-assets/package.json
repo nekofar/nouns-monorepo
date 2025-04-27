@@ -24,7 +24,7 @@
     "pngjs": "^6.0.0"
   },
   "dependencies": {
-    "@ethersproject/bignumber": "^5.5.0",
+    "@ethersproject/bignumber": "^5.8.0",
     "@ethersproject/solidity": "^5.5.0"
   }
 }
