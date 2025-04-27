@@ -19,7 +19,7 @@
     "task:deploy-and-configure": "npx hardhat deploy-and-configure",
     "task:mint-noun": "npx hardhat mint-noun",
     "task:populate-descriptor": "npx hardhat populate-descriptor",
-    "task:run-local": "npx hardhat run-local",
+    "task:run-local": "npx hardhat run-local-dao-v3",
     "test": "npx hardhat test",
     "coverage": "npx hardhat coverage",
     "prepare": "yarn build"
@@ -45,7 +45,7 @@
     "prettier-plugin-solidity": "^1.2.0",
     "prompt": "^1.1.0",
     "shx": "^0.3.3",
-    "ts-node": "^10.0.0",
+    "ts-node": "^10.9.2",
     "typechain": "^8.0.0"
   },
   "dependencies": {
