@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "eject": "react-scripts eject",
     "build": "pnpm i18n:compile && vite build",
     "dev": "vite",
     "preview": "vite preview",
