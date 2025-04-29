@@ -78,3 +78,16 @@ updates:
       web3-react:
         patterns:
           - '@web3-react/*'
+      openzeppelin:
+        patterns:
+          - '@openzeppelin/*'
+      hardhat:
+        patterns:
+          - 'hardhat'
+          - 'hardhat-*'
+          - '@nomicfoundation/*'
+          - '@nomiclabs/*'
+      typechain:
+        patterns:
+          - 'typechain'
+          - '@typechain/*'
