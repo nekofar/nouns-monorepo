@@ -75,3 +75,6 @@ updates:
         patterns:
           - 'prettier'
           - 'prettier-*'
+      web3-react:
+        patterns:
+          - '@web3-react/*'
