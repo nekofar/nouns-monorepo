@@ -329,20 +329,20 @@ importers:
         specifier: ^1.0.6
         version: 1.0.6(react@17.0.2)
       '@lingui/cli':
-        specifier: 3.13.3
-        version: 3.13.3(@babel/core@7.26.10)(@types/node@22.15.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)
+        specifier: 3.17.2
+        version: 3.17.2(@babel/core@7.26.10)(@types/node@22.15.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)
       '@lingui/core':
-        specifier: 3.13.3
-        version: 3.13.3
+        specifier: 3.17.2
+        version: 3.17.2
       '@lingui/detect-locale':
-        specifier: 3.13.3
-        version: 3.13.3
+        specifier: 3.17.2
+        version: 3.17.2
       '@lingui/macro':
-        specifier: 3.13.3
-        version: 3.13.3(@lingui/core@3.13.3)(@lingui/react@3.13.3(react@17.0.2))(@types/node@22.15.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)
+        specifier: 3.17.2
+        version: 3.17.2(@lingui/core@3.17.2)(@lingui/react@3.17.2(react@17.0.2))(@types/node@22.15.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)
       '@lingui/react':
-        specifier: 3.13.3
-        version: 3.13.3(react@17.0.2)
+        specifier: 3.17.2
+        version: 3.17.2(react@17.0.2)
       '@netlify/functions':
         specifier: ^0.7.2
         version: 0.7.2
@@ -2098,13 +2098,13 @@ packages:
     resolution: {integrity: sha512-Ovhf8a6dBlIZJFOqk6/+LRgQvSlVMol6hxvnVGLsCr/0xNcKlpGUAJ+bvY6NrmxZubpTvZqNkH23u5nEAdXtfg==}
     engines: {node: '>=14.0.0'}
 
-  '@lingui/cli@3.13.3':
-    resolution: {integrity: sha512-6AswBsIAn3+JZj9hhqcKjPGpBPnM8m7TT235iQiWHHbq11DDh1l0eH6KTCqCaWW9nIALWgxmI/03zCInRTrzRQ==}
-    engines: {node: '>=10.0.0'}
+  '@lingui/cli@3.17.2':
+    resolution: {integrity: sha512-8hPZOfwB7KZolZ01diUqtprKva1RNAUUNdzISN9pmAUGw9zCPRY/dlOvM6obZi8v0VC/JKrcadOs4Z8krIS2QQ==}
+    engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
       '@babel/core': ^7.0.0
-      babel-plugin-macros: "2 ||\_3"
+      babel-plugin-macros: 2 || 3
       typescript: 2 || 3 || 4
 
   '@lingui/conf@3.17.2':
@@ -2119,29 +2119,25 @@ packages:
       typescript:
         optional: true
 
-  '@lingui/core@3.13.3':
-    resolution: {integrity: sha512-3rQDIC7PtPfUuZCSNfU0nziWNMlGk3JhpxENzGrlt1M8w5RHson89Mk1Ce/how+hWzFpumCQDWLDDhyRPpydbg==}
-    engines: {node: '>=10.0.0'}
-
   '@lingui/core@3.17.2':
     resolution: {integrity: sha512-YOd068NanznN8lLQqOKPlAY0ill3rrgmiAvPRKuYkrxzJMIHqlIFO/2Kcc/RH5vClOmLfg+wgR4rsHK/kLKelQ==}
     engines: {node: '>=14.0.0'}
 
-  '@lingui/detect-locale@3.13.3':
-    resolution: {integrity: sha512-GhJKjnpGh5N0Y96XJNjeGOEiVyO7b0Kwddv8cY5ORA0yS0+gCETAdlECeP0YrJBrzIVUeddpQTyaexAUDmeY+A==}
-    engines: {node: '>=10.0.0'}
+  '@lingui/detect-locale@3.17.2':
+    resolution: {integrity: sha512-rqyO16lj05WRfBuppo++mPzB1fQBFDhGqEFz5X97CbWXYp6AadOIkrm+pbn114Y2Yumy9QI7Cm4Ptbfk7CXO3Q==}
+    engines: {node: '>=14.0.0'}
 
-  '@lingui/macro@3.13.3':
-    resolution: {integrity: sha512-nPldmgPGNfGTVW3TTkSZiaPI5jDQKwv/Hfmjzwo/VzfXpcjxoqz0oDGQBx8mbdKcMgpq+g6fV2Y5aCosTazdqg==}
-    engines: {node: '>=10.0.0'}
+  '@lingui/macro@3.17.2':
+    resolution: {integrity: sha512-kk1ZtwYSx5Knu/5LsRGisTqfNoLIeVkJJPn6xjZXcItoxUgRsykyKb3BqCJwxqYUClz4i4A8Ld/aA4xBi4apRQ==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
       '@lingui/core': ^3.13.0
       '@lingui/react': ^3.13.0
-      babel-plugin-macros: "2 ||\_3"
+      babel-plugin-macros: 2 || 3
 
-  '@lingui/react@3.13.3':
-    resolution: {integrity: sha512-sCCI5xMcUY9b6w2lwbwy6iHpo1Fb9TDcjcHAD2KI5JueLH+WWQG66tIHiVAlSsQ+hmQ9Tt+f86H05JQEiDdIvg==}
-    engines: {node: '>=10.0.0'}
+  '@lingui/react@3.17.2':
+    resolution: {integrity: sha512-+PECPknIiQn/zdXgrXVTCbcJUSjPFZTtPOuIO72huGNh/QA+iRVsGTvef0/Q+pWkiPEOU6CmaGHkwdtgFMtJ8g==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
 
@@ -2154,8 +2150,8 @@ packages:
   '@lit/reactive-element@2.1.0':
     resolution: {integrity: sha512-L2qyoZSQClcBmq0qajBVbhYEcG6iK0XfLn66ifLe/RfC0/ihpc+pl0Wdn8bJ8o+hj38cG0fGXRgSS20MuXn7qA==}
 
-  '@messageformat/parser@5.1.0':
-    resolution: {integrity: sha512-jKlkls3Gewgw6qMjKZ9SFfHUpdzEVdovKFtW1qRhJ3WI4FW5R/NnGDqr8SDGz+krWDO3ki94boMmQvGke1HwUQ==}
+  '@messageformat/parser@5.1.1':
+    resolution: {integrity: sha512-3p0YRGCcTUCYvBKLIxtDDyrJ0YijGIwrTRu1DT8gIviIDZru8H23+FkY6MJBzM1n9n20CiM4VeDYuBsrrwnLjg==}
 
   '@metamask/detect-provider@1.2.0':
     resolution: {integrity: sha512-ocA76vt+8D0thgXZ7LxFPyqw3H7988qblgzddTDA6B8a/yU0uKV42QR/DhA+Jh11rJjxW0jKvwb5htA6krNZDQ==}
@@ -4787,10 +4783,6 @@ packages:
     resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
     engines: {node: '>= 12'}
 
-  commander@9.2.0:
-    resolution: {integrity: sha512-e2i4wANQiSXgnrBlIatyHtP1odfUp0BbV5Y5nEGbxtIrStkEOAAzCUirvLBNXHLr7kwLvJl6V+4V3XV9x7Wd9w==}
-    engines: {node: ^12.20.0 || >=14}
-
   common-tags@1.8.2:
     resolution: {integrity: sha512-gk/Z852D2Wtb//0I+kRFNKKE9dIIVirjoqPoA1wJU+XePVXZfGeBpk45+A1rKO4Q43prqWBNY/MiIeRLbPWUaA==}
     engines: {node: '>=4.0.0'}
@@ -4910,14 +4902,14 @@ packages:
       cosmiconfig: '>=7'
       typescript: '>=3'
 
-  cosmiconfig-typescript-loader@4.3.0:
-    resolution: {integrity: sha512-NTxV1MFfZDLPiBMjxbHRwSh5LaLcPMwNdCutmnHJCKoVnlvldPWlllonKwrsRJ5pYZBIBGRWWU2tfvzxgeSW5Q==}
-    engines: {node: '>=12', npm: '>=6'}
+  cosmiconfig-typescript-loader@4.4.0:
+    resolution: {integrity: sha512-BabizFdC3wBHhbI4kJh0VkQP9GkBfoHPydD0COMce1nJ1kJAB3F2TmJ/I7diULBKtmEWSwEbuN/KDtgnmUUVmw==}
+    engines: {node: '>=v14.21.3'}
     peerDependencies:
       '@types/node': ^22.15.3
       cosmiconfig: '>=7'
       ts-node: '>=10'
-      typescript: '>=3'
+      typescript: '>=4'
 
   cosmiconfig@6.0.0:
     resolution: {integrity: sha512-xb3ZL6+L8b9JLLCx3ZdoZy4+2ECphCMo2PwqgP1tlfVq6M6YReyzBJtvWWtbDSpNr9hn96pkCiZqUcFEc+54Qg==}
@@ -4931,9 +4923,14 @@ packages:
     resolution: {integrity: sha512-AdmX6xUzdNASswsFtmwSt7Vj8po9IuqXm0UXz7QKPuEUmPB4XyjGfaAr2PSuELMwkRMVH1EpIkX5bTZGRB3eCA==}
     engines: {node: '>=10'}
 
-  cosmiconfig@8.2.0:
-    resolution: {integrity: sha512-3rTMnFJA1tCOPwRxtgF4wd7Ab2qvDbL8jX+3smjIbS4HlZBagTlpERbdN7iAbWlrfxE3M8c27kTwTawQ7st+OQ==}
+  cosmiconfig@8.3.6:
+    resolution: {integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==}
     engines: {node: '>=14'}
+    peerDependencies:
+      typescript: '>=4.9.5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   crc-32@1.2.0:
     resolution: {integrity: sha512-1uBwHxF+Y/4yF5G48fwnKq6QsIXheor3ZLPT80yGBV1oEUwpPojlEhQbWKVw1VwcTQyMGHK1/XMmTjmlsmTTGA==}
@@ -5147,8 +5144,8 @@ packages:
     resolution: {integrity: sha512-BS8PfmtDGnrgYdOonGZQdLZslWIeCGFP9tpan0hi1Co2Zr2NKADsvGYA8XxuG/4UWgJ6Cjtv+YJnB6MM69QGlQ==}
     engines: {node: '>= 0.4'}
 
-  date-fns@2.28.0:
-    resolution: {integrity: sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==}
+  date-fns@2.30.0:
+    resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
     engines: {node: '>=0.11'}
 
   dayjs@1.11.13:
@@ -5268,8 +5265,8 @@ packages:
     resolution: {integrity: sha512-fwSOJsbbNzZ/CUFpqFBqYfYNLj1NbMPm8MMCIzHjC83iSJRBEGmDUxU+WP661BaBQImeC2yHwXtz+P/O9o+XEg==}
     engines: {node: '>= 10'}
 
-  defaults@1.0.3:
-    resolution: {integrity: sha512-s82itHOnYrN0Ib8r+z7laQz3sdE+4FP3d9Q7VLO7U+KRT+CR0GsWuyHxzdAY82I7cXv0G/twrqomTJLOssO5HA==}
+  defaults@1.0.4:
+    resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
 
   defer-to-connect@1.1.3:
     resolution: {integrity: sha512-0ISdNousHvZT2EiFlZeZAHBUvSxmKswVCEf8hW7KWgG4a8MVEu/3Vb6uWYozkjylyCxe0JBIiRB1jV45S70WVQ==}
@@ -6583,6 +6580,10 @@ packages:
     resolution: {integrity: sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==}
     deprecated: Glob versions prior to v9 are no longer supported
 
+  glob@7.2.3:
+    resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
+
   global-modules@2.0.0:
     resolution: {integrity: sha512-NGbfmJBp9x8IxyJSd1P+otYK8vonoJactOogrVfFRIAEY1ukil8RSKDz2Yo7wh1oihl51l/r6W4epkeKJHqL8A==}
     engines: {node: '>=6'}
@@ -6987,6 +6988,10 @@ packages:
 
   import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
+    engines: {node: '>=6'}
+
+  import-fresh@3.3.1:
+    resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
     engines: {node: '>=6'}
 
   import-local@3.0.3:
@@ -8301,9 +8306,6 @@ packages:
   mersenne-twister@1.1.0:
     resolution: {integrity: sha512-mUYWsMKNrm4lfygPkL3OfGzOPTR2DBlTkBNHM//F6hGp8cLThY897crAlk3/Jo17LEOOjQUrNAx6DvgO77QJkA==}
 
-  messageformat-parser@4.1.3:
-    resolution: {integrity: sha512-2fU3XDCanRqeOCkn7R5zW5VQHWf+T3hH65SzuqRvjatBK7r4uyFa5mEX+k6F9Bd04LVM5G4/BHBTUJsOdW7uyg==}
-
   methods@1.1.2:
     resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
     engines: {node: '>= 0.6'}
@@ -8495,8 +8497,17 @@ packages:
     resolution: {integrity: sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==}
     hasBin: true
 
+  mkdirp@0.5.6:
+    resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==}
+    hasBin: true
+
   mkdirp@1.0.4:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  mkdirp@3.0.1:
+    resolution: {integrity: sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -9021,8 +9032,8 @@ packages:
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
 
-  papaparse@5.3.2:
-    resolution: {integrity: sha512-6dNZu0Ki+gyV0eBsFKJhYr+MdQYAzFUGlBMNj3GNrmHxmz1lfRa24CjFObPXtjcetlOv5Ad299MhIK0znp3afw==}
+  papaparse@5.5.2:
+    resolution: {integrity: sha512-PZXg8UuAc4PcVwLosEEDYjPyfWnTEhOrUfdv+3Bx+NuAb+5NhDmXzg5fHWmdCh1mP5p7JAZfFr3IMQfcntNAdA==}
 
   param-case@3.0.4:
     resolution: {integrity: sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==}
@@ -9233,8 +9244,8 @@ packages:
     resolution: {integrity: sha512-TRzzuFRRmEoSW/p1KVAmiOgPco2Irlah+bGFCeNfJXxxYGwSw7YwAOAcd7X28K/m5bjBWKsC29KyoMfHbypayg==}
     engines: {node: '>=12.13.0'}
 
-  pofile@1.1.3:
-    resolution: {integrity: sha512-sk96pUvpNwDV6PLrnhr68Uu1S5NohsxqLKz0GuracgrDo40BdF/r1RhHnjakUk6Q4Z0OKIybOQ7GevLKGN1iYw==}
+  pofile@1.1.4:
+    resolution: {integrity: sha512-r6Q21sKsY1AjTVVjOuU02VYKVNQGJNQHjTIvs4dEbeuuYfxgYk/DGD2mqqq4RDaVkwdSq0VEtmQUOPe/wH8X3g==}
 
   pony-cause@2.1.11:
     resolution: {integrity: sha512-M7LhCsdNbNgiLYiP4WjsfLUuFmCfnjdF6jKe2R9NKl4WFN+HZPGHJZ9lnLP7f9ZnKe3U9nuWD0szirmj+migUg==}
@@ -9832,8 +9843,8 @@ packages:
   prr@1.0.1:
     resolution: {integrity: sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==}
 
-  pseudolocale@1.2.0:
-    resolution: {integrity: sha512-k0OQFvIlvpRdzR0dPVrrbWX7eE9EaZ6gpZtTlFSDi1Gf9tMy9wiANCNu7JZ0drcKgUri/39a2mBbH0goiQmrmQ==}
+  pseudolocale@1.4.0:
+    resolution: {integrity: sha512-fxXgbC2ImT9OAuUyhuqkhxVWFe52flkZoNxIiAfje+PO+MZ427bwIIQDnA8wcRWoRIpPa7JuRPXn1lYq2/LmWA==}
 
   pseudomap@1.0.2:
     resolution: {integrity: sha512-b/YwNhb8lk1Zz2+bXXpS/LK9OisiZZ1SNsSLxN1x2OXVEhW2Ckr/7mWE5vrC1ZTiJlD9g19jWszTmJsB+oEpFQ==}
@@ -14907,7 +14918,7 @@ snapshots:
       chalk: 4.1.2
       collect-v8-coverage: 1.0.1
       exit: 0.1.2
-      glob: 7.2.0
+      glob: 7.2.3
       graceful-fs: 4.2.11
       istanbul-lib-coverage: 3.2.0
       istanbul-lib-instrument: 5.2.1
@@ -15125,7 +15136,7 @@ snapshots:
       - ts-node
       - typescript
 
-  '@lingui/cli@3.13.3(@babel/core@7.26.10)(@types/node@22.15.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)':
+  '@lingui/cli@3.17.2(@babel/core@7.26.10)(@types/node@22.15.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/generator': 7.27.0
@@ -15135,29 +15146,30 @@ snapshots:
       '@babel/types': 7.27.0
       '@lingui/babel-plugin-extract-messages': 3.17.2(@types/node@22.15.3)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)
       '@lingui/conf': 3.17.2(@types/node@22.15.3)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)
+      '@lingui/core': 3.17.2
+      '@messageformat/parser': 5.1.1
       babel-plugin-macros: 3.1.0
       bcp-47: 1.0.8
       chalk: 4.1.2
       chokidar: 3.5.1
       cli-table: 0.3.6
       commander: 6.2.1
-      date-fns: 2.28.0
+      date-fns: 2.30.0
       fs-extra: 9.1.0
       fuzzaldrin: 2.1.0
-      glob: 7.2.0
+      glob: 7.2.3
       inquirer: 7.3.3
       make-plural: 6.2.2
-      messageformat-parser: 4.1.3
       micromatch: 4.0.2
       mkdirp: 1.0.4
       node-gettext: 3.0.0
       normalize-path: 3.0.0
       ora: 5.4.1
-      papaparse: 5.3.2
+      papaparse: 5.5.2
       pkg-up: 3.1.0
       plurals-cldr: 1.0.4
-      pofile: 1.1.3
-      pseudolocale: 1.2.0
+      pofile: 1.1.4
+      pseudolocale: 1.4.0
       ramda: 0.27.2
       typescript: 4.9.5
     transitivePeerDependencies:
@@ -15168,8 +15180,8 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.27.0
       chalk: 4.1.2
-      cosmiconfig: 8.2.0
-      cosmiconfig-typescript-loader: 4.3.0(@types/node@22.15.3)(cosmiconfig@8.2.0)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)
+      cosmiconfig: 8.3.6(typescript@4.9.5)
+      cosmiconfig-typescript-loader: 4.4.0(@types/node@22.15.3)(cosmiconfig@8.3.6(typescript@4.9.5))(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)
       jest-validate: 26.6.2
       lodash.get: 4.4.2
     optionalDependencies:
@@ -15178,26 +15190,21 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
-  '@lingui/core@3.13.3':
-    dependencies:
-      '@babel/runtime': 7.27.0
-      make-plural: 6.2.2
-      messageformat-parser: 4.1.3
-
   '@lingui/core@3.17.2':
     dependencies:
       '@babel/runtime': 7.27.0
-      '@messageformat/parser': 5.1.0
+      '@messageformat/parser': 5.1.1
       make-plural: 6.2.2
 
-  '@lingui/detect-locale@3.13.3': {}
+  '@lingui/detect-locale@3.17.2': {}
 
-  '@lingui/macro@3.13.3(@lingui/core@3.13.3)(@lingui/react@3.13.3(react@17.0.2))(@types/node@22.15.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)':
+  '@lingui/macro@3.17.2(@lingui/core@3.17.2)(@lingui/react@3.17.2(react@17.0.2))(@types/node@22.15.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)':
     dependencies:
       '@babel/runtime': 7.27.0
+      '@babel/types': 7.27.0
       '@lingui/conf': 3.17.2(@types/node@22.15.3)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5)
-      '@lingui/core': 3.13.3
-      '@lingui/react': 3.13.3(react@17.0.2)
+      '@lingui/core': 3.17.2
+      '@lingui/react': 3.17.2(react@17.0.2)
       babel-plugin-macros: 3.1.0
       ramda: 0.27.2
     transitivePeerDependencies:
@@ -15205,7 +15212,7 @@ snapshots:
       - ts-node
       - typescript
 
-  '@lingui/react@3.13.3(react@17.0.2)':
+  '@lingui/react@3.17.2(react@17.0.2)':
     dependencies:
       '@babel/runtime': 7.27.0
       '@lingui/core': 3.17.2
@@ -15221,7 +15228,7 @@ snapshots:
     dependencies:
       '@lit-labs/ssr-dom-shim': 1.3.0
 
-  '@messageformat/parser@5.1.0':
+  '@messageformat/parser@5.1.1':
     dependencies:
       moo: 0.5.2
 
@@ -17937,7 +17944,7 @@ snapshots:
 
   async@2.6.2:
     dependencies:
-      lodash: 4.17.20
+      lodash: 4.17.21
 
   async@2.6.4:
     dependencies:
@@ -18523,7 +18530,7 @@ snapshots:
       core-js: 2.6.12
       home-or-tmp: 2.0.0
       lodash: 4.17.21
-      mkdirp: 0.5.5
+      mkdirp: 0.5.6
       source-map-support: 0.4.18
     transitivePeerDependencies:
       - supports-color
@@ -19281,8 +19288,6 @@ snapshots:
 
   commander@8.3.0: {}
 
-  commander@9.2.0: {}
-
   common-tags@1.8.2: {}
 
   commondir@1.0.1: {}
@@ -19398,17 +19403,17 @@ snapshots:
       - '@swc/core'
       - '@swc/wasm'
 
-  cosmiconfig-typescript-loader@4.3.0(@types/node@22.15.3)(cosmiconfig@8.2.0)(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5):
+  cosmiconfig-typescript-loader@4.4.0(@types/node@22.15.3)(cosmiconfig@8.3.6(typescript@4.9.5))(ts-node@10.9.2(@types/node@22.15.3)(typescript@4.9.5))(typescript@4.9.5):
     dependencies:
       '@types/node': 22.15.3
-      cosmiconfig: 8.2.0
+      cosmiconfig: 8.3.6(typescript@4.9.5)
       ts-node: 10.9.2(@types/node@22.15.3)(typescript@4.9.5)
       typescript: 4.9.5
 
   cosmiconfig@6.0.0:
     dependencies:
       '@types/parse-json': 4.0.0
-      import-fresh: 3.3.0
+      import-fresh: 3.3.1
       parse-json: 5.2.0
       path-type: 4.0.0
       yaml: 1.10.2
@@ -19429,12 +19434,14 @@ snapshots:
       path-type: 4.0.0
       yaml: 1.10.2
 
-  cosmiconfig@8.2.0:
+  cosmiconfig@8.3.6(typescript@4.9.5):
     dependencies:
-      import-fresh: 3.3.0
+      import-fresh: 3.3.1
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
+    optionalDependencies:
+      typescript: 4.9.5
 
   crc-32@1.2.0:
     dependencies:
@@ -19708,7 +19715,9 @@ snapshots:
       es-errors: 1.3.0
       is-data-view: 1.0.2
 
-  date-fns@2.28.0: {}
+  date-fns@2.30.0:
+    dependencies:
+      '@babel/runtime': 7.27.0
 
   dayjs@1.11.13: {}
 
@@ -19799,7 +19808,7 @@ snapshots:
     dependencies:
       execa: 5.1.1
 
-  defaults@1.0.3:
+  defaults@1.0.4:
     dependencies:
       clone: 1.0.4
 
@@ -21327,7 +21336,7 @@ snapshots:
       cosmiconfig: 6.0.0
       deepmerge: 4.2.2
       fs-extra: 9.1.0
-      glob: 7.2.0
+      glob: 7.2.3
       memfs: 3.6.0
       minimatch: 3.1.2
       schema-utils: 2.7.0
@@ -21673,6 +21682,15 @@ snapshots:
       path-is-absolute: 1.0.1
 
   glob@7.2.0:
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 3.1.2
+      once: 1.4.0
+      path-is-absolute: 1.0.1
+
+  glob@7.2.3:
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
@@ -22221,6 +22239,11 @@ snapshots:
   immutable@5.0.3: {}
 
   import-fresh@3.3.0:
+    dependencies:
+      parent-module: 1.0.1
+      resolve-from: 4.0.0
+
+  import-fresh@3.3.1:
     dependencies:
       parent-module: 1.0.1
       resolve-from: 4.0.0
@@ -22779,7 +22802,7 @@ snapshots:
       chalk: 4.1.2
       ci-info: 3.9.0
       deepmerge: 4.2.2
-      glob: 7.2.0
+      glob: 7.2.3
       graceful-fs: 4.2.11
       jest-circus: 27.5.1
       jest-environment-jsdom: 27.5.1(bufferutil@4.0.5)(utf-8-validate@5.0.7)
@@ -23009,7 +23032,7 @@ snapshots:
       cjs-module-lexer: 1.4.1
       collect-v8-coverage: 1.0.1
       execa: 5.1.1
-      glob: 7.2.0
+      glob: 7.2.3
       graceful-fs: 4.2.11
       jest-haste-map: 27.5.1
       jest-message-util: 27.5.1
@@ -23852,8 +23875,6 @@ snapshots:
 
   mersenne-twister@1.1.0: {}
 
-  messageformat-parser@4.1.3: {}
-
   methods@1.1.2: {}
 
   micro-eth-signer@0.14.0:
@@ -24115,13 +24136,19 @@ snapshots:
 
   mkdirp-promise@5.0.1:
     dependencies:
-      mkdirp: 1.0.4
+      mkdirp: 3.0.1
 
   mkdirp@0.5.5:
     dependencies:
       minimist: 1.2.8
 
+  mkdirp@0.5.6:
+    dependencies:
+      minimist: 1.2.8
+
   mkdirp@1.0.4: {}
+
+  mkdirp@3.0.1: {}
 
   mnemonist@0.38.5:
     dependencies:
@@ -24750,7 +24777,7 @@ snapshots:
 
   pako@1.0.11: {}
 
-  papaparse@5.3.2: {}
+  papaparse@5.5.2: {}
 
   param-case@3.0.4:
     dependencies:
@@ -24963,7 +24990,7 @@ snapshots:
 
   pngjs@6.0.0: {}
 
-  pofile@1.1.3: {}
+  pofile@1.1.4: {}
 
   pony-cause@2.1.11: {}
 
@@ -25562,9 +25589,9 @@ snapshots:
 
   prr@1.0.1: {}
 
-  pseudolocale@1.2.0:
+  pseudolocale@1.4.0:
     dependencies:
-      commander: 9.2.0
+      commander: 8.3.0
 
   pseudomap@1.0.2: {}
 
@@ -26330,7 +26357,7 @@ snapshots:
 
   rimraf@2.7.1:
     dependencies:
-      glob: 7.2.0
+      glob: 7.2.3
 
   rimraf@3.0.2:
     dependencies:
@@ -27218,7 +27245,7 @@ snapshots:
       css-tree: 1.0.0-alpha.37
       csso: 4.2.0
       js-yaml: 3.14.1
-      mkdirp: 0.5.5
+      mkdirp: 0.5.6
       object.values: 1.2.1
       sax: 1.2.4
       stable: 0.1.8
@@ -27359,7 +27386,7 @@ snapshots:
       fs-minipass: 1.2.7
       minipass: 2.9.0
       minizlib: 1.3.3
-      mkdirp: 0.5.5
+      mkdirp: 0.5.6
       safe-buffer: 5.2.1
       yallist: 3.1.1
 
@@ -27396,7 +27423,7 @@ snapshots:
   test-exclude@6.0.0:
     dependencies:
       '@istanbuljs/schema': 0.1.3
-      glob: 7.2.0
+      glob: 7.2.3
       minimatch: 3.1.2
 
   test-value@2.1.0:
@@ -27558,8 +27585,8 @@ snapshots:
       '@types/prettier': 2.7.3
       '@types/resolve': 0.0.8
       chalk: 2.4.2
-      glob: 7.2.0
-      mkdirp: 0.5.5
+      glob: 7.2.3
+      mkdirp: 0.5.6
       prettier: 2.8.8
       resolve: 1.22.10
       ts-essentials: 1.0.4
@@ -28168,7 +28195,7 @@ snapshots:
 
   wcwidth@1.0.1:
     dependencies:
-      defaults: 1.0.3
+      defaults: 1.0.4
 
   weald@1.0.4:
     dependencies:
@@ -28939,7 +28966,7 @@ snapshots:
 
   wide-align@1.1.5:
     dependencies:
-      string-width: 1.0.2
+      string-width: 4.2.3
     optional: true
 
   widest-line@3.1.0:
@@ -28991,7 +29018,7 @@ snapshots:
       common-tags: 1.8.2
       fast-json-stable-stringify: 2.1.0
       fs-extra: 9.1.0
-      glob: 7.2.0
+      glob: 7.2.3
       lodash: 4.17.21
       pretty-bytes: 5.6.0
       rollup: 2.79.2
