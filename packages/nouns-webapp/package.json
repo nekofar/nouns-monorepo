@@ -111,6 +111,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.15",
     "@babel/preset-react": "^7.22.15",
+    "@netlify/vite-plugin-react-router": "^1.0.1",
     "@react-router/dev": "^7.5.2",
     "@types/bad-words": "^3.0.1",
     "@types/history": "^4.7.11",
