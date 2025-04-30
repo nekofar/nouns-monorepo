@@ -25,7 +25,16 @@ yarn-error.log*
 .env
 .vercel
 
-# i18n 
+# i18n
 /src/locales/**/*.js
 /src/locales/**/en-US.po
 /src/locales/**/pseudo.po
+
+/node_modules/
+
+# React Router
+/.react-router/
+/build/
+
+# Local Netlify folder
+.netlify
