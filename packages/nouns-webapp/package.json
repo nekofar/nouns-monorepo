@@ -53,6 +53,7 @@
     "@nouns/assets": "workspace:*",
     "@nouns/contracts": "workspace:*",
     "@nouns/sdk": "workspace:*",
+    "@react-router/node": "^7.5.2",
     "@react-router/serve": "^7.5.2",
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.11.4",
