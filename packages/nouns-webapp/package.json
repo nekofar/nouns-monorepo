@@ -11,7 +11,7 @@
     "i18n:pseudo": "lingui extract --locale pseudo && lingui compile",
     "start": "npm run dev",
     "test": "vitest run",
-    "update-browserslist": "npx update-browserslist-db@latest"
+    "typecheck": "react-router typegen && tsc"
   },
   "browserslist": [
     ">0.2%",
