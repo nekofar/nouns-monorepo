@@ -12,4 +12,7 @@ export default defineConfig({
     },
   },
   plugins: [reactRouter(), tsconfigPaths(), netlifyPlugin()],
+  server: {
+    port: 3000,
+  },
 });
