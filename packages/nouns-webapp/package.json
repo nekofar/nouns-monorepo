@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "build": "pnpm i18n:compile && vite build",
-    "preview": "vite preview",
     "dev": "react-router dev",
     "i18n:compile": "lingui compile",
     "i18n:extract": "lingui extract",
