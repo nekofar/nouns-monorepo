@@ -36,6 +36,7 @@ import { BigNumber, BigNumberish, Event } from 'ethers';
 import { NounsAuctionHouseFactory } from '@nouns/sdk';
 import { createRoot } from 'react-dom/client';
 
+import dotenv from 'dotenv';
 import { useAppDispatch, useAppSelector } from './hooks';
 import { ConnectedRouter, connectRouter, push, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory, History } from 'history';
@@ -44,6 +45,8 @@ import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { nounPath } from './utils/history';
 import { LanguageProvider } from './i18n/LanguageProvider';
+
+dotenv.config();
 
 export const history = createBrowserHistory();
 
