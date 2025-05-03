@@ -23,6 +23,7 @@
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^5.0.9",
+    "lint-staged": "^15.5.1",
     "mocha": "^8.4.0",
     "netlify-cli": "^20.1.1",
     "pinst": "^2.1.6",
@@ -38,6 +39,13 @@
     "node": ">=16.x"
   },
   "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "netlify-cli",
+      "sharp",
+      "unix-dgram"
+    ],
     "overrides": {
       "@openzeppelin/contracts": "4.4.0",
       "@openzeppelin/contracts-upgradeable": "4.4.0",
@@ -51,13 +59,6 @@
       "http-cache-semantics": ">=4.1.1",
       "semver": ">=7.5.2",
       "underscore": ">=1.12.1"
-    },
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild",
-      "netlify-cli",
-      "sharp",
-      "unix-dgram"
-    ]
+    }
   }
 }
