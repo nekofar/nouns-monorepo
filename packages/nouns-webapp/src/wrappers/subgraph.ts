@@ -1,21 +1,19 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-import { BigNumberish } from '@ethersproject/bignumber';
-import BigNumber from 'bignumber.js';
 
 export interface IBid {
   id: string;
   bidder: {
     id: string;
   };
-  amount: BigNumber;
+  amount: bigint;
   blockNumber: number;
   blockTimestamp: number;
   txHash: string;
   txIndex?: number;
   noun: {
     id: number;
-    startTime?: BigNumberish;
-    endTime?: BigNumberish;
+    startTime?: bigint;
+    endTime?: bigint;
     settled?: boolean;
   };
 }
@@ -113,9 +111,10 @@ export const partialProposalsQuery = (first = 1_000) => gql`
 }
 `;
 
-export const activePendingUpdatableProposersQuery = (_first = 1_000, currentBlock?: number) => gql`
+export const activePendingUpdatableProposersQuery = (first = 1_000, currentBlock?: number) => gql`
 {
   proposals(
+    first: ${first},
     where: {
       or: [{status: PENDING, endBlock_gt: ${currentBlock}}, {status: ACTIVE, endBlock_gt: ${currentBlock}}], 
     }
@@ -130,9 +129,10 @@ export const activePendingUpdatableProposersQuery = (_first = 1_000, currentBloc
 }
 `;
 
-export const updatableProposalsQuery = (_first = 1_000, currentBlock?: number) => gql`
+export const updatableProposalsQuery = (first = 1_000, currentBlock?: number) => gql`
 {
   proposals(
+    first: ${first},
     where: {
     	status: PENDING, endBlock_gt: ${currentBlock}, updatePeriodEndBlock_gt: ${currentBlock},      
     }
