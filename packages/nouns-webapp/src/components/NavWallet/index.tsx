@@ -1,7 +1,3 @@
-import Davatar from '@davatar/react';
-import { useEthers } from '@usedapp/core';
-import React, { useState } from 'react';
-import { useReverseENSLookUp } from '../../utils/ensLookup';
 import { getNavBarButtonVariant, NavBarButtonStyle } from '../NavBarButton';
 import classes from './NavWallet.module.css';
 import navDropdownClasses from '../NavWallet/NavBarDropdown.module.css';
@@ -24,6 +20,8 @@ import {
 import { useActiveLocale } from '../../hooks/useActivateLocale';
 import responsiveUiUtilsClasses from '../../utils/ResponsiveUIUtils.module.css';
 import { useIsNetworkEnsSupported } from '../../hooks/useIsNetworkEnsSupported';
+import { useState, forwardRef } from 'react';
+import { useDisconnect, useEnsAvatar, useEnsName } from 'wagmi';
 
 interface NavWalletProps {
   address: string;
@@ -31,7 +29,7 @@ interface NavWalletProps {
 }
 
 type Props = {
-  onClick: (e: any) => void;
+  onClick: (e: never) => void;
   value: string;
 };
 
@@ -49,21 +47,25 @@ const NavWallet: React.FC<NavWalletProps> = props => {
 
   const [buttonUp, setButtonUp] = useState(false);
   const [showConnectModal, setShowConnectModal] = useState(false);
-  const { library: provider } = useEthers();
+
   const activeAccount = useAppSelector(state => state.account.activeAccount);
-  const { deactivate } = useEthers();
-  const ens = useReverseENSLookUp(address);
+
+  const { data: ensName } = useEnsName({ address: address as `0x${string}` });
+  const { data: avatar } = useEnsAvatar({ name: ensName ?? undefined });
+
   const shortAddress = useShortAddress(address);
   const activeLocale = useActiveLocale();
   const hasENS = useIsNetworkEnsSupported();
+
   const setModalStateHandler = (state: boolean) => {
     setShowConnectModal(state);
   };
+  const { disconnect } = useDisconnect();
 
   const switchWalletHandler = () => {
     setShowConnectModal(false);
     setButtonUp(false);
-    deactivate();
+    disconnect();
     setShowConnectModal(false);
     setShowConnectModal(true);
   };
@@ -71,7 +73,7 @@ const NavWallet: React.FC<NavWalletProps> = props => {
   const disconectWalletHandler = () => {
     setShowConnectModal(false);
     setButtonUp(false);
-    deactivate();
+    disconnect();
   };
 
   const statePrimaryButtonClass = usePickByState(
@@ -104,8 +106,8 @@ const NavWallet: React.FC<NavWalletProps> = props => {
     NavBarButtonStyle.WARM_WALLET,
   );
 
-  // @ts-ignore
-  const customDropdownToggle = React.forwardRef<RefType, Props>(({ onClick, value }, ref) => (
+  // @ts-expect-error - Props/RefType incompatibility with forwardRef
+  const customDropdownToggle = forwardRef<RefType, Props>(({ onClick, value }, ref) => (
     <>
       <div
         className={clsx(
@@ -120,9 +122,11 @@ const NavWallet: React.FC<NavWalletProps> = props => {
         <div className={navDropdownClasses.button}>
           <div className={classes.icon}>
             {' '}
-            {hasENS && <Davatar size={21} address={address} provider={provider} />}
+            {hasENS && <img src={avatar ?? ''} alt="avatar" width={21} height={21} />}
           </div>
-          <div className={navDropdownClasses.dropdownBtnContent}>{ens ? ens : shortAddress}</div>
+          <div className={navDropdownClasses.dropdownBtnContent}>
+            {ensName ? ensName : shortAddress}
+          </div>
           <div className={buttonUp ? navDropdownClasses.arrowUp : navDropdownClasses.arrowDown}>
             <FontAwesomeIcon icon={buttonUp ? faSortUp : faSortDown} />{' '}
           </div>
@@ -131,7 +135,7 @@ const NavWallet: React.FC<NavWalletProps> = props => {
     </>
   ));
 
-  const CustomMenu = React.forwardRef((props: CustomMenuProps, ref: React.Ref<HTMLDivElement>) => {
+  const CustomMenu = forwardRef((props: CustomMenuProps, ref: React.Ref<HTMLDivElement>) => {
     return (
       <div
         ref={ref}
@@ -203,10 +207,10 @@ const NavWallet: React.FC<NavWalletProps> = props => {
             <div className={navDropdownClasses.button}>
               <div className={classes.icon}>
                 {' '}
-                <Davatar size={21} address={address} provider={provider} />
+                <img src={avatar ?? ''} alt="avatar" width={21} height={21} />
               </div>
               <div className={navDropdownClasses.dropdownBtnContent}>
-                {ens ? renderENS(ens) : renderAddress(address)}
+                {ensName ? renderENS(ensName) : renderAddress(address)}
               </div>
             </div>
           </div>

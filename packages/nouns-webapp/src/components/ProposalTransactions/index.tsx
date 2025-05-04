@@ -3,8 +3,7 @@ import { buildEtherscanAddressLink } from '../../utils/etherscan';
 import { ProposalTransaction } from '../../wrappers/nounsDao';
 import classes from './ProposalTransactions.module.css';
 import xIcon from '../../assets/x-icon.png';
-import { utils } from 'ethers';
-import { defaultAbiCoder } from 'ethers/lib/utils';
+import { decodeAbiParameters, formatEther } from 'viem';
 
 const ProposalTransactions = ({
   className,
@@ -20,11 +19,12 @@ const ProposalTransactions = ({
   const getPopover = (tx: ProposalTransaction) => {
     let calldata =
       tx.calldata === '0x' ? 'None' : tx.decodedCalldata ? tx.decodedCalldata : tx.calldata;
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
     const [, types] = tx.signature.substring(0, tx.signature.length - 1).split(/\((.*)/s);
     if (isProposalUpdate && types) {
-      const decoded = defaultAbiCoder.decode(types.split(/,(?![^(]*\))/g), tx.calldata);
-      calldata = JSON.stringify([decoded.join()]);
+      const paramTypes = types.split(/,(?![^(]*\))/g).map((type) => ({ type }));
+      const decoded = decodeAbiParameters(paramTypes, `0x${tx.calldata.slice(10)}`);
+      calldata = JSON.stringify([decoded.map(String).join(',')]);
     }
 
     return (
@@ -45,7 +45,9 @@ const ProposalTransactions = ({
             <Col sm="3">
               <b>Value</b>
             </Col>
-            <Col sm="9">{tx.value ? `${utils.formatEther(tx.value)} ETH` : 'None'}</Col>
+            <Col sm="9">
+              {tx.value && BigInt(tx.value) !== 0n ? `${formatEther(BigInt(tx.value))} ETH` : 'None'}
+            </Col>
           </Row>
           <Row>
             <Col sm="3">
