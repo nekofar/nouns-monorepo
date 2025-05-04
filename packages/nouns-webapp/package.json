@@ -43,8 +43,6 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@usedapp/coingecko": "0.5.1",
     "@usedapp/core": "npm:usedapp-core-fork",
-    "@walletconnect/ethereum-provider": "^2.20.2",
-    "@walletconnect/modal": "^2.4.5",
     "axios": "^0.30.0",
     "bad-words": "^3.0.4",
     "blo": "^2.0.0",
