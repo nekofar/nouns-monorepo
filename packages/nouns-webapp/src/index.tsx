@@ -37,13 +37,19 @@ import { NounsAuctionHouseFactory } from '@nouns/sdk';
 import { createRoot } from 'react-dom/client';
 
 import { useAppDispatch, useAppSelector } from './hooks';
-import { ConnectedRouter, connectRouter, push, routerMiddleware } from 'connected-react-router';
+import { connectRouter, push, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory, History } from 'history';
 import { applyMiddleware, combineReducers, createStore, PreloadedState } from 'redux';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { nounPath } from './utils/history';
 import { LanguageProvider } from './i18n/LanguageProvider';
+
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { WagmiProvider } from 'wagmi'
+import { config as wagmiConfig } from './wagmi'
+
+const queryClient = new QueryClient()
 
 export const history = createBrowserHistory();
 
@@ -233,7 +239,11 @@ createRoot(document.getElementById('root')!).render(
             <PastAuctions />
             <DAppProvider config={useDappConfig}>
               <LanguageProvider>
-                <App />
+                <WagmiProvider config={wagmiConfig}>
+                  <QueryClientProvider client={queryClient}>
+                    <App />
+                  </QueryClientProvider>
+                </WagmiProvider>
               </LanguageProvider>
               <Updaters />
             </DAppProvider>
