@@ -1,49 +1,44 @@
-import { Auction, AuctionHouseContractFunction } from '../../wrappers/nounsAuction';
-import { useEthers, useContractFunction } from '@usedapp/core';
-import { connectContractToSigner } from '@usedapp/core/dist/cjs/src/hooks';
+import { Auction } from '../../wrappers/nounsAuction';
 import { useAppSelector } from '../../hooks';
 import React, { useEffect, useState, useRef, ChangeEvent, useCallback } from 'react';
-import { utils, BigNumber as EthersBN } from 'ethers';
-import BigNumber from 'bignumber.js';
 import classes from './Bid.module.css';
 import { Spinner, InputGroup, FormControl, Button, Col } from 'react-bootstrap';
-import { useAuctionMinBidIncPercentage } from '../../wrappers/nounsAuction';
 import { useAppDispatch } from '../../hooks';
 import { AlertModal, setAlertModal } from '../../state/slices/application';
-import { NounsAuctionHouseFactory } from '@nouns/sdk';
-import config from '../../config';
 import WalletConnectModal from '../WalletConnectModal';
 import SettleManuallyBtn from '../SettleManuallyBtn';
 import { Trans } from '@lingui/react/macro';
 import { useActiveLocale } from '../../hooks/useActivateLocale';
 import responsiveUiUtilsClasses from '../../utils/ResponsiveUIUtils.module.css';
+import {
+  useReadNounsAuctionHouseMinBidIncrementPercentage,
+  useWriteNounsAuctionHouseCreateBid,
+  useWriteNounsAuctionHouseSettleCurrentAndCreateNewAuction,
+} from '../../contracts';
+import { formatEther, parseEther } from 'viem';
+import { usePublicClient } from 'wagmi';
 
 const computeMinimumNextBid = (
-  currentBid: BigNumber,
-  minBidIncPercentage: BigNumber | undefined,
-): BigNumber => {
+  currentBid: bigint,
+  minBidIncPercentage: bigint | undefined,
+): bigint => {
   if (!minBidIncPercentage) {
-    return new BigNumber(0);
+    return 0n;
   }
-  return currentBid
-    .times(minBidIncPercentage.div(100).plus(1))
-    .decimalPlaces(0, BigNumber.ROUND_UP);
+  const multiplier = (100n + minBidIncPercentage) as bigint;
+  return (currentBid * multiplier + 99n) / 100n;
 };
 
-const minBidEth = (minBid: BigNumber): string => {
-  if (minBid.isZero()) {
-    return '0.01';
-  }
+const minBidEth = (minBid: bigint): string => {
+  if (minBid === 0n) return '0.01';
 
-  const eth = utils.formatEther(EthersBN.from(minBid.toString()));
-  return new BigNumber(eth).toFixed(2, BigNumber.ROUND_CEIL);
+  const eth = Number(formatEther(minBid));
+  return eth % 1 === 0 ? eth.toFixed(2) : (Math.ceil(eth * 100) / 100).toFixed(2);
 };
 
-const currentBid = (bidInputRef: React.RefObject<HTMLInputElement>) => {
-  if (!bidInputRef.current || !bidInputRef.current.value) {
-    return new BigNumber(0);
-  }
-  return new BigNumber(utils.parseEther(bidInputRef.current.value).toString());
+const currentBid = (bidInputRef: React.RefObject<HTMLInputElement>): bigint => {
+  const value = bidInputRef.current?.value?.trim();
+  return value ? parseEther(value) : 0n;
 };
 
 const Bid: React.FC<{
@@ -51,12 +46,10 @@ const Bid: React.FC<{
   auctionEnded: boolean;
 }> = props => {
   const activeAccount = useAppSelector(state => state.account.activeAccount);
-  const { library } = useEthers();
   const { auction, auctionEnded } = props;
   const activeLocale = useActiveLocale();
-  const nounsAuctionHouseContract = new NounsAuctionHouseFactory().attach(
-    config.addresses.nounsAuctionHouseProxy,
-  );
+
+  const publicClient = usePublicClient();
 
   const account = useAppSelector(state => state.account.activeAccount);
 
@@ -78,20 +71,23 @@ const Bid: React.FC<{
   const dispatch = useAppDispatch();
   const setModal = useCallback((modal: AlertModal) => dispatch(setAlertModal(modal)), [dispatch]);
 
-  const minBidIncPercentage = useAuctionMinBidIncPercentage();
+  const { data: minBidIncPercentage } = useReadNounsAuctionHouseMinBidIncrementPercentage();
   const minBid = computeMinimumNextBid(
-    auction && new BigNumber(auction.amount.toString()),
-    minBidIncPercentage,
+    auction && BigInt(auction.amount.toString()),
+    minBidIncPercentage !== undefined ? BigInt(minBidIncPercentage) : undefined,
   );
 
-  const { send: placeBid, state: placeBidState } = useContractFunction(
-    nounsAuctionHouseContract,
-    AuctionHouseContractFunction.createBid,
-  );
-  const { send: settleAuction, state: settleAuctionState } = useContractFunction(
-    nounsAuctionHouseContract,
-    AuctionHouseContractFunction.settleCurrentAndCreateNewAuction,
-  );
+  const {
+    writeContract: placeBid,
+    data: placeBidTx,
+    isPending: isPlacingBid,
+  } = useWriteNounsAuctionHouseCreateBid();
+
+  const {
+    writeContract: settleAuction,
+    data: settleAuctionTx,
+    isPending: isSettlingAuction,
+  } = useWriteNounsAuctionHouseSettleCurrentAndCreateNewAuction();
 
   const bidInputHandler = (event: ChangeEvent<HTMLInputElement>) => {
     const input = event.target.value;
@@ -109,7 +105,7 @@ const Bid: React.FC<{
       return;
     }
 
-    if (currentBid(bidInputRef).isLessThan(minBid)) {
+    if (currentBid(bidInputRef) < minBid) {
       setModal({
         show: true,
         title: <Trans>Insufficient bid amount 🤏</Trans>,
@@ -124,19 +120,15 @@ const Bid: React.FC<{
       return;
     }
 
-    const value = utils.parseEther(bidInputRef.current.value.toString());
-    const contract = connectContractToSigner(nounsAuctionHouseContract, undefined, library);
-    const gasLimit = await contract.estimateGas.createBid(auction.nounId, {
+    const value = parseEther(bidInputRef.current.value.toString());
+    placeBid({
+      args: [auction.nounId],
       value,
-    });
-    placeBid(auction.nounId, {
-      value,
-      gasLimit: gasLimit.add(10_000), // A 10,000 gas pad is used to avoid 'Out of gas' errors
     });
   };
 
   const settleAuctionHandler = () => {
-    settleAuction();
+    settleAuction({});
   };
 
   const clearBidInput = () => {
@@ -147,98 +139,129 @@ const Bid: React.FC<{
 
   // successful bid using redux store state
   useEffect(() => {
-    if (!account) return;
+    if (!account || !placeBidTx || auctionEnded) return;
 
-    // tx state is mining
-    const isMiningUserTx = placeBidState.status === 'Mining';
-    // allows user to rebid against themselves so long as it is not the same tx
-    const isCorrectTx = currentBid(bidInputRef).isEqualTo(new BigNumber(auction.amount.toString()));
-    if (isMiningUserTx && auction.bidder === account && isCorrectTx) {
-      placeBidState.status = 'Success';
-      setModal({
-        title: <Trans>Success</Trans>,
-        message: <Trans>Bid was placed successfully!</Trans>,
-        show: true,
-      });
-      setBidButtonContent({ loading: false, content: <Trans>Place bid</Trans> });
-      clearBidInput();
-    }
-  }, [auction, placeBidState, account, setModal]);
+    const bidAmount = parseEther(bidInputRef.current?.value?.trim() || '0');
+    const isCorrectTx = bidAmount === auction.amount;
+
+    if (auction.bidder !== account || !isCorrectTx) return;
+
+    const checkTx = async () => {
+      try {
+        const receipt = await publicClient.waitForTransactionReceipt({
+          hash: placeBidTx,
+          confirmations: 1,
+        });
+
+        if (receipt.status === 'success') {
+          setModal({
+            title: <Trans>Success</Trans>,
+            message: <Trans>Bid was placed successfully!</Trans>,
+            show: true,
+          });
+          setBidButtonContent({ loading: false, content: <Trans>Place bid</Trans> });
+          clearBidInput();
+        }
+      } catch (err) {
+        console.error('Bid tx failed or reverted', err);
+      }
+    };
+
+    checkTx();
+  }, [auction, placeBidTx, account, auctionEnded, setModal, publicClient]);
 
   // placing bid transaction state hook
   useEffect(() => {
-    switch (!auctionEnded && placeBidState.status) {
-      case 'None':
-        setBidButtonContent({
-          loading: false,
-          content: <Trans>Place bid</Trans>,
+    if (auctionEnded) return;
+
+    if (isPlacingBid) {
+      setBidButtonContent({ loading: true, content: <></> });
+      return;
+    }
+
+    if (!placeBidTx) {
+      setBidButtonContent({ loading: false, content: <Trans>Place bid</Trans> });
+      return;
+    }
+
+    const checkTx = async () => {
+      try {
+        const receipt = await publicClient.waitForTransactionReceipt({
+          hash: placeBidTx,
         });
-        break;
-      case 'Mining':
-        setBidButtonContent({ loading: true, content: <></> });
-        break;
-      case 'Fail':
-        setModal({
-          title: <Trans>Transaction Failed</Trans>,
-          message: placeBidState?.errorMessage || <Trans>Please try again.</Trans>,
-          show: true,
-        });
-        setBidButtonContent({ loading: false, content: <Trans>Bid</Trans> });
-        break;
-      case 'Exception':
+
+        if (receipt.status === 'reverted') {
+          setModal({
+            title: <Trans>Transaction Failed</Trans>,
+            message: <Trans>Please try again.</Trans>,
+            show: true,
+          });
+          setBidButtonContent({ loading: false, content: <Trans>Bid</Trans> });
+        }
+      } catch (err) {
         setModal({
           title: <Trans>Error</Trans>,
-          message: placeBidState?.errorMessage || <Trans>Please try again.</Trans>,
+          message: (err as Error)?.message || <Trans>Please try again.</Trans>,
           show: true,
         });
         setBidButtonContent({ loading: false, content: <Trans>Bid</Trans> });
-        break;
-    }
-  }, [placeBidState, auctionEnded, setModal]);
+      }
+    };
+
+    checkTx();
+  }, [placeBidTx, isPlacingBid, auctionEnded, setModal, publicClient]);
 
   // settle auction transaction state hook
   useEffect(() => {
-    switch (auctionEnded && settleAuctionState.status) {
-      case 'None':
-        setBidButtonContent({
-          loading: false,
-          content: <Trans>Settle Auction</Trans>,
+    if (!auctionEnded) return;
+
+    if (isSettlingAuction) {
+      setBidButtonContent({ loading: true, content: <></> });
+      return;
+    }
+
+    if (!settleAuctionTx) {
+      setBidButtonContent({ loading: false, content: <Trans>Settle Auction</Trans> });
+      return;
+    }
+
+    const checkTx = async () => {
+      try {
+        const receipt = await publicClient.waitForTransactionReceipt({
+          hash: settleAuctionTx,
         });
-        break;
-      case 'Mining':
-        setBidButtonContent({ loading: true, content: <></> });
-        break;
-      case 'Success':
-        setModal({
-          title: <Trans>Success</Trans>,
-          message: <Trans>Settled auction successfully!</Trans>,
-          show: true,
-        });
+
+        if (receipt.status === 'success') {
+          setModal({
+            title: <Trans>Success</Trans>,
+            message: <Trans>Settled auction successfully!</Trans>,
+            show: true,
+          });
+        } else {
+          setModal({
+            title: <Trans>Transaction Failed</Trans>,
+            message: <Trans>Please try again.</Trans>,
+            show: true,
+          });
+        }
+
         setBidButtonContent({ loading: false, content: <Trans>Settle Auction</Trans> });
-        break;
-      case 'Fail':
-        setModal({
-          title: <Trans>Transaction Failed</Trans>,
-          message: settleAuctionState?.errorMessage || <Trans>Please try again.</Trans>,
-          show: true,
-        });
-        setBidButtonContent({ loading: false, content: <Trans>Settle Auction</Trans> });
-        break;
-      case 'Exception':
+      } catch (error) {
         setModal({
           title: <Trans>Error</Trans>,
-          message: settleAuctionState?.errorMessage || <Trans>Please try again.</Trans>,
+          message: (error as Error)?.message || <Trans>Please try again.</Trans>,
           show: true,
         });
         setBidButtonContent({ loading: false, content: <Trans>Settle Auction</Trans> });
-        break;
-    }
-  }, [settleAuctionState, auctionEnded, setModal]);
+      }
+    };
+
+    checkTx();
+  }, [settleAuctionTx, isSettlingAuction, auctionEnded, setModal, publicClient]);
 
   if (!auction) return null;
 
-  const isDisabled =
-    placeBidState.status === 'Mining' || settleAuctionState.status === 'Mining' || !activeAccount;
+  const isDisabled = isPlacingBid || isSettlingAuction || !account;
 
   const fomoNounsBtnOnClickHandler = () => {
     // Open Fomo Nouns in a new tab
