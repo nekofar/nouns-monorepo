@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useEthers } from '@usedapp/core';
+import { usePublicClient } from 'wagmi';
 
 /**
  * A function that takes a block number from the chain and returns the timestamp of when the block occurred.
@@ -7,18 +7,25 @@ import { useEthers } from '@usedapp/core';
  * @returns unix timestamp of block number
  */
 export function useBlockTimestamp(blockNumber: number | undefined): number | undefined {
-  const { library } = useEthers();
+  const publicClient = usePublicClient();
   const [blockTimestamp, setBlockTimestamp] = useState<number | undefined>();
 
   useEffect(() => {
     async function updateBlockTimestamp() {
-      if (!blockNumber) return;
-      const blockData = await library?.getBlock(blockNumber);
-      setBlockTimestamp(blockData?.timestamp || undefined);
+      if (!blockNumber || !publicClient) return;
+
+      try {
+        const blockData = await publicClient.getBlock({
+          blockNumber: BigInt(blockNumber),
+        });
+        setBlockTimestamp(blockData.timestamp ? Number(blockData.timestamp) : undefined);
+      } catch (error) {
+        console.error('Failed to fetch block timestamp:', error);
+      }
     }
 
     updateBlockTimestamp();
-  }, [blockNumber, library]);
+  }, [blockNumber, publicClient]);
 
   return blockTimestamp;
 }
