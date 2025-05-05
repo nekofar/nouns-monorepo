@@ -4,14 +4,27 @@ import dayjs from 'dayjs';
 import LinkIcon from '../../assets/icons/Link.svg?react';
 import { buildEtherscanTxLink } from '../../utils/etherscan';
 import TruncatedAmount from '../TruncatedAmount';
-import BigNumber from 'bignumber.js';
 import { Bid } from '../../utils/types';
-import { BigNumber as EthersBN } from '@ethersproject/bignumber';
 import { useAuctionBids } from '../../wrappers/onDisplayAuction';
 import { useAppSelector } from '../../hooks';
 
-const bidItem = (bid: Bid, index: number, classes: any, isCool?: boolean) => {
-  const bidAmount = <TruncatedAmount amount={new BigNumber(EthersBN.from(bid.value).toString())} />;
+const bidItem = (
+  bid: Bid,
+  index: number,
+  classes: {
+    bidRowCool: string | undefined;
+    bidRowWarm: string | undefined;
+    bidItem: string | undefined;
+    leftSectionWrapper: string | undefined;
+    bidder: string | undefined;
+    bidDate: string | undefined;
+    rightSectionWrapper: string | undefined;
+    bidAmount: string | undefined;
+    linkSymbol: string | undefined;
+  },
+  isCool?: boolean,
+) => {
+  const bidAmount = <TruncatedAmount amount={BigInt(bid.value).toString()} />;
   const date = `${dayjs(bid.timestamp.toNumber() * 1000).format('MMM DD')} at ${dayjs(
     bid.timestamp.toNumber() * 1000,
   ).format('hh:mm a')}`;
@@ -25,7 +38,7 @@ const bidItem = (bid: Bid, index: number, classes: any, isCool?: boolean) => {
         <div className={classes.leftSectionWrapper}>
           <div className={classes.bidder}>
             <div>
-              <ShortAddress address={bid.sender} avatar={isMobile ? false : true} />
+              <ShortAddress address={bid.sender} avatar={!isMobile} />
             </div>
           </div>
           <div className={classes.bidDate}>{date}</div>
@@ -43,10 +56,25 @@ const bidItem = (bid: Bid, index: number, classes: any, isCool?: boolean) => {
   );
 };
 
-const BidHistory: React.FC<{ auctionId: string; max: number; classes?: any }> = props => {
+const BidHistory: React.FC<{
+  auctionId: string;
+  max: number;
+  classes: {
+    bidRowCool: string | undefined;
+    bidRowWarm: string | undefined;
+    bidItem: string | undefined;
+    leftSectionWrapper: string | undefined;
+    bidder: string | undefined;
+    bidDate: string | undefined;
+    rightSectionWrapper: string | undefined;
+    bidAmount: string | undefined;
+    linkSymbol: string | undefined;
+    bidCollection: string | undefined;
+  };
+}> = props => {
   const { auctionId, max, classes } = props;
   const isCool = useAppSelector(state => state.application.isCoolBackground);
-  const bids = useAuctionBids(EthersBN.from(auctionId));
+  const bids = useAuctionBids(BigInt(auctionId));
   const bidContent =
     bids &&
     bids
