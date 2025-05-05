@@ -7,7 +7,6 @@ import TransferFundsReviewStep from './steps/TransferFundsReviewStep';
 import FunctionCallSelectFunctionStep from './steps/FunctionCallSelectFunctionStep';
 import FunctionCallEnterArgsStep from './steps/FunctionCallEnterArgsStep';
 import FunctionCallReviewStep from './steps/FunctionCallReviewStep';
-import { Interface } from 'ethers/lib/utils';
 import StreamPaymentsPaymentDetailsStep from './steps/StreamPaymentsPaymentDetailsStep';
 import StreamPaymentDateDetailsStep from './steps/StreamPaymentsDateDetailsStep';
 import StreamPaymentsReviewStep from './steps/StreamPaymentsReviewStep';
@@ -38,12 +37,12 @@ export interface ProposalActionModalState {
   streamStartTimestamp?: number;
   streamEndTimestamp?: number;
   function?: string;
-  abi?: Interface;
+  abi?: never;
   args?: string[];
 }
 export interface ProposalActionModalStepProps {
-  onPrevBtnClick: (e?: any) => void;
-  onNextBtnClick: (e?: any) => void;
+  onPrevBtnClick: (e?: never) => void;
+  onNextBtnClick: (s: ProposalActionCreationStep) => void;
   state: ProposalActionModalState;
   setState: (e: SetStateAction<ProposalActionModalState>) => void;
 }
@@ -95,7 +94,7 @@ const ModalContent: React.FC<{
     case ProposalActionCreationStep.LUMP_SUM_REVIEW:
       return (
         <TransferFundsReviewStep
-          onNextBtnClick={onActionAdd}
+          onNextBtnClick={() => onActionAdd(state as unknown as ProposalTransaction)}
           onPrevBtnClick={() => setStep(ProposalActionCreationStep.LUMP_SUM_DETAILS)}
           state={state}
           setState={setState}
@@ -123,7 +122,7 @@ const ModalContent: React.FC<{
     case ProposalActionCreationStep.FUNCTION_CALL_REVIEW:
       return (
         <FunctionCallReviewStep
-          onNextBtnClick={onActionAdd}
+          onNextBtnClick={() => onActionAdd(state as unknown as ProposalTransaction)}
           onPrevBtnClick={() => setStep(ProposalActionCreationStep.FUNCTION_CALL_ADD_ARGUMENTS)}
           state={state}
           setState={setState}
@@ -151,7 +150,7 @@ const ModalContent: React.FC<{
     case ProposalActionCreationStep.STREAM_PAYMENT_REVIEW:
       return (
         <StreamPaymentsReviewStep
-          onNextBtnClick={onActionAdd}
+          onNextBtnClick={() => onActionAdd(state as unknown as ProposalTransaction)}
           onPrevBtnClick={() => setStep(ProposalActionCreationStep.STREAM_PAYMENT_DATE_DETAILS)}
           state={state}
           setState={setState}
