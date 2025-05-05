@@ -3,14 +3,14 @@ import {
   createUseWriteContract,
   createUseSimulateContract,
   createUseWatchContractEvent,
-} from 'wagmi/codegen'
+} from 'wagmi/codegen';
 
 import {
   createReadContract,
   createWriteContract,
   createSimulateContract,
   createWatchContractEvent,
-} from 'wagmi/codegen'
+} from 'wagmi/codegen';
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // NounsAuctionHouse
@@ -454,7 +454,7 @@ export const nounsAuctionHouseAbi = [
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
     stateMutability: 'view',
   },
-] as const
+] as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x830bd73e4184cef73443c15111a1df14e495c706)
@@ -463,7 +463,7 @@ export const nounsAuctionHouseAbi = [
 export const nounsAuctionHouseAddress = {
   1: '0x830BD73E4184ceF73443C15111a1DF14e495C706',
   11155111: '0x488609b7113FCf3B761A05956300d605E8f6BcAf',
-} as const
+} as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x830bd73e4184cef73443c15111a1df14e495c706)
@@ -472,7 +472,7 @@ export const nounsAuctionHouseAddress = {
 export const nounsAuctionHouseConfig = {
   address: nounsAuctionHouseAddress,
   abi: nounsAuctionHouseAbi,
-} as const
+} as const;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // NounsData
@@ -950,7 +950,7 @@ export const nounsDataAbi = [
     outputs: [],
     stateMutability: 'nonpayable',
   },
-] as const
+] as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0xf790a5f59678dd733fb3de93493a91f472ca1365)
@@ -959,13 +959,13 @@ export const nounsDataAbi = [
 export const nounsDataAddress = {
   1: '0xf790A5f59678dd733fb3De93493A91f472ca1365',
   11155111: '0x9040f720AA8A693F950B9cF94764b4b06079D002',
-} as const
+} as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0xf790a5f59678dd733fb3de93493a91f472ca1365)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x9040f720aa8a693f950b9cf94764b4b06079d002)
  */
-export const nounsDataConfig = { address: nounsDataAddress, abi: nounsDataAbi } as const
+export const nounsDataConfig = { address: nounsDataAddress, abi: nounsDataAbi } as const;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // NounsDescriptor
@@ -1523,7 +1523,7 @@ export const nounsDescriptorAbi = [
     outputs: [],
     stateMutability: 'nonpayable',
   },
-] as const
+] as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x33a9c445fb4fb21f2c030a6b2d3e2f12d017bfac)
@@ -1532,7 +1532,7 @@ export const nounsDescriptorAbi = [
 export const nounsDescriptorAddress = {
   1: '0x33A9c445fb4FB21f2c030A6b2d3e2F12D017BFAC',
   11155111: '0x79E04ebCDf1ac2661697B23844149b43acc002d5',
-} as const
+} as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x33a9c445fb4fb21f2c030a6b2d3e2f12d017bfac)
@@ -1541,7 +1541,7 @@ export const nounsDescriptorAddress = {
 export const nounsDescriptorConfig = {
   address: nounsDescriptorAddress,
   abi: nounsDescriptorAbi,
-} as const
+} as const;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // NounsGovernor
@@ -2865,7 +2865,7 @@ export const nounsGovernorAbi = [
     stateMutability: 'nonpayable',
   },
   { type: 'receive', stateMutability: 'payable' },
-] as const
+] as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x6f3e6272a167e8accb32072d08e0957f9c79223d)
@@ -2874,13 +2874,16 @@ export const nounsGovernorAbi = [
 export const nounsGovernorAddress = {
   1: '0x6f3E6272A167e8AcCb32072d08E0957F9c79223d',
   11155111: '0x35d2670d7C8931AACdd37C89Ddcb0638c3c44A57',
-} as const
+} as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x6f3e6272a167e8accb32072d08e0957f9c79223d)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x35d2670d7c8931aacdd37c89ddcb0638c3c44a57)
  */
-export const nounsGovernorConfig = { address: nounsGovernorAddress, abi: nounsGovernorAbi } as const
+export const nounsGovernorConfig = {
+  address: nounsGovernorAddress,
+  abi: nounsGovernorAbi,
+} as const;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // NounsToken
@@ -3423,7 +3426,7 @@ export const nounsTokenAbi = [
     outputs: [{ name: '', internalType: 'uint96', type: 'uint96' }],
     stateMutability: 'view',
   },
-] as const
+] as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9c8ff314c9bc7f6e59a9d9225fb22946427edc03)
@@ -3432,13 +3435,13 @@ export const nounsTokenAbi = [
 export const nounsTokenAddress = {
   1: '0x9C8fF314C9Bc7F6e59A9d9225Fb22946427eDC03',
   11155111: '0x4C4674bb72a096855496a7204962297bd7e12b85',
-} as const
+} as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9c8ff314c9bc7f6e59a9d9225fb22946427edc03)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x4c4674bb72a096855496a7204962297bd7e12b85)
  */
-export const nounsTokenConfig = { address: nounsTokenAddress, abi: nounsTokenAbi } as const
+export const nounsTokenConfig = { address: nounsTokenAddress, abi: nounsTokenAbi } as const;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // NounsTreasury
@@ -3707,7 +3710,7 @@ export const nounsTreasuryAbi = [
     stateMutability: 'payable',
   },
   { type: 'receive', stateMutability: 'payable' },
-] as const
+] as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0xb1a32fc9f9d8b2cf86c068cae13108809547ef71)
@@ -3716,13 +3719,16 @@ export const nounsTreasuryAbi = [
 export const nounsTreasuryAddress = {
   1: '0xb1a32FC9F9D8b2cf86C068Cae13108809547ef71',
   11155111: '0x07e5D6a1550aD5E597A9b0698A474AA080A2fB28',
-} as const
+} as const;
 
 /**
  * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0xb1a32fc9f9d8b2cf86c068cae13108809547ef71)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x07e5d6a1550ad5e597a9b0698a474aa080a2fb28)
  */
-export const nounsTreasuryConfig = { address: nounsTreasuryAddress, abi: nounsTreasuryAbi } as const
+export const nounsTreasuryConfig = {
+  address: nounsTreasuryAddress,
+  abi: nounsTreasuryAbi,
+} as const;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // React
@@ -3737,7 +3743,7 @@ export const nounsTreasuryConfig = { address: nounsTreasuryAddress, abi: nounsTr
 export const useReadNounsAuctionHouse = /*#__PURE__*/ createUseReadContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"MAX_TIME_BUFFER"`
@@ -3749,7 +3755,7 @@ export const useReadNounsAuctionHouseMaxTimeBuffer = /*#__PURE__*/ createUseRead
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'MAX_TIME_BUFFER',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"auction"`
@@ -3761,7 +3767,7 @@ export const useReadNounsAuctionHouseAuction = /*#__PURE__*/ createUseReadContra
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'auction',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"auctionStorage"`
@@ -3773,7 +3779,7 @@ export const useReadNounsAuctionHouseAuctionStorage = /*#__PURE__*/ createUseRea
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'auctionStorage',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"biddingClient"`
@@ -3785,7 +3791,7 @@ export const useReadNounsAuctionHouseBiddingClient = /*#__PURE__*/ createUseRead
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'biddingClient',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"duration"`
@@ -3797,7 +3803,7 @@ export const useReadNounsAuctionHouseDuration = /*#__PURE__*/ createUseReadContr
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'duration',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"getPrices"`
@@ -3809,7 +3815,7 @@ export const useReadNounsAuctionHouseGetPrices = /*#__PURE__*/ createUseReadCont
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'getPrices',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"getSettlements"`
@@ -3821,7 +3827,7 @@ export const useReadNounsAuctionHouseGetSettlements = /*#__PURE__*/ createUseRea
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'getSettlements',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"getSettlementsFromIdtoTimestamp"`
@@ -3834,7 +3840,7 @@ export const useReadNounsAuctionHouseGetSettlementsFromIdtoTimestamp =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'getSettlementsFromIdtoTimestamp',
-  })
+  });
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"minBidIncrementPercentage"`
@@ -3847,7 +3853,7 @@ export const useReadNounsAuctionHouseMinBidIncrementPercentage =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'minBidIncrementPercentage',
-  })
+  });
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"nouns"`
@@ -3859,7 +3865,7 @@ export const useReadNounsAuctionHouseNouns = /*#__PURE__*/ createUseReadContract
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'nouns',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"owner"`
@@ -3871,7 +3877,7 @@ export const useReadNounsAuctionHouseOwner = /*#__PURE__*/ createUseReadContract
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'owner',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"paused"`
@@ -3883,7 +3889,7 @@ export const useReadNounsAuctionHousePaused = /*#__PURE__*/ createUseReadContrac
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'paused',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"reservePrice"`
@@ -3895,7 +3901,7 @@ export const useReadNounsAuctionHouseReservePrice = /*#__PURE__*/ createUseReadC
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'reservePrice',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"sanctionsOracle"`
@@ -3907,7 +3913,7 @@ export const useReadNounsAuctionHouseSanctionsOracle = /*#__PURE__*/ createUseRe
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'sanctionsOracle',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"timeBuffer"`
@@ -3919,7 +3925,7 @@ export const useReadNounsAuctionHouseTimeBuffer = /*#__PURE__*/ createUseReadCon
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'timeBuffer',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"weth"`
@@ -3931,7 +3937,7 @@ export const useReadNounsAuctionHouseWeth = /*#__PURE__*/ createUseReadContract(
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'weth',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__
@@ -3942,7 +3948,7 @@ export const useReadNounsAuctionHouseWeth = /*#__PURE__*/ createUseReadContract(
 export const useWriteNounsAuctionHouse = /*#__PURE__*/ createUseWriteContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"createBid"`
@@ -3954,7 +3960,7 @@ export const useWriteNounsAuctionHouseCreateBid = /*#__PURE__*/ createUseWriteCo
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'createBid',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"initialize"`
@@ -3966,7 +3972,7 @@ export const useWriteNounsAuctionHouseInitialize = /*#__PURE__*/ createUseWriteC
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"pause"`
@@ -3978,7 +3984,7 @@ export const useWriteNounsAuctionHousePause = /*#__PURE__*/ createUseWriteContra
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'pause',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -3990,7 +3996,7 @@ export const useWriteNounsAuctionHouseRenounceOwnership = /*#__PURE__*/ createUs
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setMinBidIncrementPercentage"`
@@ -4003,7 +4009,7 @@ export const useWriteNounsAuctionHouseSetMinBidIncrementPercentage =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'setMinBidIncrementPercentage',
-  })
+  });
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setPrices"`
@@ -4015,7 +4021,7 @@ export const useWriteNounsAuctionHouseSetPrices = /*#__PURE__*/ createUseWriteCo
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setPrices',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setReservePrice"`
@@ -4027,7 +4033,7 @@ export const useWriteNounsAuctionHouseSetReservePrice = /*#__PURE__*/ createUseW
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setReservePrice',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setSanctionsOracle"`
@@ -4039,7 +4045,7 @@ export const useWriteNounsAuctionHouseSetSanctionsOracle = /*#__PURE__*/ createU
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setSanctionsOracle',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setTimeBuffer"`
@@ -4051,7 +4057,7 @@ export const useWriteNounsAuctionHouseSetTimeBuffer = /*#__PURE__*/ createUseWri
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setTimeBuffer',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"settleAuction"`
@@ -4063,7 +4069,7 @@ export const useWriteNounsAuctionHouseSettleAuction = /*#__PURE__*/ createUseWri
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'settleAuction',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"settleCurrentAndCreateNewAuction"`
@@ -4076,7 +4082,7 @@ export const useWriteNounsAuctionHouseSettleCurrentAndCreateNewAuction =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'settleCurrentAndCreateNewAuction',
-  })
+  });
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"transferOwnership"`
@@ -4088,7 +4094,7 @@ export const useWriteNounsAuctionHouseTransferOwnership = /*#__PURE__*/ createUs
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"unpause"`
@@ -4100,7 +4106,7 @@ export const useWriteNounsAuctionHouseUnpause = /*#__PURE__*/ createUseWriteCont
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'unpause',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"warmUpSettlementState"`
@@ -4112,7 +4118,7 @@ export const useWriteNounsAuctionHouseWarmUpSettlementState = /*#__PURE__*/ crea
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'warmUpSettlementState',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__
@@ -4123,7 +4129,7 @@ export const useWriteNounsAuctionHouseWarmUpSettlementState = /*#__PURE__*/ crea
 export const useSimulateNounsAuctionHouse = /*#__PURE__*/ createUseSimulateContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"createBid"`
@@ -4135,7 +4141,7 @@ export const useSimulateNounsAuctionHouseCreateBid = /*#__PURE__*/ createUseSimu
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'createBid',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"initialize"`
@@ -4147,7 +4153,7 @@ export const useSimulateNounsAuctionHouseInitialize = /*#__PURE__*/ createUseSim
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"pause"`
@@ -4159,7 +4165,7 @@ export const useSimulateNounsAuctionHousePause = /*#__PURE__*/ createUseSimulate
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'pause',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -4172,7 +4178,7 @@ export const useSimulateNounsAuctionHouseRenounceOwnership =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'renounceOwnership',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setMinBidIncrementPercentage"`
@@ -4185,7 +4191,7 @@ export const useSimulateNounsAuctionHouseSetMinBidIncrementPercentage =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'setMinBidIncrementPercentage',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setPrices"`
@@ -4197,7 +4203,7 @@ export const useSimulateNounsAuctionHouseSetPrices = /*#__PURE__*/ createUseSimu
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setPrices',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setReservePrice"`
@@ -4209,7 +4215,7 @@ export const useSimulateNounsAuctionHouseSetReservePrice = /*#__PURE__*/ createU
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setReservePrice',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setSanctionsOracle"`
@@ -4222,7 +4228,7 @@ export const useSimulateNounsAuctionHouseSetSanctionsOracle =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'setSanctionsOracle',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setTimeBuffer"`
@@ -4234,7 +4240,7 @@ export const useSimulateNounsAuctionHouseSetTimeBuffer = /*#__PURE__*/ createUse
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setTimeBuffer',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"settleAuction"`
@@ -4246,7 +4252,7 @@ export const useSimulateNounsAuctionHouseSettleAuction = /*#__PURE__*/ createUse
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'settleAuction',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"settleCurrentAndCreateNewAuction"`
@@ -4259,7 +4265,7 @@ export const useSimulateNounsAuctionHouseSettleCurrentAndCreateNewAuction =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'settleCurrentAndCreateNewAuction',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"transferOwnership"`
@@ -4272,7 +4278,7 @@ export const useSimulateNounsAuctionHouseTransferOwnership =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'transferOwnership',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"unpause"`
@@ -4284,7 +4290,7 @@ export const useSimulateNounsAuctionHouseUnpause = /*#__PURE__*/ createUseSimula
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'unpause',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"warmUpSettlementState"`
@@ -4297,7 +4303,7 @@ export const useSimulateNounsAuctionHouseWarmUpSettlementState =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'warmUpSettlementState',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__
@@ -4308,7 +4314,7 @@ export const useSimulateNounsAuctionHouseWarmUpSettlementState =
 export const useWatchNounsAuctionHouseEvent = /*#__PURE__*/ createUseWatchContractEvent({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionBid"`
@@ -4320,7 +4326,7 @@ export const useWatchNounsAuctionHouseAuctionBidEvent = /*#__PURE__*/ createUseW
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   eventName: 'AuctionBid',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionBidWithClientId"`
@@ -4333,7 +4339,7 @@ export const useWatchNounsAuctionHouseAuctionBidWithClientIdEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionBidWithClientId',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionCreated"`
@@ -4346,7 +4352,7 @@ export const useWatchNounsAuctionHouseAuctionCreatedEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionCreated',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionExtended"`
@@ -4359,7 +4365,7 @@ export const useWatchNounsAuctionHouseAuctionExtendedEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionExtended',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionMinBidIncrementPercentageUpdated"`
@@ -4372,7 +4378,7 @@ export const useWatchNounsAuctionHouseAuctionMinBidIncrementPercentageUpdatedEve
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionMinBidIncrementPercentageUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionReservePriceUpdated"`
@@ -4385,7 +4391,7 @@ export const useWatchNounsAuctionHouseAuctionReservePriceUpdatedEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionReservePriceUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionSettled"`
@@ -4398,7 +4404,7 @@ export const useWatchNounsAuctionHouseAuctionSettledEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionSettled',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionSettledWithClientId"`
@@ -4411,7 +4417,7 @@ export const useWatchNounsAuctionHouseAuctionSettledWithClientIdEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionSettledWithClientId',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionTimeBufferUpdated"`
@@ -4424,7 +4430,7 @@ export const useWatchNounsAuctionHouseAuctionTimeBufferUpdatedEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionTimeBufferUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"OwnershipTransferred"`
@@ -4437,7 +4443,7 @@ export const useWatchNounsAuctionHouseOwnershipTransferredEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'OwnershipTransferred',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"Paused"`
@@ -4449,7 +4455,7 @@ export const useWatchNounsAuctionHousePausedEvent = /*#__PURE__*/ createUseWatch
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   eventName: 'Paused',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"SanctionsOracleSet"`
@@ -4462,7 +4468,7 @@ export const useWatchNounsAuctionHouseSanctionsOracleSetEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'SanctionsOracleSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"Unpaused"`
@@ -4474,7 +4480,7 @@ export const useWatchNounsAuctionHouseUnpausedEvent = /*#__PURE__*/ createUseWat
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   eventName: 'Unpaused',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDataAbi}__
@@ -4485,7 +4491,7 @@ export const useWatchNounsAuctionHouseUnpausedEvent = /*#__PURE__*/ createUseWat
 export const useReadNounsData = /*#__PURE__*/ createUseReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"PRIOR_VOTES_BLOCKS_AGO"`
@@ -4497,7 +4503,7 @@ export const useReadNounsDataPriorVotesBlocksAgo = /*#__PURE__*/ createUseReadCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'PRIOR_VOTES_BLOCKS_AGO',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"createCandidateCost"`
@@ -4509,7 +4515,7 @@ export const useReadNounsDataCreateCandidateCost = /*#__PURE__*/ createUseReadCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'createCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"dunaAdmin"`
@@ -4521,7 +4527,7 @@ export const useReadNounsDataDunaAdmin = /*#__PURE__*/ createUseReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'dunaAdmin',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"feeRecipient"`
@@ -4533,7 +4539,7 @@ export const useReadNounsDataFeeRecipient = /*#__PURE__*/ createUseReadContract(
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'feeRecipient',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"nounsDao"`
@@ -4545,7 +4551,7 @@ export const useReadNounsDataNounsDao = /*#__PURE__*/ createUseReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'nounsDao',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"nounsToken"`
@@ -4557,7 +4563,7 @@ export const useReadNounsDataNounsToken = /*#__PURE__*/ createUseReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'nounsToken',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"owner"`
@@ -4569,7 +4575,7 @@ export const useReadNounsDataOwner = /*#__PURE__*/ createUseReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'owner',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"propCandidates"`
@@ -4581,7 +4587,7 @@ export const useReadNounsDataPropCandidates = /*#__PURE__*/ createUseReadContrac
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'propCandidates',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"updateCandidateCost"`
@@ -4593,7 +4599,7 @@ export const useReadNounsDataUpdateCandidateCost = /*#__PURE__*/ createUseReadCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'updateCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__
@@ -4604,7 +4610,7 @@ export const useReadNounsDataUpdateCandidateCost = /*#__PURE__*/ createUseReadCo
 export const useWriteNounsData = /*#__PURE__*/ createUseWriteContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"addSignature"`
@@ -4616,7 +4622,7 @@ export const useWriteNounsDataAddSignature = /*#__PURE__*/ createUseWriteContrac
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'addSignature',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"cancelProposalCandidate"`
@@ -4628,7 +4634,7 @@ export const useWriteNounsDataCancelProposalCandidate = /*#__PURE__*/ createUseW
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'cancelProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"createProposalCandidate"`
@@ -4640,7 +4646,7 @@ export const useWriteNounsDataCreateProposalCandidate = /*#__PURE__*/ createUseW
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'createProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"initialize"`
@@ -4652,7 +4658,7 @@ export const useWriteNounsDataInitialize = /*#__PURE__*/ createUseWriteContract(
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"postDunaAdminMessage"`
@@ -4664,7 +4670,7 @@ export const useWriteNounsDataPostDunaAdminMessage = /*#__PURE__*/ createUseWrit
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'postDunaAdminMessage',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"postVoterMessageToDunaAdmin"`
@@ -4676,7 +4682,7 @@ export const useWriteNounsDataPostVoterMessageToDunaAdmin = /*#__PURE__*/ create
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'postVoterMessageToDunaAdmin',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -4688,7 +4694,7 @@ export const useWriteNounsDataRenounceOwnership = /*#__PURE__*/ createUseWriteCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"sendCandidateFeedback"`
@@ -4700,7 +4706,7 @@ export const useWriteNounsDataSendCandidateFeedback = /*#__PURE__*/ createUseWri
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'sendCandidateFeedback',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"sendFeedback"`
@@ -4712,7 +4718,7 @@ export const useWriteNounsDataSendFeedback = /*#__PURE__*/ createUseWriteContrac
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'sendFeedback',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setCreateCandidateCost"`
@@ -4724,7 +4730,7 @@ export const useWriteNounsDataSetCreateCandidateCost = /*#__PURE__*/ createUseWr
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setCreateCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setDunaAdmin"`
@@ -4736,7 +4742,7 @@ export const useWriteNounsDataSetDunaAdmin = /*#__PURE__*/ createUseWriteContrac
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setDunaAdmin',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setFeeRecipient"`
@@ -4748,7 +4754,7 @@ export const useWriteNounsDataSetFeeRecipient = /*#__PURE__*/ createUseWriteCont
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setFeeRecipient',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setUpdateCandidateCost"`
@@ -4760,7 +4766,7 @@ export const useWriteNounsDataSetUpdateCandidateCost = /*#__PURE__*/ createUseWr
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setUpdateCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"signalProposalCompliance"`
@@ -4772,7 +4778,7 @@ export const useWriteNounsDataSignalProposalCompliance = /*#__PURE__*/ createUse
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'signalProposalCompliance',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"transferOwnership"`
@@ -4784,7 +4790,7 @@ export const useWriteNounsDataTransferOwnership = /*#__PURE__*/ createUseWriteCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"updateProposalCandidate"`
@@ -4796,7 +4802,7 @@ export const useWriteNounsDataUpdateProposalCandidate = /*#__PURE__*/ createUseW
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'updateProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"upgradeTo"`
@@ -4808,7 +4814,7 @@ export const useWriteNounsDataUpgradeTo = /*#__PURE__*/ createUseWriteContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'upgradeTo',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"upgradeToAndCall"`
@@ -4820,7 +4826,7 @@ export const useWriteNounsDataUpgradeToAndCall = /*#__PURE__*/ createUseWriteCon
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'upgradeToAndCall',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"withdrawETH"`
@@ -4832,7 +4838,7 @@ export const useWriteNounsDataWithdrawEth = /*#__PURE__*/ createUseWriteContract
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'withdrawETH',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__
@@ -4843,7 +4849,7 @@ export const useWriteNounsDataWithdrawEth = /*#__PURE__*/ createUseWriteContract
 export const useSimulateNounsData = /*#__PURE__*/ createUseSimulateContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"addSignature"`
@@ -4855,7 +4861,7 @@ export const useSimulateNounsDataAddSignature = /*#__PURE__*/ createUseSimulateC
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'addSignature',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"cancelProposalCandidate"`
@@ -4867,7 +4873,7 @@ export const useSimulateNounsDataCancelProposalCandidate = /*#__PURE__*/ createU
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'cancelProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"createProposalCandidate"`
@@ -4879,7 +4885,7 @@ export const useSimulateNounsDataCreateProposalCandidate = /*#__PURE__*/ createU
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'createProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"initialize"`
@@ -4891,7 +4897,7 @@ export const useSimulateNounsDataInitialize = /*#__PURE__*/ createUseSimulateCon
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"postDunaAdminMessage"`
@@ -4903,7 +4909,7 @@ export const useSimulateNounsDataPostDunaAdminMessage = /*#__PURE__*/ createUseS
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'postDunaAdminMessage',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"postVoterMessageToDunaAdmin"`
@@ -4916,7 +4922,7 @@ export const useSimulateNounsDataPostVoterMessageToDunaAdmin =
     abi: nounsDataAbi,
     address: nounsDataAddress,
     functionName: 'postVoterMessageToDunaAdmin',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -4928,7 +4934,7 @@ export const useSimulateNounsDataRenounceOwnership = /*#__PURE__*/ createUseSimu
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"sendCandidateFeedback"`
@@ -4940,7 +4946,7 @@ export const useSimulateNounsDataSendCandidateFeedback = /*#__PURE__*/ createUse
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'sendCandidateFeedback',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"sendFeedback"`
@@ -4952,7 +4958,7 @@ export const useSimulateNounsDataSendFeedback = /*#__PURE__*/ createUseSimulateC
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'sendFeedback',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setCreateCandidateCost"`
@@ -4964,7 +4970,7 @@ export const useSimulateNounsDataSetCreateCandidateCost = /*#__PURE__*/ createUs
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setCreateCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setDunaAdmin"`
@@ -4976,7 +4982,7 @@ export const useSimulateNounsDataSetDunaAdmin = /*#__PURE__*/ createUseSimulateC
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setDunaAdmin',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setFeeRecipient"`
@@ -4988,7 +4994,7 @@ export const useSimulateNounsDataSetFeeRecipient = /*#__PURE__*/ createUseSimula
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setFeeRecipient',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setUpdateCandidateCost"`
@@ -5000,7 +5006,7 @@ export const useSimulateNounsDataSetUpdateCandidateCost = /*#__PURE__*/ createUs
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setUpdateCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"signalProposalCompliance"`
@@ -5010,7 +5016,7 @@ export const useSimulateNounsDataSetUpdateCandidateCost = /*#__PURE__*/ createUs
  */
 export const useSimulateNounsDataSignalProposalCompliance = /*#__PURE__*/ createUseSimulateContract(
   { abi: nounsDataAbi, address: nounsDataAddress, functionName: 'signalProposalCompliance' },
-)
+);
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"transferOwnership"`
@@ -5022,7 +5028,7 @@ export const useSimulateNounsDataTransferOwnership = /*#__PURE__*/ createUseSimu
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"updateProposalCandidate"`
@@ -5034,7 +5040,7 @@ export const useSimulateNounsDataUpdateProposalCandidate = /*#__PURE__*/ createU
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'updateProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"upgradeTo"`
@@ -5046,7 +5052,7 @@ export const useSimulateNounsDataUpgradeTo = /*#__PURE__*/ createUseSimulateCont
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'upgradeTo',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"upgradeToAndCall"`
@@ -5058,7 +5064,7 @@ export const useSimulateNounsDataUpgradeToAndCall = /*#__PURE__*/ createUseSimul
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'upgradeToAndCall',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"withdrawETH"`
@@ -5070,7 +5076,7 @@ export const useSimulateNounsDataWithdrawEth = /*#__PURE__*/ createUseSimulateCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'withdrawETH',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__
@@ -5081,7 +5087,7 @@ export const useSimulateNounsDataWithdrawEth = /*#__PURE__*/ createUseSimulateCo
 export const useWatchNounsDataEvent = /*#__PURE__*/ createUseWatchContractEvent({
   abi: nounsDataAbi,
   address: nounsDataAddress,
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"AdminChanged"`
@@ -5093,7 +5099,7 @@ export const useWatchNounsDataAdminChangedEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'AdminChanged',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"BeaconUpgraded"`
@@ -5105,7 +5111,7 @@ export const useWatchNounsDataBeaconUpgradedEvent = /*#__PURE__*/ createUseWatch
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'BeaconUpgraded',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"CandidateFeedbackSent"`
@@ -5118,7 +5124,7 @@ export const useWatchNounsDataCandidateFeedbackSentEvent =
     abi: nounsDataAbi,
     address: nounsDataAddress,
     eventName: 'CandidateFeedbackSent',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"CreateCandidateCostSet"`
@@ -5131,7 +5137,7 @@ export const useWatchNounsDataCreateCandidateCostSetEvent =
     abi: nounsDataAbi,
     address: nounsDataAddress,
     eventName: 'CreateCandidateCostSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"DunaAdminMessagePosted"`
@@ -5144,7 +5150,7 @@ export const useWatchNounsDataDunaAdminMessagePostedEvent =
     abi: nounsDataAbi,
     address: nounsDataAddress,
     eventName: 'DunaAdminMessagePosted',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"DunaAdminSet"`
@@ -5156,7 +5162,7 @@ export const useWatchNounsDataDunaAdminSetEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'DunaAdminSet',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"ETHWithdrawn"`
@@ -5168,7 +5174,7 @@ export const useWatchNounsDataEthWithdrawnEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'ETHWithdrawn',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"FeeRecipientSet"`
@@ -5180,7 +5186,7 @@ export const useWatchNounsDataFeeRecipientSetEvent = /*#__PURE__*/ createUseWatc
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'FeeRecipientSet',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"FeedbackSent"`
@@ -5192,7 +5198,7 @@ export const useWatchNounsDataFeedbackSentEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'FeedbackSent',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"OwnershipTransferred"`
@@ -5202,7 +5208,7 @@ export const useWatchNounsDataFeedbackSentEvent = /*#__PURE__*/ createUseWatchCo
  */
 export const useWatchNounsDataOwnershipTransferredEvent = /*#__PURE__*/ createUseWatchContractEvent(
   { abi: nounsDataAbi, address: nounsDataAddress, eventName: 'OwnershipTransferred' },
-)
+);
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"ProposalCandidateCanceled"`
@@ -5215,7 +5221,7 @@ export const useWatchNounsDataProposalCandidateCanceledEvent =
     abi: nounsDataAbi,
     address: nounsDataAddress,
     eventName: 'ProposalCandidateCanceled',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"ProposalCandidateCreated"`
@@ -5228,7 +5234,7 @@ export const useWatchNounsDataProposalCandidateCreatedEvent =
     abi: nounsDataAbi,
     address: nounsDataAddress,
     eventName: 'ProposalCandidateCreated',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"ProposalCandidateUpdated"`
@@ -5241,7 +5247,7 @@ export const useWatchNounsDataProposalCandidateUpdatedEvent =
     abi: nounsDataAbi,
     address: nounsDataAddress,
     eventName: 'ProposalCandidateUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"ProposalComplianceSignaled"`
@@ -5254,7 +5260,7 @@ export const useWatchNounsDataProposalComplianceSignaledEvent =
     abi: nounsDataAbi,
     address: nounsDataAddress,
     eventName: 'ProposalComplianceSignaled',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"SignatureAdded"`
@@ -5266,7 +5272,7 @@ export const useWatchNounsDataSignatureAddedEvent = /*#__PURE__*/ createUseWatch
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'SignatureAdded',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"UpdateCandidateCostSet"`
@@ -5279,7 +5285,7 @@ export const useWatchNounsDataUpdateCandidateCostSetEvent =
     abi: nounsDataAbi,
     address: nounsDataAddress,
     eventName: 'UpdateCandidateCostSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"Upgraded"`
@@ -5291,7 +5297,7 @@ export const useWatchNounsDataUpgradedEvent = /*#__PURE__*/ createUseWatchContra
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'Upgraded',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"VoterMessageToDunaAdminPosted"`
@@ -5304,7 +5310,7 @@ export const useWatchNounsDataVoterMessageToDunaAdminPostedEvent =
     abi: nounsDataAbi,
     address: nounsDataAddress,
     eventName: 'VoterMessageToDunaAdminPosted',
-  })
+  });
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__
@@ -5315,7 +5321,7 @@ export const useWatchNounsDataVoterMessageToDunaAdminPostedEvent =
 export const useReadNounsDescriptor = /*#__PURE__*/ createUseReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"accessories"`
@@ -5327,7 +5333,7 @@ export const useReadNounsDescriptorAccessories = /*#__PURE__*/ createUseReadCont
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'accessories',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"accessoryCount"`
@@ -5339,7 +5345,7 @@ export const useReadNounsDescriptorAccessoryCount = /*#__PURE__*/ createUseReadC
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'accessoryCount',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"arePartsLocked"`
@@ -5351,7 +5357,7 @@ export const useReadNounsDescriptorArePartsLocked = /*#__PURE__*/ createUseReadC
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'arePartsLocked',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"art"`
@@ -5363,7 +5369,7 @@ export const useReadNounsDescriptorArt = /*#__PURE__*/ createUseReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'art',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"backgroundCount"`
@@ -5375,7 +5381,7 @@ export const useReadNounsDescriptorBackgroundCount = /*#__PURE__*/ createUseRead
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'backgroundCount',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"backgrounds"`
@@ -5387,7 +5393,7 @@ export const useReadNounsDescriptorBackgrounds = /*#__PURE__*/ createUseReadCont
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'backgrounds',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"baseURI"`
@@ -5399,7 +5405,7 @@ export const useReadNounsDescriptorBaseUri = /*#__PURE__*/ createUseReadContract
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'baseURI',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"bodies"`
@@ -5411,7 +5417,7 @@ export const useReadNounsDescriptorBodies = /*#__PURE__*/ createUseReadContract(
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'bodies',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"bodyCount"`
@@ -5423,7 +5429,7 @@ export const useReadNounsDescriptorBodyCount = /*#__PURE__*/ createUseReadContra
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'bodyCount',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"dataURI"`
@@ -5435,7 +5441,7 @@ export const useReadNounsDescriptorDataUri = /*#__PURE__*/ createUseReadContract
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'dataURI',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"generateSVGImage"`
@@ -5447,7 +5453,7 @@ export const useReadNounsDescriptorGenerateSvgImage = /*#__PURE__*/ createUseRea
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'generateSVGImage',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"genericDataURI"`
@@ -5459,7 +5465,7 @@ export const useReadNounsDescriptorGenericDataUri = /*#__PURE__*/ createUseReadC
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'genericDataURI',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"getPartsForSeed"`
@@ -5471,7 +5477,7 @@ export const useReadNounsDescriptorGetPartsForSeed = /*#__PURE__*/ createUseRead
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'getPartsForSeed',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"glasses"`
@@ -5483,7 +5489,7 @@ export const useReadNounsDescriptorGlasses = /*#__PURE__*/ createUseReadContract
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'glasses',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"glassesCount"`
@@ -5495,7 +5501,7 @@ export const useReadNounsDescriptorGlassesCount = /*#__PURE__*/ createUseReadCon
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'glassesCount',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"headCount"`
@@ -5507,7 +5513,7 @@ export const useReadNounsDescriptorHeadCount = /*#__PURE__*/ createUseReadContra
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'headCount',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"heads"`
@@ -5519,7 +5525,7 @@ export const useReadNounsDescriptorHeads = /*#__PURE__*/ createUseReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'heads',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"isDataURIEnabled"`
@@ -5531,7 +5537,7 @@ export const useReadNounsDescriptorIsDataUriEnabled = /*#__PURE__*/ createUseRea
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'isDataURIEnabled',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"owner"`
@@ -5543,7 +5549,7 @@ export const useReadNounsDescriptorOwner = /*#__PURE__*/ createUseReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'owner',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"palettes"`
@@ -5555,7 +5561,7 @@ export const useReadNounsDescriptorPalettes = /*#__PURE__*/ createUseReadContrac
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'palettes',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"renderer"`
@@ -5567,7 +5573,7 @@ export const useReadNounsDescriptorRenderer = /*#__PURE__*/ createUseReadContrac
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'renderer',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"tokenURI"`
@@ -5579,7 +5585,7 @@ export const useReadNounsDescriptorTokenUri = /*#__PURE__*/ createUseReadContrac
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'tokenURI',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__
@@ -5590,7 +5596,7 @@ export const useReadNounsDescriptorTokenUri = /*#__PURE__*/ createUseReadContrac
 export const useWriteNounsDescriptor = /*#__PURE__*/ createUseWriteContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addAccessories"`
@@ -5602,7 +5608,7 @@ export const useWriteNounsDescriptorAddAccessories = /*#__PURE__*/ createUseWrit
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addAccessories',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addAccessoriesFromPointer"`
@@ -5615,7 +5621,7 @@ export const useWriteNounsDescriptorAddAccessoriesFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'addAccessoriesFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBackground"`
@@ -5627,7 +5633,7 @@ export const useWriteNounsDescriptorAddBackground = /*#__PURE__*/ createUseWrite
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addBackground',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBodies"`
@@ -5639,7 +5645,7 @@ export const useWriteNounsDescriptorAddBodies = /*#__PURE__*/ createUseWriteCont
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addBodies',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBodiesFromPointer"`
@@ -5651,7 +5657,7 @@ export const useWriteNounsDescriptorAddBodiesFromPointer = /*#__PURE__*/ createU
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addBodiesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addGlasses"`
@@ -5663,7 +5669,7 @@ export const useWriteNounsDescriptorAddGlasses = /*#__PURE__*/ createUseWriteCon
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addGlasses',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addGlassesFromPointer"`
@@ -5675,7 +5681,7 @@ export const useWriteNounsDescriptorAddGlassesFromPointer = /*#__PURE__*/ create
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addGlassesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addHeads"`
@@ -5687,7 +5693,7 @@ export const useWriteNounsDescriptorAddHeads = /*#__PURE__*/ createUseWriteContr
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addHeads',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addHeadsFromPointer"`
@@ -5699,7 +5705,7 @@ export const useWriteNounsDescriptorAddHeadsFromPointer = /*#__PURE__*/ createUs
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addHeadsFromPointer',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addManyBackgrounds"`
@@ -5711,7 +5717,7 @@ export const useWriteNounsDescriptorAddManyBackgrounds = /*#__PURE__*/ createUse
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addManyBackgrounds',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"lockParts"`
@@ -5723,7 +5729,7 @@ export const useWriteNounsDescriptorLockParts = /*#__PURE__*/ createUseWriteCont
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'lockParts',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -5735,7 +5741,7 @@ export const useWriteNounsDescriptorRenounceOwnership = /*#__PURE__*/ createUseW
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArt"`
@@ -5747,7 +5753,7 @@ export const useWriteNounsDescriptorSetArt = /*#__PURE__*/ createUseWriteContrac
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArt',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArtDescriptor"`
@@ -5759,7 +5765,7 @@ export const useWriteNounsDescriptorSetArtDescriptor = /*#__PURE__*/ createUseWr
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArtDescriptor',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArtInflator"`
@@ -5771,7 +5777,7 @@ export const useWriteNounsDescriptorSetArtInflator = /*#__PURE__*/ createUseWrit
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArtInflator',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setBaseURI"`
@@ -5783,7 +5789,7 @@ export const useWriteNounsDescriptorSetBaseUri = /*#__PURE__*/ createUseWriteCon
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setBaseURI',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setPalette"`
@@ -5795,7 +5801,7 @@ export const useWriteNounsDescriptorSetPalette = /*#__PURE__*/ createUseWriteCon
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setPalette',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setPalettePointer"`
@@ -5807,7 +5813,7 @@ export const useWriteNounsDescriptorSetPalettePointer = /*#__PURE__*/ createUseW
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setPalettePointer',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setRenderer"`
@@ -5819,7 +5825,7 @@ export const useWriteNounsDescriptorSetRenderer = /*#__PURE__*/ createUseWriteCo
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setRenderer',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"toggleDataURIEnabled"`
@@ -5831,7 +5837,7 @@ export const useWriteNounsDescriptorToggleDataUriEnabled = /*#__PURE__*/ createU
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'toggleDataURIEnabled',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"transferOwnership"`
@@ -5843,7 +5849,7 @@ export const useWriteNounsDescriptorTransferOwnership = /*#__PURE__*/ createUseW
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateAccessories"`
@@ -5855,7 +5861,7 @@ export const useWriteNounsDescriptorUpdateAccessories = /*#__PURE__*/ createUseW
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateAccessories',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateAccessoriesFromPointer"`
@@ -5868,7 +5874,7 @@ export const useWriteNounsDescriptorUpdateAccessoriesFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'updateAccessoriesFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateBodies"`
@@ -5880,7 +5886,7 @@ export const useWriteNounsDescriptorUpdateBodies = /*#__PURE__*/ createUseWriteC
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateBodies',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateBodiesFromPointer"`
@@ -5892,7 +5898,7 @@ export const useWriteNounsDescriptorUpdateBodiesFromPointer = /*#__PURE__*/ crea
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateBodiesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateGlasses"`
@@ -5904,7 +5910,7 @@ export const useWriteNounsDescriptorUpdateGlasses = /*#__PURE__*/ createUseWrite
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateGlasses',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateGlassesFromPointer"`
@@ -5918,7 +5924,7 @@ export const useWriteNounsDescriptorUpdateGlassesFromPointer = /*#__PURE__*/ cre
     address: nounsDescriptorAddress,
     functionName: 'updateGlassesFromPointer',
   },
-)
+);
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateHeads"`
@@ -5930,7 +5936,7 @@ export const useWriteNounsDescriptorUpdateHeads = /*#__PURE__*/ createUseWriteCo
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateHeads',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateHeadsFromPointer"`
@@ -5942,7 +5948,7 @@ export const useWriteNounsDescriptorUpdateHeadsFromPointer = /*#__PURE__*/ creat
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateHeadsFromPointer',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__
@@ -5953,7 +5959,7 @@ export const useWriteNounsDescriptorUpdateHeadsFromPointer = /*#__PURE__*/ creat
 export const useSimulateNounsDescriptor = /*#__PURE__*/ createUseSimulateContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addAccessories"`
@@ -5965,7 +5971,7 @@ export const useSimulateNounsDescriptorAddAccessories = /*#__PURE__*/ createUseS
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addAccessories',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addAccessoriesFromPointer"`
@@ -5978,7 +5984,7 @@ export const useSimulateNounsDescriptorAddAccessoriesFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'addAccessoriesFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBackground"`
@@ -5990,7 +5996,7 @@ export const useSimulateNounsDescriptorAddBackground = /*#__PURE__*/ createUseSi
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addBackground',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBodies"`
@@ -6002,7 +6008,7 @@ export const useSimulateNounsDescriptorAddBodies = /*#__PURE__*/ createUseSimula
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addBodies',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBodiesFromPointer"`
@@ -6015,7 +6021,7 @@ export const useSimulateNounsDescriptorAddBodiesFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'addBodiesFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addGlasses"`
@@ -6027,7 +6033,7 @@ export const useSimulateNounsDescriptorAddGlasses = /*#__PURE__*/ createUseSimul
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addGlasses',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addGlassesFromPointer"`
@@ -6040,7 +6046,7 @@ export const useSimulateNounsDescriptorAddGlassesFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'addGlassesFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addHeads"`
@@ -6052,7 +6058,7 @@ export const useSimulateNounsDescriptorAddHeads = /*#__PURE__*/ createUseSimulat
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addHeads',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addHeadsFromPointer"`
@@ -6065,7 +6071,7 @@ export const useSimulateNounsDescriptorAddHeadsFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'addHeadsFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addManyBackgrounds"`
@@ -6075,7 +6081,7 @@ export const useSimulateNounsDescriptorAddHeadsFromPointer =
  */
 export const useSimulateNounsDescriptorAddManyBackgrounds = /*#__PURE__*/ createUseSimulateContract(
   { abi: nounsDescriptorAbi, address: nounsDescriptorAddress, functionName: 'addManyBackgrounds' },
-)
+);
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"lockParts"`
@@ -6087,7 +6093,7 @@ export const useSimulateNounsDescriptorLockParts = /*#__PURE__*/ createUseSimula
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'lockParts',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -6099,7 +6105,7 @@ export const useSimulateNounsDescriptorRenounceOwnership = /*#__PURE__*/ createU
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArt"`
@@ -6111,7 +6117,7 @@ export const useSimulateNounsDescriptorSetArt = /*#__PURE__*/ createUseSimulateC
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArt',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArtDescriptor"`
@@ -6123,7 +6129,7 @@ export const useSimulateNounsDescriptorSetArtDescriptor = /*#__PURE__*/ createUs
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArtDescriptor',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArtInflator"`
@@ -6135,7 +6141,7 @@ export const useSimulateNounsDescriptorSetArtInflator = /*#__PURE__*/ createUseS
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArtInflator',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setBaseURI"`
@@ -6147,7 +6153,7 @@ export const useSimulateNounsDescriptorSetBaseUri = /*#__PURE__*/ createUseSimul
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setBaseURI',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setPalette"`
@@ -6159,7 +6165,7 @@ export const useSimulateNounsDescriptorSetPalette = /*#__PURE__*/ createUseSimul
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setPalette',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setPalettePointer"`
@@ -6171,7 +6177,7 @@ export const useSimulateNounsDescriptorSetPalettePointer = /*#__PURE__*/ createU
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setPalettePointer',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setRenderer"`
@@ -6183,7 +6189,7 @@ export const useSimulateNounsDescriptorSetRenderer = /*#__PURE__*/ createUseSimu
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setRenderer',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"toggleDataURIEnabled"`
@@ -6196,7 +6202,7 @@ export const useSimulateNounsDescriptorToggleDataUriEnabled =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'toggleDataURIEnabled',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"transferOwnership"`
@@ -6208,7 +6214,7 @@ export const useSimulateNounsDescriptorTransferOwnership = /*#__PURE__*/ createU
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateAccessories"`
@@ -6220,7 +6226,7 @@ export const useSimulateNounsDescriptorUpdateAccessories = /*#__PURE__*/ createU
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateAccessories',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateAccessoriesFromPointer"`
@@ -6233,7 +6239,7 @@ export const useSimulateNounsDescriptorUpdateAccessoriesFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'updateAccessoriesFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateBodies"`
@@ -6245,7 +6251,7 @@ export const useSimulateNounsDescriptorUpdateBodies = /*#__PURE__*/ createUseSim
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateBodies',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateBodiesFromPointer"`
@@ -6258,7 +6264,7 @@ export const useSimulateNounsDescriptorUpdateBodiesFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'updateBodiesFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateGlasses"`
@@ -6270,7 +6276,7 @@ export const useSimulateNounsDescriptorUpdateGlasses = /*#__PURE__*/ createUseSi
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateGlasses',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateGlassesFromPointer"`
@@ -6283,7 +6289,7 @@ export const useSimulateNounsDescriptorUpdateGlassesFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'updateGlassesFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateHeads"`
@@ -6295,7 +6301,7 @@ export const useSimulateNounsDescriptorUpdateHeads = /*#__PURE__*/ createUseSimu
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateHeads',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateHeadsFromPointer"`
@@ -6308,7 +6314,7 @@ export const useSimulateNounsDescriptorUpdateHeadsFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'updateHeadsFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__
@@ -6319,7 +6325,7 @@ export const useSimulateNounsDescriptorUpdateHeadsFromPointer =
 export const useWatchNounsDescriptorEvent = /*#__PURE__*/ createUseWatchContractEvent({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"ArtUpdated"`
@@ -6331,7 +6337,7 @@ export const useWatchNounsDescriptorArtUpdatedEvent = /*#__PURE__*/ createUseWat
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   eventName: 'ArtUpdated',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"BaseURIUpdated"`
@@ -6341,7 +6347,7 @@ export const useWatchNounsDescriptorArtUpdatedEvent = /*#__PURE__*/ createUseWat
  */
 export const useWatchNounsDescriptorBaseUriUpdatedEvent = /*#__PURE__*/ createUseWatchContractEvent(
   { abi: nounsDescriptorAbi, address: nounsDescriptorAddress, eventName: 'BaseURIUpdated' },
-)
+);
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"DataURIToggled"`
@@ -6351,7 +6357,7 @@ export const useWatchNounsDescriptorBaseUriUpdatedEvent = /*#__PURE__*/ createUs
  */
 export const useWatchNounsDescriptorDataUriToggledEvent = /*#__PURE__*/ createUseWatchContractEvent(
   { abi: nounsDescriptorAbi, address: nounsDescriptorAddress, eventName: 'DataURIToggled' },
-)
+);
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"OwnershipTransferred"`
@@ -6364,7 +6370,7 @@ export const useWatchNounsDescriptorOwnershipTransferredEvent =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     eventName: 'OwnershipTransferred',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"PartsLocked"`
@@ -6376,7 +6382,7 @@ export const useWatchNounsDescriptorPartsLockedEvent = /*#__PURE__*/ createUseWa
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   eventName: 'PartsLocked',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"RendererUpdated"`
@@ -6389,7 +6395,7 @@ export const useWatchNounsDescriptorRendererUpdatedEvent =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     eventName: 'RendererUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__
@@ -6400,7 +6406,7 @@ export const useWatchNounsDescriptorRendererUpdatedEvent =
 export const useReadNounsGovernor = /*#__PURE__*/ createUseReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MAX_PROPOSAL_THRESHOLD_BPS"`
@@ -6412,7 +6418,7 @@ export const useReadNounsGovernorMaxProposalThresholdBps = /*#__PURE__*/ createU
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MAX_PROPOSAL_THRESHOLD_BPS',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MAX_VOTING_DELAY"`
@@ -6424,7 +6430,7 @@ export const useReadNounsGovernorMaxVotingDelay = /*#__PURE__*/ createUseReadCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MAX_VOTING_DELAY',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MAX_VOTING_PERIOD"`
@@ -6436,7 +6442,7 @@ export const useReadNounsGovernorMaxVotingPeriod = /*#__PURE__*/ createUseReadCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MAX_VOTING_PERIOD',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MIN_PROPOSAL_THRESHOLD_BPS"`
@@ -6448,7 +6454,7 @@ export const useReadNounsGovernorMinProposalThresholdBps = /*#__PURE__*/ createU
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MIN_PROPOSAL_THRESHOLD_BPS',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MIN_VOTING_DELAY"`
@@ -6460,7 +6466,7 @@ export const useReadNounsGovernorMinVotingDelay = /*#__PURE__*/ createUseReadCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MIN_VOTING_DELAY',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MIN_VOTING_PERIOD"`
@@ -6472,7 +6478,7 @@ export const useReadNounsGovernorMinVotingPeriod = /*#__PURE__*/ createUseReadCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MIN_VOTING_PERIOD',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"adjustedTotalSupply"`
@@ -6484,7 +6490,7 @@ export const useReadNounsGovernorAdjustedTotalSupply = /*#__PURE__*/ createUseRe
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'adjustedTotalSupply',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"admin"`
@@ -6496,7 +6502,7 @@ export const useReadNounsGovernorAdmin = /*#__PURE__*/ createUseReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'admin',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"dynamicQuorumVotes"`
@@ -6508,7 +6514,7 @@ export const useReadNounsGovernorDynamicQuorumVotes = /*#__PURE__*/ createUseRea
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'dynamicQuorumVotes',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"erc20TokensToIncludeInFork"`
@@ -6520,7 +6526,7 @@ export const useReadNounsGovernorErc20TokensToIncludeInFork = /*#__PURE__*/ crea
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'erc20TokensToIncludeInFork',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkDAODeployer"`
@@ -6532,7 +6538,7 @@ export const useReadNounsGovernorForkDaoDeployer = /*#__PURE__*/ createUseReadCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkDAODeployer',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkEndTimestamp"`
@@ -6544,7 +6550,7 @@ export const useReadNounsGovernorForkEndTimestamp = /*#__PURE__*/ createUseReadC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkEndTimestamp',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkEscrow"`
@@ -6556,7 +6562,7 @@ export const useReadNounsGovernorForkEscrow = /*#__PURE__*/ createUseReadContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkEscrow',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkPeriod"`
@@ -6568,7 +6574,7 @@ export const useReadNounsGovernorForkPeriod = /*#__PURE__*/ createUseReadContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkPeriod',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkThreshold"`
@@ -6580,7 +6586,7 @@ export const useReadNounsGovernorForkThreshold = /*#__PURE__*/ createUseReadCont
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkThreshold',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkThresholdBPS"`
@@ -6592,7 +6598,7 @@ export const useReadNounsGovernorForkThresholdBps = /*#__PURE__*/ createUseReadC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkThresholdBPS',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"getActions"`
@@ -6604,7 +6610,7 @@ export const useReadNounsGovernorGetActions = /*#__PURE__*/ createUseReadContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'getActions',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"getDynamicQuorumParamsAt"`
@@ -6616,7 +6622,7 @@ export const useReadNounsGovernorGetDynamicQuorumParamsAt = /*#__PURE__*/ create
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'getDynamicQuorumParamsAt',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"getReceipt"`
@@ -6628,7 +6634,7 @@ export const useReadNounsGovernorGetReceipt = /*#__PURE__*/ createUseReadContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'getReceipt',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"lastMinuteWindowInBlocks"`
@@ -6640,7 +6646,7 @@ export const useReadNounsGovernorLastMinuteWindowInBlocks = /*#__PURE__*/ create
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'lastMinuteWindowInBlocks',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"latestProposalIds"`
@@ -6652,7 +6658,7 @@ export const useReadNounsGovernorLatestProposalIds = /*#__PURE__*/ createUseRead
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'latestProposalIds',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"maxQuorumVotes"`
@@ -6664,7 +6670,7 @@ export const useReadNounsGovernorMaxQuorumVotes = /*#__PURE__*/ createUseReadCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'maxQuorumVotes',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"minQuorumVotes"`
@@ -6676,7 +6682,7 @@ export const useReadNounsGovernorMinQuorumVotes = /*#__PURE__*/ createUseReadCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'minQuorumVotes',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"nouns"`
@@ -6688,7 +6694,7 @@ export const useReadNounsGovernorNouns = /*#__PURE__*/ createUseReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'nouns',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"numTokensInForkEscrow"`
@@ -6700,7 +6706,7 @@ export const useReadNounsGovernorNumTokensInForkEscrow = /*#__PURE__*/ createUse
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'numTokensInForkEscrow',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"objectionPeriodDurationInBlocks"`
@@ -6713,7 +6719,7 @@ export const useReadNounsGovernorObjectionPeriodDurationInBlocks =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'objectionPeriodDurationInBlocks',
-  })
+  });
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"pendingVetoer"`
@@ -6725,7 +6731,7 @@ export const useReadNounsGovernorPendingVetoer = /*#__PURE__*/ createUseReadCont
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'pendingVetoer',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalCount"`
@@ -6737,7 +6743,7 @@ export const useReadNounsGovernorProposalCount = /*#__PURE__*/ createUseReadCont
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalCount',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalDataForRewards"`
@@ -6749,7 +6755,7 @@ export const useReadNounsGovernorProposalDataForRewards = /*#__PURE__*/ createUs
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalDataForRewards',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalMaxOperations"`
@@ -6761,7 +6767,7 @@ export const useReadNounsGovernorProposalMaxOperations = /*#__PURE__*/ createUse
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalMaxOperations',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalThreshold"`
@@ -6773,7 +6779,7 @@ export const useReadNounsGovernorProposalThreshold = /*#__PURE__*/ createUseRead
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalThreshold',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalThresholdBPS"`
@@ -6785,7 +6791,7 @@ export const useReadNounsGovernorProposalThresholdBps = /*#__PURE__*/ createUseR
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalThresholdBPS',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalUpdatablePeriodInBlocks"`
@@ -6798,7 +6804,7 @@ export const useReadNounsGovernorProposalUpdatablePeriodInBlocks =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'proposalUpdatablePeriodInBlocks',
-  })
+  });
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposals"`
@@ -6810,7 +6816,7 @@ export const useReadNounsGovernorProposals = /*#__PURE__*/ createUseReadContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposals',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalsV3"`
@@ -6822,7 +6828,7 @@ export const useReadNounsGovernorProposalsV3 = /*#__PURE__*/ createUseReadContra
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalsV3',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"quorumParamsCheckpoints"`
@@ -6834,7 +6840,7 @@ export const useReadNounsGovernorQuorumParamsCheckpoints = /*#__PURE__*/ createU
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'quorumParamsCheckpoints',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"quorumVotes"`
@@ -6846,7 +6852,7 @@ export const useReadNounsGovernorQuorumVotes = /*#__PURE__*/ createUseReadContra
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'quorumVotes',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"quorumVotesBPS"`
@@ -6858,7 +6864,7 @@ export const useReadNounsGovernorQuorumVotesBps = /*#__PURE__*/ createUseReadCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'quorumVotesBPS',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"state"`
@@ -6870,7 +6876,7 @@ export const useReadNounsGovernorState = /*#__PURE__*/ createUseReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'state',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"timelock"`
@@ -6882,7 +6888,7 @@ export const useReadNounsGovernorTimelock = /*#__PURE__*/ createUseReadContract(
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'timelock',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"timelockV1"`
@@ -6894,7 +6900,7 @@ export const useReadNounsGovernorTimelockV1 = /*#__PURE__*/ createUseReadContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'timelockV1',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"vetoer"`
@@ -6906,7 +6912,7 @@ export const useReadNounsGovernorVetoer = /*#__PURE__*/ createUseReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'vetoer',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"voteSnapshotBlockSwitchProposalId"`
@@ -6919,7 +6925,7 @@ export const useReadNounsGovernorVoteSnapshotBlockSwitchProposalId =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'voteSnapshotBlockSwitchProposalId',
-  })
+  });
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"votingDelay"`
@@ -6931,7 +6937,7 @@ export const useReadNounsGovernorVotingDelay = /*#__PURE__*/ createUseReadContra
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'votingDelay',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"votingPeriod"`
@@ -6943,7 +6949,7 @@ export const useReadNounsGovernorVotingPeriod = /*#__PURE__*/ createUseReadContr
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'votingPeriod',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__
@@ -6954,7 +6960,7 @@ export const useReadNounsGovernorVotingPeriod = /*#__PURE__*/ createUseReadContr
 export const useWriteNounsGovernor = /*#__PURE__*/ createUseWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"cancel"`
@@ -6966,7 +6972,7 @@ export const useWriteNounsGovernorCancel = /*#__PURE__*/ createUseWriteContract(
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'cancel',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"cancelSig"`
@@ -6978,7 +6984,7 @@ export const useWriteNounsGovernorCancelSig = /*#__PURE__*/ createUseWriteContra
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'cancelSig',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castRefundableVote"`
@@ -6990,7 +6996,7 @@ export const useWriteNounsGovernorCastRefundableVote = /*#__PURE__*/ createUseWr
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castRefundableVote',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castRefundableVoteWithReason"`
@@ -7003,7 +7009,7 @@ export const useWriteNounsGovernorCastRefundableVoteWithReason =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'castRefundableVoteWithReason',
-  })
+  });
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVote"`
@@ -7015,7 +7021,7 @@ export const useWriteNounsGovernorCastVote = /*#__PURE__*/ createUseWriteContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVote',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVoteBySig"`
@@ -7027,7 +7033,7 @@ export const useWriteNounsGovernorCastVoteBySig = /*#__PURE__*/ createUseWriteCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVoteBySig',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVoteWithReason"`
@@ -7039,7 +7045,7 @@ export const useWriteNounsGovernorCastVoteWithReason = /*#__PURE__*/ createUseWr
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVoteWithReason',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"escrowToFork"`
@@ -7051,7 +7057,7 @@ export const useWriteNounsGovernorEscrowToFork = /*#__PURE__*/ createUseWriteCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'escrowToFork',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"execute"`
@@ -7063,7 +7069,7 @@ export const useWriteNounsGovernorExecute = /*#__PURE__*/ createUseWriteContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'execute',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"executeFork"`
@@ -7075,7 +7081,7 @@ export const useWriteNounsGovernorExecuteFork = /*#__PURE__*/ createUseWriteCont
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'executeFork',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"initialize"`
@@ -7087,7 +7093,7 @@ export const useWriteNounsGovernorInitialize = /*#__PURE__*/ createUseWriteContr
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"joinFork"`
@@ -7099,7 +7105,7 @@ export const useWriteNounsGovernorJoinFork = /*#__PURE__*/ createUseWriteContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'joinFork',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"propose"`
@@ -7111,7 +7117,7 @@ export const useWriteNounsGovernorPropose = /*#__PURE__*/ createUseWriteContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'propose',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposeBySigs"`
@@ -7123,7 +7129,7 @@ export const useWriteNounsGovernorProposeBySigs = /*#__PURE__*/ createUseWriteCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposeBySigs',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposeOnTimelockV1"`
@@ -7135,7 +7141,7 @@ export const useWriteNounsGovernorProposeOnTimelockV1 = /*#__PURE__*/ createUseW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposeOnTimelockV1',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"queue"`
@@ -7147,7 +7153,7 @@ export const useWriteNounsGovernorQueue = /*#__PURE__*/ createUseWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'queue',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposal"`
@@ -7159,7 +7165,7 @@ export const useWriteNounsGovernorUpdateProposal = /*#__PURE__*/ createUseWriteC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'updateProposal',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalBySigs"`
@@ -7171,7 +7177,7 @@ export const useWriteNounsGovernorUpdateProposalBySigs = /*#__PURE__*/ createUse
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'updateProposalBySigs',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalDescription"`
@@ -7183,7 +7189,7 @@ export const useWriteNounsGovernorUpdateProposalDescription = /*#__PURE__*/ crea
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'updateProposalDescription',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalTransactions"`
@@ -7197,7 +7203,7 @@ export const useWriteNounsGovernorUpdateProposalTransactions = /*#__PURE__*/ cre
     address: nounsGovernorAddress,
     functionName: 'updateProposalTransactions',
   },
-)
+);
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"veto"`
@@ -7209,7 +7215,7 @@ export const useWriteNounsGovernorVeto = /*#__PURE__*/ createUseWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'veto',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawDAONounsFromEscrowIncreasingTotalSupply"`
@@ -7222,7 +7228,7 @@ export const useWriteNounsGovernorWithdrawDaoNounsFromEscrowIncreasingTotalSuppl
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'withdrawDAONounsFromEscrowIncreasingTotalSupply',
-  })
+  });
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawDAONounsFromEscrowToTreasury"`
@@ -7235,7 +7241,7 @@ export const useWriteNounsGovernorWithdrawDaoNounsFromEscrowToTreasury =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'withdrawDAONounsFromEscrowToTreasury',
-  })
+  });
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawFromForkEscrow"`
@@ -7247,7 +7253,7 @@ export const useWriteNounsGovernorWithdrawFromForkEscrow = /*#__PURE__*/ createU
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'withdrawFromForkEscrow',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__
@@ -7258,7 +7264,7 @@ export const useWriteNounsGovernorWithdrawFromForkEscrow = /*#__PURE__*/ createU
 export const useSimulateNounsGovernor = /*#__PURE__*/ createUseSimulateContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"cancel"`
@@ -7270,7 +7276,7 @@ export const useSimulateNounsGovernorCancel = /*#__PURE__*/ createUseSimulateCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'cancel',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"cancelSig"`
@@ -7282,7 +7288,7 @@ export const useSimulateNounsGovernorCancelSig = /*#__PURE__*/ createUseSimulate
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'cancelSig',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castRefundableVote"`
@@ -7294,7 +7300,7 @@ export const useSimulateNounsGovernorCastRefundableVote = /*#__PURE__*/ createUs
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castRefundableVote',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castRefundableVoteWithReason"`
@@ -7307,7 +7313,7 @@ export const useSimulateNounsGovernorCastRefundableVoteWithReason =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'castRefundableVoteWithReason',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVote"`
@@ -7319,7 +7325,7 @@ export const useSimulateNounsGovernorCastVote = /*#__PURE__*/ createUseSimulateC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVote',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVoteBySig"`
@@ -7331,7 +7337,7 @@ export const useSimulateNounsGovernorCastVoteBySig = /*#__PURE__*/ createUseSimu
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVoteBySig',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVoteWithReason"`
@@ -7343,7 +7349,7 @@ export const useSimulateNounsGovernorCastVoteWithReason = /*#__PURE__*/ createUs
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVoteWithReason',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"escrowToFork"`
@@ -7355,7 +7361,7 @@ export const useSimulateNounsGovernorEscrowToFork = /*#__PURE__*/ createUseSimul
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'escrowToFork',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"execute"`
@@ -7367,7 +7373,7 @@ export const useSimulateNounsGovernorExecute = /*#__PURE__*/ createUseSimulateCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'execute',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"executeFork"`
@@ -7379,7 +7385,7 @@ export const useSimulateNounsGovernorExecuteFork = /*#__PURE__*/ createUseSimula
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'executeFork',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"initialize"`
@@ -7391,7 +7397,7 @@ export const useSimulateNounsGovernorInitialize = /*#__PURE__*/ createUseSimulat
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"joinFork"`
@@ -7403,7 +7409,7 @@ export const useSimulateNounsGovernorJoinFork = /*#__PURE__*/ createUseSimulateC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'joinFork',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"propose"`
@@ -7415,7 +7421,7 @@ export const useSimulateNounsGovernorPropose = /*#__PURE__*/ createUseSimulateCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'propose',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposeBySigs"`
@@ -7427,7 +7433,7 @@ export const useSimulateNounsGovernorProposeBySigs = /*#__PURE__*/ createUseSimu
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposeBySigs',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposeOnTimelockV1"`
@@ -7439,7 +7445,7 @@ export const useSimulateNounsGovernorProposeOnTimelockV1 = /*#__PURE__*/ createU
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposeOnTimelockV1',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"queue"`
@@ -7451,7 +7457,7 @@ export const useSimulateNounsGovernorQueue = /*#__PURE__*/ createUseSimulateCont
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'queue',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposal"`
@@ -7463,7 +7469,7 @@ export const useSimulateNounsGovernorUpdateProposal = /*#__PURE__*/ createUseSim
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'updateProposal',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalBySigs"`
@@ -7473,7 +7479,7 @@ export const useSimulateNounsGovernorUpdateProposal = /*#__PURE__*/ createUseSim
  */
 export const useSimulateNounsGovernorUpdateProposalBySigs = /*#__PURE__*/ createUseSimulateContract(
   { abi: nounsGovernorAbi, address: nounsGovernorAddress, functionName: 'updateProposalBySigs' },
-)
+);
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalDescription"`
@@ -7486,7 +7492,7 @@ export const useSimulateNounsGovernorUpdateProposalDescription =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'updateProposalDescription',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalTransactions"`
@@ -7499,7 +7505,7 @@ export const useSimulateNounsGovernorUpdateProposalTransactions =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'updateProposalTransactions',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"veto"`
@@ -7511,7 +7517,7 @@ export const useSimulateNounsGovernorVeto = /*#__PURE__*/ createUseSimulateContr
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'veto',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawDAONounsFromEscrowIncreasingTotalSupply"`
@@ -7524,7 +7530,7 @@ export const useSimulateNounsGovernorWithdrawDaoNounsFromEscrowIncreasingTotalSu
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'withdrawDAONounsFromEscrowIncreasingTotalSupply',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawDAONounsFromEscrowToTreasury"`
@@ -7537,7 +7543,7 @@ export const useSimulateNounsGovernorWithdrawDaoNounsFromEscrowToTreasury =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'withdrawDAONounsFromEscrowToTreasury',
-  })
+  });
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawFromForkEscrow"`
@@ -7550,7 +7556,7 @@ export const useSimulateNounsGovernorWithdrawFromForkEscrow =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'withdrawFromForkEscrow',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__
@@ -7561,7 +7567,7 @@ export const useSimulateNounsGovernorWithdrawFromForkEscrow =
 export const useWatchNounsGovernorEvent = /*#__PURE__*/ createUseWatchContractEvent({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"DAONounsSupplyIncreasedFromEscrow"`
@@ -7574,7 +7580,7 @@ export const useWatchNounsGovernorDaoNounsSupplyIncreasedFromEscrowEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'DAONounsSupplyIncreasedFromEscrow',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"DAOWithdrawNounsFromEscrow"`
@@ -7587,7 +7593,7 @@ export const useWatchNounsGovernorDaoWithdrawNounsFromEscrowEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'DAOWithdrawNounsFromEscrow',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ERC20TokensToIncludeInForkSet"`
@@ -7600,7 +7606,7 @@ export const useWatchNounsGovernorErc20TokensToIncludeInForkSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ERC20TokensToIncludeInForkSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"EscrowedToFork"`
@@ -7612,7 +7618,7 @@ export const useWatchNounsGovernorEscrowedToForkEvent = /*#__PURE__*/ createUseW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'EscrowedToFork',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ExecuteFork"`
@@ -7624,7 +7630,7 @@ export const useWatchNounsGovernorExecuteForkEvent = /*#__PURE__*/ createUseWatc
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ExecuteFork',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ForkDAODeployerSet"`
@@ -7637,7 +7643,7 @@ export const useWatchNounsGovernorForkDaoDeployerSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ForkDAODeployerSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ForkPeriodSet"`
@@ -7649,7 +7655,7 @@ export const useWatchNounsGovernorForkPeriodSetEvent = /*#__PURE__*/ createUseWa
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ForkPeriodSet',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ForkThresholdSet"`
@@ -7659,7 +7665,7 @@ export const useWatchNounsGovernorForkPeriodSetEvent = /*#__PURE__*/ createUseWa
  */
 export const useWatchNounsGovernorForkThresholdSetEvent = /*#__PURE__*/ createUseWatchContractEvent(
   { abi: nounsGovernorAbi, address: nounsGovernorAddress, eventName: 'ForkThresholdSet' },
-)
+);
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"JoinFork"`
@@ -7671,7 +7677,7 @@ export const useWatchNounsGovernorJoinForkEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'JoinFork',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"LastMinuteWindowSet"`
@@ -7684,7 +7690,7 @@ export const useWatchNounsGovernorLastMinuteWindowSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'LastMinuteWindowSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"MaxQuorumVotesBPSSet"`
@@ -7697,7 +7703,7 @@ export const useWatchNounsGovernorMaxQuorumVotesBpsSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'MaxQuorumVotesBPSSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"MinQuorumVotesBPSSet"`
@@ -7710,7 +7716,7 @@ export const useWatchNounsGovernorMinQuorumVotesBpsSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'MinQuorumVotesBPSSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"NewAdmin"`
@@ -7722,7 +7728,7 @@ export const useWatchNounsGovernorNewAdminEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'NewAdmin',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"NewPendingAdmin"`
@@ -7734,7 +7740,7 @@ export const useWatchNounsGovernorNewPendingAdminEvent = /*#__PURE__*/ createUse
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'NewPendingAdmin',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"NewPendingVetoer"`
@@ -7744,7 +7750,7 @@ export const useWatchNounsGovernorNewPendingAdminEvent = /*#__PURE__*/ createUse
  */
 export const useWatchNounsGovernorNewPendingVetoerEvent = /*#__PURE__*/ createUseWatchContractEvent(
   { abi: nounsGovernorAbi, address: nounsGovernorAddress, eventName: 'NewPendingVetoer' },
-)
+);
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"NewVetoer"`
@@ -7756,7 +7762,7 @@ export const useWatchNounsGovernorNewVetoerEvent = /*#__PURE__*/ createUseWatchC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'NewVetoer',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ObjectionPeriodDurationSet"`
@@ -7769,7 +7775,7 @@ export const useWatchNounsGovernorObjectionPeriodDurationSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ObjectionPeriodDurationSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalCanceled"`
@@ -7779,7 +7785,7 @@ export const useWatchNounsGovernorObjectionPeriodDurationSetEvent =
  */
 export const useWatchNounsGovernorProposalCanceledEvent = /*#__PURE__*/ createUseWatchContractEvent(
   { abi: nounsGovernorAbi, address: nounsGovernorAddress, eventName: 'ProposalCanceled' },
-)
+);
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalCreated"`
@@ -7791,7 +7797,7 @@ export const useWatchNounsGovernorProposalCreatedEvent = /*#__PURE__*/ createUse
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ProposalCreated',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalCreatedOnTimelockV1"`
@@ -7804,7 +7810,7 @@ export const useWatchNounsGovernorProposalCreatedOnTimelockV1Event =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalCreatedOnTimelockV1',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalCreatedWithRequirements"`
@@ -7817,7 +7823,7 @@ export const useWatchNounsGovernorProposalCreatedWithRequirementsEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalCreatedWithRequirements',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalDescriptionUpdated"`
@@ -7830,7 +7836,7 @@ export const useWatchNounsGovernorProposalDescriptionUpdatedEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalDescriptionUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalExecuted"`
@@ -7840,7 +7846,7 @@ export const useWatchNounsGovernorProposalDescriptionUpdatedEvent =
  */
 export const useWatchNounsGovernorProposalExecutedEvent = /*#__PURE__*/ createUseWatchContractEvent(
   { abi: nounsGovernorAbi, address: nounsGovernorAddress, eventName: 'ProposalExecuted' },
-)
+);
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalObjectionPeriodSet"`
@@ -7853,7 +7859,7 @@ export const useWatchNounsGovernorProposalObjectionPeriodSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalObjectionPeriodSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalQueued"`
@@ -7865,7 +7871,7 @@ export const useWatchNounsGovernorProposalQueuedEvent = /*#__PURE__*/ createUseW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ProposalQueued',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalThresholdBPSSet"`
@@ -7878,7 +7884,7 @@ export const useWatchNounsGovernorProposalThresholdBpsSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalThresholdBPSSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalTransactionsUpdated"`
@@ -7891,7 +7897,7 @@ export const useWatchNounsGovernorProposalTransactionsUpdatedEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalTransactionsUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalUpdatablePeriodSet"`
@@ -7904,7 +7910,7 @@ export const useWatchNounsGovernorProposalUpdatablePeriodSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalUpdatablePeriodSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalUpdated"`
@@ -7916,7 +7922,7 @@ export const useWatchNounsGovernorProposalUpdatedEvent = /*#__PURE__*/ createUse
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ProposalUpdated',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalVetoed"`
@@ -7928,7 +7934,7 @@ export const useWatchNounsGovernorProposalVetoedEvent = /*#__PURE__*/ createUseW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ProposalVetoed',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"QuorumCoefficientSet"`
@@ -7941,7 +7947,7 @@ export const useWatchNounsGovernorQuorumCoefficientSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'QuorumCoefficientSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"QuorumVotesBPSSet"`
@@ -7954,7 +7960,7 @@ export const useWatchNounsGovernorQuorumVotesBpsSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'QuorumVotesBPSSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"RefundableVote"`
@@ -7966,7 +7972,7 @@ export const useWatchNounsGovernorRefundableVoteEvent = /*#__PURE__*/ createUseW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'RefundableVote',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"SignatureCancelled"`
@@ -7979,7 +7985,7 @@ export const useWatchNounsGovernorSignatureCancelledEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'SignatureCancelled',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"TimelocksAndAdminSet"`
@@ -7992,7 +7998,7 @@ export const useWatchNounsGovernorTimelocksAndAdminSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'TimelocksAndAdminSet',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"VoteCast"`
@@ -8004,7 +8010,7 @@ export const useWatchNounsGovernorVoteCastEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'VoteCast',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"VoteCastWithClientId"`
@@ -8017,7 +8023,7 @@ export const useWatchNounsGovernorVoteCastWithClientIdEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'VoteCastWithClientId',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"VotingDelaySet"`
@@ -8029,7 +8035,7 @@ export const useWatchNounsGovernorVotingDelaySetEvent = /*#__PURE__*/ createUseW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'VotingDelaySet',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"VotingPeriodSet"`
@@ -8041,7 +8047,7 @@ export const useWatchNounsGovernorVotingPeriodSetEvent = /*#__PURE__*/ createUse
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'VotingPeriodSet',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"Withdraw"`
@@ -8053,7 +8059,7 @@ export const useWatchNounsGovernorWithdrawEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'Withdraw',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"WithdrawFromForkEscrow"`
@@ -8066,7 +8072,7 @@ export const useWatchNounsGovernorWithdrawFromForkEscrowEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'WithdrawFromForkEscrow',
-  })
+  });
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__
@@ -8077,7 +8083,7 @@ export const useWatchNounsGovernorWithdrawFromForkEscrowEvent =
 export const useReadNounsToken = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"DELEGATION_TYPEHASH"`
@@ -8089,7 +8095,7 @@ export const useReadNounsTokenDelegationTypehash = /*#__PURE__*/ createUseReadCo
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'DELEGATION_TYPEHASH',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"DOMAIN_TYPEHASH"`
@@ -8101,7 +8107,7 @@ export const useReadNounsTokenDomainTypehash = /*#__PURE__*/ createUseReadContra
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'DOMAIN_TYPEHASH',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"balanceOf"`
@@ -8113,7 +8119,7 @@ export const useReadNounsTokenBalanceOf = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'balanceOf',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"checkpoints"`
@@ -8125,7 +8131,7 @@ export const useReadNounsTokenCheckpoints = /*#__PURE__*/ createUseReadContract(
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'checkpoints',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"contractURI"`
@@ -8137,7 +8143,7 @@ export const useReadNounsTokenContractUri = /*#__PURE__*/ createUseReadContract(
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'contractURI',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"dataURI"`
@@ -8149,7 +8155,7 @@ export const useReadNounsTokenDataUri = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'dataURI',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"decimals"`
@@ -8161,7 +8167,7 @@ export const useReadNounsTokenDecimals = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'decimals',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"delegates"`
@@ -8173,7 +8179,7 @@ export const useReadNounsTokenDelegates = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'delegates',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"descriptor"`
@@ -8185,7 +8191,7 @@ export const useReadNounsTokenDescriptor = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'descriptor',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"getApproved"`
@@ -8197,7 +8203,7 @@ export const useReadNounsTokenGetApproved = /*#__PURE__*/ createUseReadContract(
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'getApproved',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"getCurrentVotes"`
@@ -8209,7 +8215,7 @@ export const useReadNounsTokenGetCurrentVotes = /*#__PURE__*/ createUseReadContr
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'getCurrentVotes',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"getPriorVotes"`
@@ -8221,7 +8227,7 @@ export const useReadNounsTokenGetPriorVotes = /*#__PURE__*/ createUseReadContrac
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'getPriorVotes',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"isApprovedForAll"`
@@ -8233,7 +8239,7 @@ export const useReadNounsTokenIsApprovedForAll = /*#__PURE__*/ createUseReadCont
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'isApprovedForAll',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"isDescriptorLocked"`
@@ -8245,7 +8251,7 @@ export const useReadNounsTokenIsDescriptorLocked = /*#__PURE__*/ createUseReadCo
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'isDescriptorLocked',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"isMinterLocked"`
@@ -8257,7 +8263,7 @@ export const useReadNounsTokenIsMinterLocked = /*#__PURE__*/ createUseReadContra
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'isMinterLocked',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"isSeederLocked"`
@@ -8269,7 +8275,7 @@ export const useReadNounsTokenIsSeederLocked = /*#__PURE__*/ createUseReadContra
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'isSeederLocked',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"minter"`
@@ -8281,7 +8287,7 @@ export const useReadNounsTokenMinter = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'minter',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"name"`
@@ -8293,7 +8299,7 @@ export const useReadNounsTokenName = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'name',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"nonces"`
@@ -8305,7 +8311,7 @@ export const useReadNounsTokenNonces = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'nonces',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"noundersDAO"`
@@ -8317,7 +8323,7 @@ export const useReadNounsTokenNoundersDao = /*#__PURE__*/ createUseReadContract(
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'noundersDAO',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"numCheckpoints"`
@@ -8329,7 +8335,7 @@ export const useReadNounsTokenNumCheckpoints = /*#__PURE__*/ createUseReadContra
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'numCheckpoints',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"owner"`
@@ -8341,7 +8347,7 @@ export const useReadNounsTokenOwner = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'owner',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"ownerOf"`
@@ -8353,7 +8359,7 @@ export const useReadNounsTokenOwnerOf = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'ownerOf',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"proxyRegistry"`
@@ -8365,7 +8371,7 @@ export const useReadNounsTokenProxyRegistry = /*#__PURE__*/ createUseReadContrac
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'proxyRegistry',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"seeder"`
@@ -8377,7 +8383,7 @@ export const useReadNounsTokenSeeder = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'seeder',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"seeds"`
@@ -8389,7 +8395,7 @@ export const useReadNounsTokenSeeds = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'seeds',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"supportsInterface"`
@@ -8401,7 +8407,7 @@ export const useReadNounsTokenSupportsInterface = /*#__PURE__*/ createUseReadCon
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'supportsInterface',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"symbol"`
@@ -8413,7 +8419,7 @@ export const useReadNounsTokenSymbol = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'symbol',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"tokenByIndex"`
@@ -8425,7 +8431,7 @@ export const useReadNounsTokenTokenByIndex = /*#__PURE__*/ createUseReadContract
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'tokenByIndex',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"tokenOfOwnerByIndex"`
@@ -8437,7 +8443,7 @@ export const useReadNounsTokenTokenOfOwnerByIndex = /*#__PURE__*/ createUseReadC
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'tokenOfOwnerByIndex',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"tokenURI"`
@@ -8449,7 +8455,7 @@ export const useReadNounsTokenTokenUri = /*#__PURE__*/ createUseReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'tokenURI',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"totalSupply"`
@@ -8461,7 +8467,7 @@ export const useReadNounsTokenTotalSupply = /*#__PURE__*/ createUseReadContract(
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'totalSupply',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"votesToDelegate"`
@@ -8473,7 +8479,7 @@ export const useReadNounsTokenVotesToDelegate = /*#__PURE__*/ createUseReadContr
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'votesToDelegate',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__
@@ -8484,7 +8490,7 @@ export const useReadNounsTokenVotesToDelegate = /*#__PURE__*/ createUseReadContr
 export const useWriteNounsToken = /*#__PURE__*/ createUseWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"approve"`
@@ -8496,7 +8502,7 @@ export const useWriteNounsTokenApprove = /*#__PURE__*/ createUseWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'approve',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"burn"`
@@ -8508,7 +8514,7 @@ export const useWriteNounsTokenBurn = /*#__PURE__*/ createUseWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'burn',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"delegate"`
@@ -8520,7 +8526,7 @@ export const useWriteNounsTokenDelegate = /*#__PURE__*/ createUseWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'delegate',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"delegateBySig"`
@@ -8532,7 +8538,7 @@ export const useWriteNounsTokenDelegateBySig = /*#__PURE__*/ createUseWriteContr
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'delegateBySig',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockDescriptor"`
@@ -8544,7 +8550,7 @@ export const useWriteNounsTokenLockDescriptor = /*#__PURE__*/ createUseWriteCont
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockDescriptor',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockMinter"`
@@ -8556,7 +8562,7 @@ export const useWriteNounsTokenLockMinter = /*#__PURE__*/ createUseWriteContract
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockMinter',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockSeeder"`
@@ -8568,7 +8574,7 @@ export const useWriteNounsTokenLockSeeder = /*#__PURE__*/ createUseWriteContract
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockSeeder',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"mint"`
@@ -8580,7 +8586,7 @@ export const useWriteNounsTokenMint = /*#__PURE__*/ createUseWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'mint',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -8592,7 +8598,7 @@ export const useWriteNounsTokenRenounceOwnership = /*#__PURE__*/ createUseWriteC
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"safeTransferFrom"`
@@ -8604,7 +8610,7 @@ export const useWriteNounsTokenSafeTransferFrom = /*#__PURE__*/ createUseWriteCo
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'safeTransferFrom',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setApprovalForAll"`
@@ -8616,7 +8622,7 @@ export const useWriteNounsTokenSetApprovalForAll = /*#__PURE__*/ createUseWriteC
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setApprovalForAll',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setContractURIHash"`
@@ -8628,7 +8634,7 @@ export const useWriteNounsTokenSetContractUriHash = /*#__PURE__*/ createUseWrite
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setContractURIHash',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setDescriptor"`
@@ -8640,7 +8646,7 @@ export const useWriteNounsTokenSetDescriptor = /*#__PURE__*/ createUseWriteContr
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setDescriptor',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setMinter"`
@@ -8652,7 +8658,7 @@ export const useWriteNounsTokenSetMinter = /*#__PURE__*/ createUseWriteContract(
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setMinter',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setNoundersDAO"`
@@ -8664,7 +8670,7 @@ export const useWriteNounsTokenSetNoundersDao = /*#__PURE__*/ createUseWriteCont
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setNoundersDAO',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setSeeder"`
@@ -8676,7 +8682,7 @@ export const useWriteNounsTokenSetSeeder = /*#__PURE__*/ createUseWriteContract(
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setSeeder',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"transferFrom"`
@@ -8688,7 +8694,7 @@ export const useWriteNounsTokenTransferFrom = /*#__PURE__*/ createUseWriteContra
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'transferFrom',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"transferOwnership"`
@@ -8700,7 +8706,7 @@ export const useWriteNounsTokenTransferOwnership = /*#__PURE__*/ createUseWriteC
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__
@@ -8711,7 +8717,7 @@ export const useWriteNounsTokenTransferOwnership = /*#__PURE__*/ createUseWriteC
 export const useSimulateNounsToken = /*#__PURE__*/ createUseSimulateContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"approve"`
@@ -8723,7 +8729,7 @@ export const useSimulateNounsTokenApprove = /*#__PURE__*/ createUseSimulateContr
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'approve',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"burn"`
@@ -8735,7 +8741,7 @@ export const useSimulateNounsTokenBurn = /*#__PURE__*/ createUseSimulateContract
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'burn',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"delegate"`
@@ -8747,7 +8753,7 @@ export const useSimulateNounsTokenDelegate = /*#__PURE__*/ createUseSimulateCont
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'delegate',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"delegateBySig"`
@@ -8759,7 +8765,7 @@ export const useSimulateNounsTokenDelegateBySig = /*#__PURE__*/ createUseSimulat
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'delegateBySig',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockDescriptor"`
@@ -8771,7 +8777,7 @@ export const useSimulateNounsTokenLockDescriptor = /*#__PURE__*/ createUseSimula
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockDescriptor',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockMinter"`
@@ -8783,7 +8789,7 @@ export const useSimulateNounsTokenLockMinter = /*#__PURE__*/ createUseSimulateCo
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockMinter',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockSeeder"`
@@ -8795,7 +8801,7 @@ export const useSimulateNounsTokenLockSeeder = /*#__PURE__*/ createUseSimulateCo
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockSeeder',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"mint"`
@@ -8807,7 +8813,7 @@ export const useSimulateNounsTokenMint = /*#__PURE__*/ createUseSimulateContract
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'mint',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -8819,7 +8825,7 @@ export const useSimulateNounsTokenRenounceOwnership = /*#__PURE__*/ createUseSim
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"safeTransferFrom"`
@@ -8831,7 +8837,7 @@ export const useSimulateNounsTokenSafeTransferFrom = /*#__PURE__*/ createUseSimu
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'safeTransferFrom',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setApprovalForAll"`
@@ -8843,7 +8849,7 @@ export const useSimulateNounsTokenSetApprovalForAll = /*#__PURE__*/ createUseSim
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setApprovalForAll',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setContractURIHash"`
@@ -8855,7 +8861,7 @@ export const useSimulateNounsTokenSetContractUriHash = /*#__PURE__*/ createUseSi
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setContractURIHash',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setDescriptor"`
@@ -8867,7 +8873,7 @@ export const useSimulateNounsTokenSetDescriptor = /*#__PURE__*/ createUseSimulat
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setDescriptor',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setMinter"`
@@ -8879,7 +8885,7 @@ export const useSimulateNounsTokenSetMinter = /*#__PURE__*/ createUseSimulateCon
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setMinter',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setNoundersDAO"`
@@ -8891,7 +8897,7 @@ export const useSimulateNounsTokenSetNoundersDao = /*#__PURE__*/ createUseSimula
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setNoundersDAO',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setSeeder"`
@@ -8903,7 +8909,7 @@ export const useSimulateNounsTokenSetSeeder = /*#__PURE__*/ createUseSimulateCon
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setSeeder',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"transferFrom"`
@@ -8915,7 +8921,7 @@ export const useSimulateNounsTokenTransferFrom = /*#__PURE__*/ createUseSimulate
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'transferFrom',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"transferOwnership"`
@@ -8927,7 +8933,7 @@ export const useSimulateNounsTokenTransferOwnership = /*#__PURE__*/ createUseSim
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__
@@ -8938,7 +8944,7 @@ export const useSimulateNounsTokenTransferOwnership = /*#__PURE__*/ createUseSim
 export const useWatchNounsTokenEvent = /*#__PURE__*/ createUseWatchContractEvent({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"Approval"`
@@ -8950,7 +8956,7 @@ export const useWatchNounsTokenApprovalEvent = /*#__PURE__*/ createUseWatchContr
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'Approval',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"ApprovalForAll"`
@@ -8962,7 +8968,7 @@ export const useWatchNounsTokenApprovalForAllEvent = /*#__PURE__*/ createUseWatc
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'ApprovalForAll',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"DelegateChanged"`
@@ -8974,7 +8980,7 @@ export const useWatchNounsTokenDelegateChangedEvent = /*#__PURE__*/ createUseWat
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'DelegateChanged',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"DelegateVotesChanged"`
@@ -8987,7 +8993,7 @@ export const useWatchNounsTokenDelegateVotesChangedEvent =
     abi: nounsTokenAbi,
     address: nounsTokenAddress,
     eventName: 'DelegateVotesChanged',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"DescriptorLocked"`
@@ -8999,7 +9005,7 @@ export const useWatchNounsTokenDescriptorLockedEvent = /*#__PURE__*/ createUseWa
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'DescriptorLocked',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"DescriptorUpdated"`
@@ -9011,7 +9017,7 @@ export const useWatchNounsTokenDescriptorUpdatedEvent = /*#__PURE__*/ createUseW
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'DescriptorUpdated',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"MinterLocked"`
@@ -9023,7 +9029,7 @@ export const useWatchNounsTokenMinterLockedEvent = /*#__PURE__*/ createUseWatchC
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'MinterLocked',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"MinterUpdated"`
@@ -9035,7 +9041,7 @@ export const useWatchNounsTokenMinterUpdatedEvent = /*#__PURE__*/ createUseWatch
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'MinterUpdated',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"NounBurned"`
@@ -9047,7 +9053,7 @@ export const useWatchNounsTokenNounBurnedEvent = /*#__PURE__*/ createUseWatchCon
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'NounBurned',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"NounCreated"`
@@ -9059,7 +9065,7 @@ export const useWatchNounsTokenNounCreatedEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'NounCreated',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"NoundersDAOUpdated"`
@@ -9071,7 +9077,7 @@ export const useWatchNounsTokenNoundersDaoUpdatedEvent = /*#__PURE__*/ createUse
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'NoundersDAOUpdated',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"OwnershipTransferred"`
@@ -9084,7 +9090,7 @@ export const useWatchNounsTokenOwnershipTransferredEvent =
     abi: nounsTokenAbi,
     address: nounsTokenAddress,
     eventName: 'OwnershipTransferred',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"SeederLocked"`
@@ -9096,7 +9102,7 @@ export const useWatchNounsTokenSeederLockedEvent = /*#__PURE__*/ createUseWatchC
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'SeederLocked',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"SeederUpdated"`
@@ -9108,7 +9114,7 @@ export const useWatchNounsTokenSeederUpdatedEvent = /*#__PURE__*/ createUseWatch
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'SeederUpdated',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"Transfer"`
@@ -9120,7 +9126,7 @@ export const useWatchNounsTokenTransferEvent = /*#__PURE__*/ createUseWatchContr
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'Transfer',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTreasuryAbi}__
@@ -9131,7 +9137,7 @@ export const useWatchNounsTokenTransferEvent = /*#__PURE__*/ createUseWatchContr
 export const useReadNounsTreasury = /*#__PURE__*/ createUseReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"GRACE_PERIOD"`
@@ -9143,7 +9149,7 @@ export const useReadNounsTreasuryGracePeriod = /*#__PURE__*/ createUseReadContra
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'GRACE_PERIOD',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"MAXIMUM_DELAY"`
@@ -9155,7 +9161,7 @@ export const useReadNounsTreasuryMaximumDelay = /*#__PURE__*/ createUseReadContr
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'MAXIMUM_DELAY',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"MINIMUM_DELAY"`
@@ -9167,7 +9173,7 @@ export const useReadNounsTreasuryMinimumDelay = /*#__PURE__*/ createUseReadContr
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'MINIMUM_DELAY',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"NAME"`
@@ -9179,7 +9185,7 @@ export const useReadNounsTreasuryName = /*#__PURE__*/ createUseReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'NAME',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"admin"`
@@ -9191,7 +9197,7 @@ export const useReadNounsTreasuryAdmin = /*#__PURE__*/ createUseReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'admin',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"delay"`
@@ -9203,7 +9209,7 @@ export const useReadNounsTreasuryDelay = /*#__PURE__*/ createUseReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'delay',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"pendingAdmin"`
@@ -9215,7 +9221,7 @@ export const useReadNounsTreasuryPendingAdmin = /*#__PURE__*/ createUseReadContr
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'pendingAdmin',
-})
+});
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"queuedTransactions"`
@@ -9227,7 +9233,7 @@ export const useReadNounsTreasuryQueuedTransactions = /*#__PURE__*/ createUseRea
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'queuedTransactions',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__
@@ -9238,7 +9244,7 @@ export const useReadNounsTreasuryQueuedTransactions = /*#__PURE__*/ createUseRea
 export const useWriteNounsTreasury = /*#__PURE__*/ createUseWriteContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"acceptAdmin"`
@@ -9250,7 +9256,7 @@ export const useWriteNounsTreasuryAcceptAdmin = /*#__PURE__*/ createUseWriteCont
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'acceptAdmin',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"cancelTransaction"`
@@ -9262,7 +9268,7 @@ export const useWriteNounsTreasuryCancelTransaction = /*#__PURE__*/ createUseWri
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'cancelTransaction',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"executeTransaction"`
@@ -9274,7 +9280,7 @@ export const useWriteNounsTreasuryExecuteTransaction = /*#__PURE__*/ createUseWr
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'executeTransaction',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"initialize"`
@@ -9286,7 +9292,7 @@ export const useWriteNounsTreasuryInitialize = /*#__PURE__*/ createUseWriteContr
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"queueTransaction"`
@@ -9298,7 +9304,7 @@ export const useWriteNounsTreasuryQueueTransaction = /*#__PURE__*/ createUseWrit
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'queueTransaction',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"sendERC20"`
@@ -9310,7 +9316,7 @@ export const useWriteNounsTreasurySendErc20 = /*#__PURE__*/ createUseWriteContra
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'sendERC20',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"sendETH"`
@@ -9322,7 +9328,7 @@ export const useWriteNounsTreasurySendEth = /*#__PURE__*/ createUseWriteContract
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'sendETH',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"setDelay"`
@@ -9334,7 +9340,7 @@ export const useWriteNounsTreasurySetDelay = /*#__PURE__*/ createUseWriteContrac
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'setDelay',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"setPendingAdmin"`
@@ -9346,7 +9352,7 @@ export const useWriteNounsTreasurySetPendingAdmin = /*#__PURE__*/ createUseWrite
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'setPendingAdmin',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"upgradeTo"`
@@ -9358,7 +9364,7 @@ export const useWriteNounsTreasuryUpgradeTo = /*#__PURE__*/ createUseWriteContra
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'upgradeTo',
-})
+});
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"upgradeToAndCall"`
@@ -9370,7 +9376,7 @@ export const useWriteNounsTreasuryUpgradeToAndCall = /*#__PURE__*/ createUseWrit
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'upgradeToAndCall',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__
@@ -9381,7 +9387,7 @@ export const useWriteNounsTreasuryUpgradeToAndCall = /*#__PURE__*/ createUseWrit
 export const useSimulateNounsTreasury = /*#__PURE__*/ createUseSimulateContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"acceptAdmin"`
@@ -9393,7 +9399,7 @@ export const useSimulateNounsTreasuryAcceptAdmin = /*#__PURE__*/ createUseSimula
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'acceptAdmin',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"cancelTransaction"`
@@ -9405,7 +9411,7 @@ export const useSimulateNounsTreasuryCancelTransaction = /*#__PURE__*/ createUse
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'cancelTransaction',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"executeTransaction"`
@@ -9417,7 +9423,7 @@ export const useSimulateNounsTreasuryExecuteTransaction = /*#__PURE__*/ createUs
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'executeTransaction',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"initialize"`
@@ -9429,7 +9435,7 @@ export const useSimulateNounsTreasuryInitialize = /*#__PURE__*/ createUseSimulat
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"queueTransaction"`
@@ -9441,7 +9447,7 @@ export const useSimulateNounsTreasuryQueueTransaction = /*#__PURE__*/ createUseS
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'queueTransaction',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"sendERC20"`
@@ -9453,7 +9459,7 @@ export const useSimulateNounsTreasurySendErc20 = /*#__PURE__*/ createUseSimulate
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'sendERC20',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"sendETH"`
@@ -9465,7 +9471,7 @@ export const useSimulateNounsTreasurySendEth = /*#__PURE__*/ createUseSimulateCo
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'sendETH',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"setDelay"`
@@ -9477,7 +9483,7 @@ export const useSimulateNounsTreasurySetDelay = /*#__PURE__*/ createUseSimulateC
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'setDelay',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"setPendingAdmin"`
@@ -9489,7 +9495,7 @@ export const useSimulateNounsTreasurySetPendingAdmin = /*#__PURE__*/ createUseSi
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'setPendingAdmin',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"upgradeTo"`
@@ -9501,7 +9507,7 @@ export const useSimulateNounsTreasuryUpgradeTo = /*#__PURE__*/ createUseSimulate
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'upgradeTo',
-})
+});
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"upgradeToAndCall"`
@@ -9513,7 +9519,7 @@ export const useSimulateNounsTreasuryUpgradeToAndCall = /*#__PURE__*/ createUseS
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'upgradeToAndCall',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__
@@ -9524,7 +9530,7 @@ export const useSimulateNounsTreasuryUpgradeToAndCall = /*#__PURE__*/ createUseS
 export const useWatchNounsTreasuryEvent = /*#__PURE__*/ createUseWatchContractEvent({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"AdminChanged"`
@@ -9536,7 +9542,7 @@ export const useWatchNounsTreasuryAdminChangedEvent = /*#__PURE__*/ createUseWat
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'AdminChanged',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"BeaconUpgraded"`
@@ -9548,7 +9554,7 @@ export const useWatchNounsTreasuryBeaconUpgradedEvent = /*#__PURE__*/ createUseW
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'BeaconUpgraded',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"CancelTransaction"`
@@ -9561,7 +9567,7 @@ export const useWatchNounsTreasuryCancelTransactionEvent =
     abi: nounsTreasuryAbi,
     address: nounsTreasuryAddress,
     eventName: 'CancelTransaction',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"ERC20Sent"`
@@ -9573,7 +9579,7 @@ export const useWatchNounsTreasuryErc20SentEvent = /*#__PURE__*/ createUseWatchC
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'ERC20Sent',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"ETHSent"`
@@ -9585,7 +9591,7 @@ export const useWatchNounsTreasuryEthSentEvent = /*#__PURE__*/ createUseWatchCon
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'ETHSent',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"ExecuteTransaction"`
@@ -9598,7 +9604,7 @@ export const useWatchNounsTreasuryExecuteTransactionEvent =
     abi: nounsTreasuryAbi,
     address: nounsTreasuryAddress,
     eventName: 'ExecuteTransaction',
-  })
+  });
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"NewAdmin"`
@@ -9610,7 +9616,7 @@ export const useWatchNounsTreasuryNewAdminEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'NewAdmin',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"NewDelay"`
@@ -9622,7 +9628,7 @@ export const useWatchNounsTreasuryNewDelayEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'NewDelay',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"NewPendingAdmin"`
@@ -9634,7 +9640,7 @@ export const useWatchNounsTreasuryNewPendingAdminEvent = /*#__PURE__*/ createUse
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'NewPendingAdmin',
-})
+});
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"QueueTransaction"`
@@ -9644,7 +9650,7 @@ export const useWatchNounsTreasuryNewPendingAdminEvent = /*#__PURE__*/ createUse
  */
 export const useWatchNounsTreasuryQueueTransactionEvent = /*#__PURE__*/ createUseWatchContractEvent(
   { abi: nounsTreasuryAbi, address: nounsTreasuryAddress, eventName: 'QueueTransaction' },
-)
+);
 
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"Upgraded"`
@@ -9656,7 +9662,7 @@ export const useWatchNounsTreasuryUpgradedEvent = /*#__PURE__*/ createUseWatchCo
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'Upgraded',
-})
+});
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Action
@@ -9671,7 +9677,7 @@ export const useWatchNounsTreasuryUpgradedEvent = /*#__PURE__*/ createUseWatchCo
 export const readNounsAuctionHouse = /*#__PURE__*/ createReadContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"MAX_TIME_BUFFER"`
@@ -9683,7 +9689,7 @@ export const readNounsAuctionHouseMaxTimeBuffer = /*#__PURE__*/ createReadContra
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'MAX_TIME_BUFFER',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"auction"`
@@ -9695,7 +9701,7 @@ export const readNounsAuctionHouseAuction = /*#__PURE__*/ createReadContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'auction',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"auctionStorage"`
@@ -9707,7 +9713,7 @@ export const readNounsAuctionHouseAuctionStorage = /*#__PURE__*/ createReadContr
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'auctionStorage',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"biddingClient"`
@@ -9719,7 +9725,7 @@ export const readNounsAuctionHouseBiddingClient = /*#__PURE__*/ createReadContra
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'biddingClient',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"duration"`
@@ -9731,7 +9737,7 @@ export const readNounsAuctionHouseDuration = /*#__PURE__*/ createReadContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'duration',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"getPrices"`
@@ -9743,7 +9749,7 @@ export const readNounsAuctionHouseGetPrices = /*#__PURE__*/ createReadContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'getPrices',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"getSettlements"`
@@ -9755,7 +9761,7 @@ export const readNounsAuctionHouseGetSettlements = /*#__PURE__*/ createReadContr
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'getSettlements',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"getSettlementsFromIdtoTimestamp"`
@@ -9768,7 +9774,7 @@ export const readNounsAuctionHouseGetSettlementsFromIdtoTimestamp =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'getSettlementsFromIdtoTimestamp',
-  })
+  });
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"minBidIncrementPercentage"`
@@ -9780,7 +9786,7 @@ export const readNounsAuctionHouseMinBidIncrementPercentage = /*#__PURE__*/ crea
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'minBidIncrementPercentage',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"nouns"`
@@ -9792,7 +9798,7 @@ export const readNounsAuctionHouseNouns = /*#__PURE__*/ createReadContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'nouns',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"owner"`
@@ -9804,7 +9810,7 @@ export const readNounsAuctionHouseOwner = /*#__PURE__*/ createReadContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'owner',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"paused"`
@@ -9816,7 +9822,7 @@ export const readNounsAuctionHousePaused = /*#__PURE__*/ createReadContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'paused',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"reservePrice"`
@@ -9828,7 +9834,7 @@ export const readNounsAuctionHouseReservePrice = /*#__PURE__*/ createReadContrac
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'reservePrice',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"sanctionsOracle"`
@@ -9840,7 +9846,7 @@ export const readNounsAuctionHouseSanctionsOracle = /*#__PURE__*/ createReadCont
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'sanctionsOracle',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"timeBuffer"`
@@ -9852,7 +9858,7 @@ export const readNounsAuctionHouseTimeBuffer = /*#__PURE__*/ createReadContract(
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'timeBuffer',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"weth"`
@@ -9864,7 +9870,7 @@ export const readNounsAuctionHouseWeth = /*#__PURE__*/ createReadContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'weth',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__
@@ -9875,7 +9881,7 @@ export const readNounsAuctionHouseWeth = /*#__PURE__*/ createReadContract({
 export const writeNounsAuctionHouse = /*#__PURE__*/ createWriteContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"createBid"`
@@ -9887,7 +9893,7 @@ export const writeNounsAuctionHouseCreateBid = /*#__PURE__*/ createWriteContract
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'createBid',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"initialize"`
@@ -9899,7 +9905,7 @@ export const writeNounsAuctionHouseInitialize = /*#__PURE__*/ createWriteContrac
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"pause"`
@@ -9911,7 +9917,7 @@ export const writeNounsAuctionHousePause = /*#__PURE__*/ createWriteContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'pause',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -9923,7 +9929,7 @@ export const writeNounsAuctionHouseRenounceOwnership = /*#__PURE__*/ createWrite
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setMinBidIncrementPercentage"`
@@ -9937,7 +9943,7 @@ export const writeNounsAuctionHouseSetMinBidIncrementPercentage = /*#__PURE__*/ 
     address: nounsAuctionHouseAddress,
     functionName: 'setMinBidIncrementPercentage',
   },
-)
+);
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setPrices"`
@@ -9949,7 +9955,7 @@ export const writeNounsAuctionHouseSetPrices = /*#__PURE__*/ createWriteContract
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setPrices',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setReservePrice"`
@@ -9961,7 +9967,7 @@ export const writeNounsAuctionHouseSetReservePrice = /*#__PURE__*/ createWriteCo
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setReservePrice',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setSanctionsOracle"`
@@ -9973,7 +9979,7 @@ export const writeNounsAuctionHouseSetSanctionsOracle = /*#__PURE__*/ createWrit
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setSanctionsOracle',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setTimeBuffer"`
@@ -9985,7 +9991,7 @@ export const writeNounsAuctionHouseSetTimeBuffer = /*#__PURE__*/ createWriteCont
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setTimeBuffer',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"settleAuction"`
@@ -9997,7 +10003,7 @@ export const writeNounsAuctionHouseSettleAuction = /*#__PURE__*/ createWriteCont
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'settleAuction',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"settleCurrentAndCreateNewAuction"`
@@ -10010,7 +10016,7 @@ export const writeNounsAuctionHouseSettleCurrentAndCreateNewAuction =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'settleCurrentAndCreateNewAuction',
-  })
+  });
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"transferOwnership"`
@@ -10022,7 +10028,7 @@ export const writeNounsAuctionHouseTransferOwnership = /*#__PURE__*/ createWrite
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"unpause"`
@@ -10034,7 +10040,7 @@ export const writeNounsAuctionHouseUnpause = /*#__PURE__*/ createWriteContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'unpause',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"warmUpSettlementState"`
@@ -10046,7 +10052,7 @@ export const writeNounsAuctionHouseWarmUpSettlementState = /*#__PURE__*/ createW
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'warmUpSettlementState',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__
@@ -10057,7 +10063,7 @@ export const writeNounsAuctionHouseWarmUpSettlementState = /*#__PURE__*/ createW
 export const simulateNounsAuctionHouse = /*#__PURE__*/ createSimulateContract({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"createBid"`
@@ -10069,7 +10075,7 @@ export const simulateNounsAuctionHouseCreateBid = /*#__PURE__*/ createSimulateCo
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'createBid',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"initialize"`
@@ -10081,7 +10087,7 @@ export const simulateNounsAuctionHouseInitialize = /*#__PURE__*/ createSimulateC
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"pause"`
@@ -10093,7 +10099,7 @@ export const simulateNounsAuctionHousePause = /*#__PURE__*/ createSimulateContra
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'pause',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -10105,7 +10111,7 @@ export const simulateNounsAuctionHouseRenounceOwnership = /*#__PURE__*/ createSi
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setMinBidIncrementPercentage"`
@@ -10118,7 +10124,7 @@ export const simulateNounsAuctionHouseSetMinBidIncrementPercentage =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'setMinBidIncrementPercentage',
-  })
+  });
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setPrices"`
@@ -10130,7 +10136,7 @@ export const simulateNounsAuctionHouseSetPrices = /*#__PURE__*/ createSimulateCo
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setPrices',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setReservePrice"`
@@ -10142,7 +10148,7 @@ export const simulateNounsAuctionHouseSetReservePrice = /*#__PURE__*/ createSimu
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setReservePrice',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setSanctionsOracle"`
@@ -10154,7 +10160,7 @@ export const simulateNounsAuctionHouseSetSanctionsOracle = /*#__PURE__*/ createS
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setSanctionsOracle',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"setTimeBuffer"`
@@ -10166,7 +10172,7 @@ export const simulateNounsAuctionHouseSetTimeBuffer = /*#__PURE__*/ createSimula
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'setTimeBuffer',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"settleAuction"`
@@ -10178,7 +10184,7 @@ export const simulateNounsAuctionHouseSettleAuction = /*#__PURE__*/ createSimula
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'settleAuction',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"settleCurrentAndCreateNewAuction"`
@@ -10191,7 +10197,7 @@ export const simulateNounsAuctionHouseSettleCurrentAndCreateNewAuction =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     functionName: 'settleCurrentAndCreateNewAuction',
-  })
+  });
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"transferOwnership"`
@@ -10203,7 +10209,7 @@ export const simulateNounsAuctionHouseTransferOwnership = /*#__PURE__*/ createSi
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"unpause"`
@@ -10215,7 +10221,7 @@ export const simulateNounsAuctionHouseUnpause = /*#__PURE__*/ createSimulateCont
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'unpause',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `functionName` set to `"warmUpSettlementState"`
@@ -10227,7 +10233,7 @@ export const simulateNounsAuctionHouseWarmUpSettlementState = /*#__PURE__*/ crea
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   functionName: 'warmUpSettlementState',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__
@@ -10238,7 +10244,7 @@ export const simulateNounsAuctionHouseWarmUpSettlementState = /*#__PURE__*/ crea
 export const watchNounsAuctionHouseEvent = /*#__PURE__*/ createWatchContractEvent({
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionBid"`
@@ -10250,7 +10256,7 @@ export const watchNounsAuctionHouseAuctionBidEvent = /*#__PURE__*/ createWatchCo
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   eventName: 'AuctionBid',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionBidWithClientId"`
@@ -10263,7 +10269,7 @@ export const watchNounsAuctionHouseAuctionBidWithClientIdEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionBidWithClientId',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionCreated"`
@@ -10275,7 +10281,7 @@ export const watchNounsAuctionHouseAuctionCreatedEvent = /*#__PURE__*/ createWat
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   eventName: 'AuctionCreated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionExtended"`
@@ -10287,7 +10293,7 @@ export const watchNounsAuctionHouseAuctionExtendedEvent = /*#__PURE__*/ createWa
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   eventName: 'AuctionExtended',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionMinBidIncrementPercentageUpdated"`
@@ -10300,7 +10306,7 @@ export const watchNounsAuctionHouseAuctionMinBidIncrementPercentageUpdatedEvent 
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionMinBidIncrementPercentageUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionReservePriceUpdated"`
@@ -10313,7 +10319,7 @@ export const watchNounsAuctionHouseAuctionReservePriceUpdatedEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionReservePriceUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionSettled"`
@@ -10325,7 +10331,7 @@ export const watchNounsAuctionHouseAuctionSettledEvent = /*#__PURE__*/ createWat
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   eventName: 'AuctionSettled',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionSettledWithClientId"`
@@ -10338,7 +10344,7 @@ export const watchNounsAuctionHouseAuctionSettledWithClientIdEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionSettledWithClientId',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"AuctionTimeBufferUpdated"`
@@ -10351,7 +10357,7 @@ export const watchNounsAuctionHouseAuctionTimeBufferUpdatedEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'AuctionTimeBufferUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"OwnershipTransferred"`
@@ -10364,7 +10370,7 @@ export const watchNounsAuctionHouseOwnershipTransferredEvent =
     abi: nounsAuctionHouseAbi,
     address: nounsAuctionHouseAddress,
     eventName: 'OwnershipTransferred',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"Paused"`
@@ -10376,7 +10382,7 @@ export const watchNounsAuctionHousePausedEvent = /*#__PURE__*/ createWatchContra
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   eventName: 'Paused',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"SanctionsOracleSet"`
@@ -10386,7 +10392,7 @@ export const watchNounsAuctionHousePausedEvent = /*#__PURE__*/ createWatchContra
  */
 export const watchNounsAuctionHouseSanctionsOracleSetEvent = /*#__PURE__*/ createWatchContractEvent(
   { abi: nounsAuctionHouseAbi, address: nounsAuctionHouseAddress, eventName: 'SanctionsOracleSet' },
-)
+);
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsAuctionHouseAbi}__ and `eventName` set to `"Unpaused"`
@@ -10398,7 +10404,7 @@ export const watchNounsAuctionHouseUnpausedEvent = /*#__PURE__*/ createWatchCont
   abi: nounsAuctionHouseAbi,
   address: nounsAuctionHouseAddress,
   eventName: 'Unpaused',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDataAbi}__
@@ -10409,7 +10415,7 @@ export const watchNounsAuctionHouseUnpausedEvent = /*#__PURE__*/ createWatchCont
 export const readNounsData = /*#__PURE__*/ createReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"PRIOR_VOTES_BLOCKS_AGO"`
@@ -10421,7 +10427,7 @@ export const readNounsDataPriorVotesBlocksAgo = /*#__PURE__*/ createReadContract
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'PRIOR_VOTES_BLOCKS_AGO',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"createCandidateCost"`
@@ -10433,7 +10439,7 @@ export const readNounsDataCreateCandidateCost = /*#__PURE__*/ createReadContract
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'createCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"dunaAdmin"`
@@ -10445,7 +10451,7 @@ export const readNounsDataDunaAdmin = /*#__PURE__*/ createReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'dunaAdmin',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"feeRecipient"`
@@ -10457,7 +10463,7 @@ export const readNounsDataFeeRecipient = /*#__PURE__*/ createReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'feeRecipient',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"nounsDao"`
@@ -10469,7 +10475,7 @@ export const readNounsDataNounsDao = /*#__PURE__*/ createReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'nounsDao',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"nounsToken"`
@@ -10481,7 +10487,7 @@ export const readNounsDataNounsToken = /*#__PURE__*/ createReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'nounsToken',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"owner"`
@@ -10493,7 +10499,7 @@ export const readNounsDataOwner = /*#__PURE__*/ createReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'owner',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"propCandidates"`
@@ -10505,7 +10511,7 @@ export const readNounsDataPropCandidates = /*#__PURE__*/ createReadContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'propCandidates',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"updateCandidateCost"`
@@ -10517,7 +10523,7 @@ export const readNounsDataUpdateCandidateCost = /*#__PURE__*/ createReadContract
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'updateCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__
@@ -10528,7 +10534,7 @@ export const readNounsDataUpdateCandidateCost = /*#__PURE__*/ createReadContract
 export const writeNounsData = /*#__PURE__*/ createWriteContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"addSignature"`
@@ -10540,7 +10546,7 @@ export const writeNounsDataAddSignature = /*#__PURE__*/ createWriteContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'addSignature',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"cancelProposalCandidate"`
@@ -10552,7 +10558,7 @@ export const writeNounsDataCancelProposalCandidate = /*#__PURE__*/ createWriteCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'cancelProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"createProposalCandidate"`
@@ -10564,7 +10570,7 @@ export const writeNounsDataCreateProposalCandidate = /*#__PURE__*/ createWriteCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'createProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"initialize"`
@@ -10576,7 +10582,7 @@ export const writeNounsDataInitialize = /*#__PURE__*/ createWriteContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"postDunaAdminMessage"`
@@ -10588,7 +10594,7 @@ export const writeNounsDataPostDunaAdminMessage = /*#__PURE__*/ createWriteContr
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'postDunaAdminMessage',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"postVoterMessageToDunaAdmin"`
@@ -10600,7 +10606,7 @@ export const writeNounsDataPostVoterMessageToDunaAdmin = /*#__PURE__*/ createWri
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'postVoterMessageToDunaAdmin',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -10612,7 +10618,7 @@ export const writeNounsDataRenounceOwnership = /*#__PURE__*/ createWriteContract
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"sendCandidateFeedback"`
@@ -10624,7 +10630,7 @@ export const writeNounsDataSendCandidateFeedback = /*#__PURE__*/ createWriteCont
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'sendCandidateFeedback',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"sendFeedback"`
@@ -10636,7 +10642,7 @@ export const writeNounsDataSendFeedback = /*#__PURE__*/ createWriteContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'sendFeedback',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setCreateCandidateCost"`
@@ -10648,7 +10654,7 @@ export const writeNounsDataSetCreateCandidateCost = /*#__PURE__*/ createWriteCon
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setCreateCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setDunaAdmin"`
@@ -10660,7 +10666,7 @@ export const writeNounsDataSetDunaAdmin = /*#__PURE__*/ createWriteContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setDunaAdmin',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setFeeRecipient"`
@@ -10672,7 +10678,7 @@ export const writeNounsDataSetFeeRecipient = /*#__PURE__*/ createWriteContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setFeeRecipient',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setUpdateCandidateCost"`
@@ -10684,7 +10690,7 @@ export const writeNounsDataSetUpdateCandidateCost = /*#__PURE__*/ createWriteCon
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setUpdateCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"signalProposalCompliance"`
@@ -10696,7 +10702,7 @@ export const writeNounsDataSignalProposalCompliance = /*#__PURE__*/ createWriteC
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'signalProposalCompliance',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"transferOwnership"`
@@ -10708,7 +10714,7 @@ export const writeNounsDataTransferOwnership = /*#__PURE__*/ createWriteContract
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"updateProposalCandidate"`
@@ -10720,7 +10726,7 @@ export const writeNounsDataUpdateProposalCandidate = /*#__PURE__*/ createWriteCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'updateProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"upgradeTo"`
@@ -10732,7 +10738,7 @@ export const writeNounsDataUpgradeTo = /*#__PURE__*/ createWriteContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'upgradeTo',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"upgradeToAndCall"`
@@ -10744,7 +10750,7 @@ export const writeNounsDataUpgradeToAndCall = /*#__PURE__*/ createWriteContract(
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'upgradeToAndCall',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"withdrawETH"`
@@ -10756,7 +10762,7 @@ export const writeNounsDataWithdrawEth = /*#__PURE__*/ createWriteContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'withdrawETH',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__
@@ -10767,7 +10773,7 @@ export const writeNounsDataWithdrawEth = /*#__PURE__*/ createWriteContract({
 export const simulateNounsData = /*#__PURE__*/ createSimulateContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"addSignature"`
@@ -10779,7 +10785,7 @@ export const simulateNounsDataAddSignature = /*#__PURE__*/ createSimulateContrac
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'addSignature',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"cancelProposalCandidate"`
@@ -10791,7 +10797,7 @@ export const simulateNounsDataCancelProposalCandidate = /*#__PURE__*/ createSimu
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'cancelProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"createProposalCandidate"`
@@ -10803,7 +10809,7 @@ export const simulateNounsDataCreateProposalCandidate = /*#__PURE__*/ createSimu
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'createProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"initialize"`
@@ -10815,7 +10821,7 @@ export const simulateNounsDataInitialize = /*#__PURE__*/ createSimulateContract(
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"postDunaAdminMessage"`
@@ -10827,7 +10833,7 @@ export const simulateNounsDataPostDunaAdminMessage = /*#__PURE__*/ createSimulat
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'postDunaAdminMessage',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"postVoterMessageToDunaAdmin"`
@@ -10839,7 +10845,7 @@ export const simulateNounsDataPostVoterMessageToDunaAdmin = /*#__PURE__*/ create
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'postVoterMessageToDunaAdmin',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -10851,7 +10857,7 @@ export const simulateNounsDataRenounceOwnership = /*#__PURE__*/ createSimulateCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"sendCandidateFeedback"`
@@ -10863,7 +10869,7 @@ export const simulateNounsDataSendCandidateFeedback = /*#__PURE__*/ createSimula
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'sendCandidateFeedback',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"sendFeedback"`
@@ -10875,7 +10881,7 @@ export const simulateNounsDataSendFeedback = /*#__PURE__*/ createSimulateContrac
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'sendFeedback',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setCreateCandidateCost"`
@@ -10887,7 +10893,7 @@ export const simulateNounsDataSetCreateCandidateCost = /*#__PURE__*/ createSimul
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setCreateCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setDunaAdmin"`
@@ -10899,7 +10905,7 @@ export const simulateNounsDataSetDunaAdmin = /*#__PURE__*/ createSimulateContrac
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setDunaAdmin',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setFeeRecipient"`
@@ -10911,7 +10917,7 @@ export const simulateNounsDataSetFeeRecipient = /*#__PURE__*/ createSimulateCont
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setFeeRecipient',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"setUpdateCandidateCost"`
@@ -10923,7 +10929,7 @@ export const simulateNounsDataSetUpdateCandidateCost = /*#__PURE__*/ createSimul
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'setUpdateCandidateCost',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"signalProposalCompliance"`
@@ -10935,7 +10941,7 @@ export const simulateNounsDataSignalProposalCompliance = /*#__PURE__*/ createSim
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'signalProposalCompliance',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"transferOwnership"`
@@ -10947,7 +10953,7 @@ export const simulateNounsDataTransferOwnership = /*#__PURE__*/ createSimulateCo
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"updateProposalCandidate"`
@@ -10959,7 +10965,7 @@ export const simulateNounsDataUpdateProposalCandidate = /*#__PURE__*/ createSimu
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'updateProposalCandidate',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"upgradeTo"`
@@ -10971,7 +10977,7 @@ export const simulateNounsDataUpgradeTo = /*#__PURE__*/ createSimulateContract({
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'upgradeTo',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"upgradeToAndCall"`
@@ -10983,7 +10989,7 @@ export const simulateNounsDataUpgradeToAndCall = /*#__PURE__*/ createSimulateCon
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'upgradeToAndCall',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDataAbi}__ and `functionName` set to `"withdrawETH"`
@@ -10995,7 +11001,7 @@ export const simulateNounsDataWithdrawEth = /*#__PURE__*/ createSimulateContract
   abi: nounsDataAbi,
   address: nounsDataAddress,
   functionName: 'withdrawETH',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__
@@ -11006,7 +11012,7 @@ export const simulateNounsDataWithdrawEth = /*#__PURE__*/ createSimulateContract
 export const watchNounsDataEvent = /*#__PURE__*/ createWatchContractEvent({
   abi: nounsDataAbi,
   address: nounsDataAddress,
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"AdminChanged"`
@@ -11018,7 +11024,7 @@ export const watchNounsDataAdminChangedEvent = /*#__PURE__*/ createWatchContract
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'AdminChanged',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"BeaconUpgraded"`
@@ -11030,7 +11036,7 @@ export const watchNounsDataBeaconUpgradedEvent = /*#__PURE__*/ createWatchContra
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'BeaconUpgraded',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"CandidateFeedbackSent"`
@@ -11042,7 +11048,7 @@ export const watchNounsDataCandidateFeedbackSentEvent = /*#__PURE__*/ createWatc
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'CandidateFeedbackSent',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"CreateCandidateCostSet"`
@@ -11054,7 +11060,7 @@ export const watchNounsDataCreateCandidateCostSetEvent = /*#__PURE__*/ createWat
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'CreateCandidateCostSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"DunaAdminMessagePosted"`
@@ -11066,7 +11072,7 @@ export const watchNounsDataDunaAdminMessagePostedEvent = /*#__PURE__*/ createWat
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'DunaAdminMessagePosted',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"DunaAdminSet"`
@@ -11078,7 +11084,7 @@ export const watchNounsDataDunaAdminSetEvent = /*#__PURE__*/ createWatchContract
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'DunaAdminSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"ETHWithdrawn"`
@@ -11090,7 +11096,7 @@ export const watchNounsDataEthWithdrawnEvent = /*#__PURE__*/ createWatchContract
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'ETHWithdrawn',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"FeeRecipientSet"`
@@ -11102,7 +11108,7 @@ export const watchNounsDataFeeRecipientSetEvent = /*#__PURE__*/ createWatchContr
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'FeeRecipientSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"FeedbackSent"`
@@ -11114,7 +11120,7 @@ export const watchNounsDataFeedbackSentEvent = /*#__PURE__*/ createWatchContract
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'FeedbackSent',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"OwnershipTransferred"`
@@ -11126,7 +11132,7 @@ export const watchNounsDataOwnershipTransferredEvent = /*#__PURE__*/ createWatch
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'OwnershipTransferred',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"ProposalCandidateCanceled"`
@@ -11138,7 +11144,7 @@ export const watchNounsDataProposalCandidateCanceledEvent = /*#__PURE__*/ create
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'ProposalCandidateCanceled',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"ProposalCandidateCreated"`
@@ -11150,7 +11156,7 @@ export const watchNounsDataProposalCandidateCreatedEvent = /*#__PURE__*/ createW
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'ProposalCandidateCreated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"ProposalCandidateUpdated"`
@@ -11162,7 +11168,7 @@ export const watchNounsDataProposalCandidateUpdatedEvent = /*#__PURE__*/ createW
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'ProposalCandidateUpdated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"ProposalComplianceSignaled"`
@@ -11172,7 +11178,7 @@ export const watchNounsDataProposalCandidateUpdatedEvent = /*#__PURE__*/ createW
  */
 export const watchNounsDataProposalComplianceSignaledEvent = /*#__PURE__*/ createWatchContractEvent(
   { abi: nounsDataAbi, address: nounsDataAddress, eventName: 'ProposalComplianceSignaled' },
-)
+);
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"SignatureAdded"`
@@ -11184,7 +11190,7 @@ export const watchNounsDataSignatureAddedEvent = /*#__PURE__*/ createWatchContra
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'SignatureAdded',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"UpdateCandidateCostSet"`
@@ -11196,7 +11202,7 @@ export const watchNounsDataUpdateCandidateCostSetEvent = /*#__PURE__*/ createWat
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'UpdateCandidateCostSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"Upgraded"`
@@ -11208,7 +11214,7 @@ export const watchNounsDataUpgradedEvent = /*#__PURE__*/ createWatchContractEven
   abi: nounsDataAbi,
   address: nounsDataAddress,
   eventName: 'Upgraded',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDataAbi}__ and `eventName` set to `"VoterMessageToDunaAdminPosted"`
@@ -11221,7 +11227,7 @@ export const watchNounsDataVoterMessageToDunaAdminPostedEvent =
     abi: nounsDataAbi,
     address: nounsDataAddress,
     eventName: 'VoterMessageToDunaAdminPosted',
-  })
+  });
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__
@@ -11232,7 +11238,7 @@ export const watchNounsDataVoterMessageToDunaAdminPostedEvent =
 export const readNounsDescriptor = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"accessories"`
@@ -11244,7 +11250,7 @@ export const readNounsDescriptorAccessories = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'accessories',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"accessoryCount"`
@@ -11256,7 +11262,7 @@ export const readNounsDescriptorAccessoryCount = /*#__PURE__*/ createReadContrac
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'accessoryCount',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"arePartsLocked"`
@@ -11268,7 +11274,7 @@ export const readNounsDescriptorArePartsLocked = /*#__PURE__*/ createReadContrac
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'arePartsLocked',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"art"`
@@ -11280,7 +11286,7 @@ export const readNounsDescriptorArt = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'art',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"backgroundCount"`
@@ -11292,7 +11298,7 @@ export const readNounsDescriptorBackgroundCount = /*#__PURE__*/ createReadContra
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'backgroundCount',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"backgrounds"`
@@ -11304,7 +11310,7 @@ export const readNounsDescriptorBackgrounds = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'backgrounds',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"baseURI"`
@@ -11316,7 +11322,7 @@ export const readNounsDescriptorBaseUri = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'baseURI',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"bodies"`
@@ -11328,7 +11334,7 @@ export const readNounsDescriptorBodies = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'bodies',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"bodyCount"`
@@ -11340,7 +11346,7 @@ export const readNounsDescriptorBodyCount = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'bodyCount',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"dataURI"`
@@ -11352,7 +11358,7 @@ export const readNounsDescriptorDataUri = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'dataURI',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"generateSVGImage"`
@@ -11364,7 +11370,7 @@ export const readNounsDescriptorGenerateSvgImage = /*#__PURE__*/ createReadContr
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'generateSVGImage',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"genericDataURI"`
@@ -11376,7 +11382,7 @@ export const readNounsDescriptorGenericDataUri = /*#__PURE__*/ createReadContrac
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'genericDataURI',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"getPartsForSeed"`
@@ -11388,7 +11394,7 @@ export const readNounsDescriptorGetPartsForSeed = /*#__PURE__*/ createReadContra
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'getPartsForSeed',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"glasses"`
@@ -11400,7 +11406,7 @@ export const readNounsDescriptorGlasses = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'glasses',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"glassesCount"`
@@ -11412,7 +11418,7 @@ export const readNounsDescriptorGlassesCount = /*#__PURE__*/ createReadContract(
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'glassesCount',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"headCount"`
@@ -11424,7 +11430,7 @@ export const readNounsDescriptorHeadCount = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'headCount',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"heads"`
@@ -11436,7 +11442,7 @@ export const readNounsDescriptorHeads = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'heads',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"isDataURIEnabled"`
@@ -11448,7 +11454,7 @@ export const readNounsDescriptorIsDataUriEnabled = /*#__PURE__*/ createReadContr
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'isDataURIEnabled',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"owner"`
@@ -11460,7 +11466,7 @@ export const readNounsDescriptorOwner = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'owner',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"palettes"`
@@ -11472,7 +11478,7 @@ export const readNounsDescriptorPalettes = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'palettes',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"renderer"`
@@ -11484,7 +11490,7 @@ export const readNounsDescriptorRenderer = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'renderer',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"tokenURI"`
@@ -11496,7 +11502,7 @@ export const readNounsDescriptorTokenUri = /*#__PURE__*/ createReadContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'tokenURI',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__
@@ -11507,7 +11513,7 @@ export const readNounsDescriptorTokenUri = /*#__PURE__*/ createReadContract({
 export const writeNounsDescriptor = /*#__PURE__*/ createWriteContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addAccessories"`
@@ -11519,7 +11525,7 @@ export const writeNounsDescriptorAddAccessories = /*#__PURE__*/ createWriteContr
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addAccessories',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addAccessoriesFromPointer"`
@@ -11531,7 +11537,7 @@ export const writeNounsDescriptorAddAccessoriesFromPointer = /*#__PURE__*/ creat
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addAccessoriesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBackground"`
@@ -11543,7 +11549,7 @@ export const writeNounsDescriptorAddBackground = /*#__PURE__*/ createWriteContra
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addBackground',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBodies"`
@@ -11555,7 +11561,7 @@ export const writeNounsDescriptorAddBodies = /*#__PURE__*/ createWriteContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addBodies',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBodiesFromPointer"`
@@ -11567,7 +11573,7 @@ export const writeNounsDescriptorAddBodiesFromPointer = /*#__PURE__*/ createWrit
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addBodiesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addGlasses"`
@@ -11579,7 +11585,7 @@ export const writeNounsDescriptorAddGlasses = /*#__PURE__*/ createWriteContract(
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addGlasses',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addGlassesFromPointer"`
@@ -11591,7 +11597,7 @@ export const writeNounsDescriptorAddGlassesFromPointer = /*#__PURE__*/ createWri
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addGlassesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addHeads"`
@@ -11603,7 +11609,7 @@ export const writeNounsDescriptorAddHeads = /*#__PURE__*/ createWriteContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addHeads',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addHeadsFromPointer"`
@@ -11615,7 +11621,7 @@ export const writeNounsDescriptorAddHeadsFromPointer = /*#__PURE__*/ createWrite
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addHeadsFromPointer',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addManyBackgrounds"`
@@ -11627,7 +11633,7 @@ export const writeNounsDescriptorAddManyBackgrounds = /*#__PURE__*/ createWriteC
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addManyBackgrounds',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"lockParts"`
@@ -11639,7 +11645,7 @@ export const writeNounsDescriptorLockParts = /*#__PURE__*/ createWriteContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'lockParts',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -11651,7 +11657,7 @@ export const writeNounsDescriptorRenounceOwnership = /*#__PURE__*/ createWriteCo
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArt"`
@@ -11663,7 +11669,7 @@ export const writeNounsDescriptorSetArt = /*#__PURE__*/ createWriteContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArt',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArtDescriptor"`
@@ -11675,7 +11681,7 @@ export const writeNounsDescriptorSetArtDescriptor = /*#__PURE__*/ createWriteCon
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArtDescriptor',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArtInflator"`
@@ -11687,7 +11693,7 @@ export const writeNounsDescriptorSetArtInflator = /*#__PURE__*/ createWriteContr
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArtInflator',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setBaseURI"`
@@ -11699,7 +11705,7 @@ export const writeNounsDescriptorSetBaseUri = /*#__PURE__*/ createWriteContract(
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setBaseURI',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setPalette"`
@@ -11711,7 +11717,7 @@ export const writeNounsDescriptorSetPalette = /*#__PURE__*/ createWriteContract(
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setPalette',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setPalettePointer"`
@@ -11723,7 +11729,7 @@ export const writeNounsDescriptorSetPalettePointer = /*#__PURE__*/ createWriteCo
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setPalettePointer',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setRenderer"`
@@ -11735,7 +11741,7 @@ export const writeNounsDescriptorSetRenderer = /*#__PURE__*/ createWriteContract
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setRenderer',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"toggleDataURIEnabled"`
@@ -11747,7 +11753,7 @@ export const writeNounsDescriptorToggleDataUriEnabled = /*#__PURE__*/ createWrit
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'toggleDataURIEnabled',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"transferOwnership"`
@@ -11759,7 +11765,7 @@ export const writeNounsDescriptorTransferOwnership = /*#__PURE__*/ createWriteCo
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateAccessories"`
@@ -11771,7 +11777,7 @@ export const writeNounsDescriptorUpdateAccessories = /*#__PURE__*/ createWriteCo
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateAccessories',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateAccessoriesFromPointer"`
@@ -11783,7 +11789,7 @@ export const writeNounsDescriptorUpdateAccessoriesFromPointer = /*#__PURE__*/ cr
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateAccessoriesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateBodies"`
@@ -11795,7 +11801,7 @@ export const writeNounsDescriptorUpdateBodies = /*#__PURE__*/ createWriteContrac
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateBodies',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateBodiesFromPointer"`
@@ -11807,7 +11813,7 @@ export const writeNounsDescriptorUpdateBodiesFromPointer = /*#__PURE__*/ createW
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateBodiesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateGlasses"`
@@ -11819,7 +11825,7 @@ export const writeNounsDescriptorUpdateGlasses = /*#__PURE__*/ createWriteContra
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateGlasses',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateGlassesFromPointer"`
@@ -11831,7 +11837,7 @@ export const writeNounsDescriptorUpdateGlassesFromPointer = /*#__PURE__*/ create
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateGlassesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateHeads"`
@@ -11843,7 +11849,7 @@ export const writeNounsDescriptorUpdateHeads = /*#__PURE__*/ createWriteContract
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateHeads',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateHeadsFromPointer"`
@@ -11855,7 +11861,7 @@ export const writeNounsDescriptorUpdateHeadsFromPointer = /*#__PURE__*/ createWr
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateHeadsFromPointer',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__
@@ -11866,7 +11872,7 @@ export const writeNounsDescriptorUpdateHeadsFromPointer = /*#__PURE__*/ createWr
 export const simulateNounsDescriptor = /*#__PURE__*/ createSimulateContract({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addAccessories"`
@@ -11878,7 +11884,7 @@ export const simulateNounsDescriptorAddAccessories = /*#__PURE__*/ createSimulat
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addAccessories',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addAccessoriesFromPointer"`
@@ -11891,7 +11897,7 @@ export const simulateNounsDescriptorAddAccessoriesFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'addAccessoriesFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBackground"`
@@ -11903,7 +11909,7 @@ export const simulateNounsDescriptorAddBackground = /*#__PURE__*/ createSimulate
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addBackground',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBodies"`
@@ -11915,7 +11921,7 @@ export const simulateNounsDescriptorAddBodies = /*#__PURE__*/ createSimulateCont
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addBodies',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addBodiesFromPointer"`
@@ -11927,7 +11933,7 @@ export const simulateNounsDescriptorAddBodiesFromPointer = /*#__PURE__*/ createS
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addBodiesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addGlasses"`
@@ -11939,7 +11945,7 @@ export const simulateNounsDescriptorAddGlasses = /*#__PURE__*/ createSimulateCon
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addGlasses',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addGlassesFromPointer"`
@@ -11951,7 +11957,7 @@ export const simulateNounsDescriptorAddGlassesFromPointer = /*#__PURE__*/ create
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addGlassesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addHeads"`
@@ -11963,7 +11969,7 @@ export const simulateNounsDescriptorAddHeads = /*#__PURE__*/ createSimulateContr
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addHeads',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addHeadsFromPointer"`
@@ -11975,7 +11981,7 @@ export const simulateNounsDescriptorAddHeadsFromPointer = /*#__PURE__*/ createSi
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addHeadsFromPointer',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"addManyBackgrounds"`
@@ -11987,7 +11993,7 @@ export const simulateNounsDescriptorAddManyBackgrounds = /*#__PURE__*/ createSim
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'addManyBackgrounds',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"lockParts"`
@@ -11999,7 +12005,7 @@ export const simulateNounsDescriptorLockParts = /*#__PURE__*/ createSimulateCont
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'lockParts',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -12011,7 +12017,7 @@ export const simulateNounsDescriptorRenounceOwnership = /*#__PURE__*/ createSimu
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArt"`
@@ -12023,7 +12029,7 @@ export const simulateNounsDescriptorSetArt = /*#__PURE__*/ createSimulateContrac
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArt',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArtDescriptor"`
@@ -12035,7 +12041,7 @@ export const simulateNounsDescriptorSetArtDescriptor = /*#__PURE__*/ createSimul
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArtDescriptor',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setArtInflator"`
@@ -12047,7 +12053,7 @@ export const simulateNounsDescriptorSetArtInflator = /*#__PURE__*/ createSimulat
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setArtInflator',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setBaseURI"`
@@ -12059,7 +12065,7 @@ export const simulateNounsDescriptorSetBaseUri = /*#__PURE__*/ createSimulateCon
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setBaseURI',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setPalette"`
@@ -12071,7 +12077,7 @@ export const simulateNounsDescriptorSetPalette = /*#__PURE__*/ createSimulateCon
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setPalette',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setPalettePointer"`
@@ -12083,7 +12089,7 @@ export const simulateNounsDescriptorSetPalettePointer = /*#__PURE__*/ createSimu
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setPalettePointer',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"setRenderer"`
@@ -12095,7 +12101,7 @@ export const simulateNounsDescriptorSetRenderer = /*#__PURE__*/ createSimulateCo
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'setRenderer',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"toggleDataURIEnabled"`
@@ -12107,7 +12113,7 @@ export const simulateNounsDescriptorToggleDataUriEnabled = /*#__PURE__*/ createS
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'toggleDataURIEnabled',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"transferOwnership"`
@@ -12119,7 +12125,7 @@ export const simulateNounsDescriptorTransferOwnership = /*#__PURE__*/ createSimu
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateAccessories"`
@@ -12131,7 +12137,7 @@ export const simulateNounsDescriptorUpdateAccessories = /*#__PURE__*/ createSimu
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateAccessories',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateAccessoriesFromPointer"`
@@ -12144,7 +12150,7 @@ export const simulateNounsDescriptorUpdateAccessoriesFromPointer =
     abi: nounsDescriptorAbi,
     address: nounsDescriptorAddress,
     functionName: 'updateAccessoriesFromPointer',
-  })
+  });
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateBodies"`
@@ -12156,7 +12162,7 @@ export const simulateNounsDescriptorUpdateBodies = /*#__PURE__*/ createSimulateC
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateBodies',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateBodiesFromPointer"`
@@ -12168,7 +12174,7 @@ export const simulateNounsDescriptorUpdateBodiesFromPointer = /*#__PURE__*/ crea
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateBodiesFromPointer',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateGlasses"`
@@ -12180,7 +12186,7 @@ export const simulateNounsDescriptorUpdateGlasses = /*#__PURE__*/ createSimulate
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateGlasses',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateGlassesFromPointer"`
@@ -12194,7 +12200,7 @@ export const simulateNounsDescriptorUpdateGlassesFromPointer = /*#__PURE__*/ cre
     address: nounsDescriptorAddress,
     functionName: 'updateGlassesFromPointer',
   },
-)
+);
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateHeads"`
@@ -12206,7 +12212,7 @@ export const simulateNounsDescriptorUpdateHeads = /*#__PURE__*/ createSimulateCo
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateHeads',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `functionName` set to `"updateHeadsFromPointer"`
@@ -12218,7 +12224,7 @@ export const simulateNounsDescriptorUpdateHeadsFromPointer = /*#__PURE__*/ creat
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   functionName: 'updateHeadsFromPointer',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__
@@ -12229,7 +12235,7 @@ export const simulateNounsDescriptorUpdateHeadsFromPointer = /*#__PURE__*/ creat
 export const watchNounsDescriptorEvent = /*#__PURE__*/ createWatchContractEvent({
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"ArtUpdated"`
@@ -12241,7 +12247,7 @@ export const watchNounsDescriptorArtUpdatedEvent = /*#__PURE__*/ createWatchCont
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   eventName: 'ArtUpdated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"BaseURIUpdated"`
@@ -12253,7 +12259,7 @@ export const watchNounsDescriptorBaseUriUpdatedEvent = /*#__PURE__*/ createWatch
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   eventName: 'BaseURIUpdated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"DataURIToggled"`
@@ -12265,7 +12271,7 @@ export const watchNounsDescriptorDataUriToggledEvent = /*#__PURE__*/ createWatch
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   eventName: 'DataURIToggled',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"OwnershipTransferred"`
@@ -12275,7 +12281,7 @@ export const watchNounsDescriptorDataUriToggledEvent = /*#__PURE__*/ createWatch
  */
 export const watchNounsDescriptorOwnershipTransferredEvent = /*#__PURE__*/ createWatchContractEvent(
   { abi: nounsDescriptorAbi, address: nounsDescriptorAddress, eventName: 'OwnershipTransferred' },
-)
+);
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"PartsLocked"`
@@ -12287,7 +12293,7 @@ export const watchNounsDescriptorPartsLockedEvent = /*#__PURE__*/ createWatchCon
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   eventName: 'PartsLocked',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsDescriptorAbi}__ and `eventName` set to `"RendererUpdated"`
@@ -12299,7 +12305,7 @@ export const watchNounsDescriptorRendererUpdatedEvent = /*#__PURE__*/ createWatc
   abi: nounsDescriptorAbi,
   address: nounsDescriptorAddress,
   eventName: 'RendererUpdated',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__
@@ -12310,7 +12316,7 @@ export const watchNounsDescriptorRendererUpdatedEvent = /*#__PURE__*/ createWatc
 export const readNounsGovernor = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MAX_PROPOSAL_THRESHOLD_BPS"`
@@ -12322,7 +12328,7 @@ export const readNounsGovernorMaxProposalThresholdBps = /*#__PURE__*/ createRead
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MAX_PROPOSAL_THRESHOLD_BPS',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MAX_VOTING_DELAY"`
@@ -12334,7 +12340,7 @@ export const readNounsGovernorMaxVotingDelay = /*#__PURE__*/ createReadContract(
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MAX_VOTING_DELAY',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MAX_VOTING_PERIOD"`
@@ -12346,7 +12352,7 @@ export const readNounsGovernorMaxVotingPeriod = /*#__PURE__*/ createReadContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MAX_VOTING_PERIOD',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MIN_PROPOSAL_THRESHOLD_BPS"`
@@ -12358,7 +12364,7 @@ export const readNounsGovernorMinProposalThresholdBps = /*#__PURE__*/ createRead
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MIN_PROPOSAL_THRESHOLD_BPS',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MIN_VOTING_DELAY"`
@@ -12370,7 +12376,7 @@ export const readNounsGovernorMinVotingDelay = /*#__PURE__*/ createReadContract(
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MIN_VOTING_DELAY',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"MIN_VOTING_PERIOD"`
@@ -12382,7 +12388,7 @@ export const readNounsGovernorMinVotingPeriod = /*#__PURE__*/ createReadContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'MIN_VOTING_PERIOD',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"adjustedTotalSupply"`
@@ -12394,7 +12400,7 @@ export const readNounsGovernorAdjustedTotalSupply = /*#__PURE__*/ createReadCont
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'adjustedTotalSupply',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"admin"`
@@ -12406,7 +12412,7 @@ export const readNounsGovernorAdmin = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'admin',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"dynamicQuorumVotes"`
@@ -12418,7 +12424,7 @@ export const readNounsGovernorDynamicQuorumVotes = /*#__PURE__*/ createReadContr
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'dynamicQuorumVotes',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"erc20TokensToIncludeInFork"`
@@ -12430,7 +12436,7 @@ export const readNounsGovernorErc20TokensToIncludeInFork = /*#__PURE__*/ createR
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'erc20TokensToIncludeInFork',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkDAODeployer"`
@@ -12442,7 +12448,7 @@ export const readNounsGovernorForkDaoDeployer = /*#__PURE__*/ createReadContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkDAODeployer',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkEndTimestamp"`
@@ -12454,7 +12460,7 @@ export const readNounsGovernorForkEndTimestamp = /*#__PURE__*/ createReadContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkEndTimestamp',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkEscrow"`
@@ -12466,7 +12472,7 @@ export const readNounsGovernorForkEscrow = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkEscrow',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkPeriod"`
@@ -12478,7 +12484,7 @@ export const readNounsGovernorForkPeriod = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkPeriod',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkThreshold"`
@@ -12490,7 +12496,7 @@ export const readNounsGovernorForkThreshold = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkThreshold',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"forkThresholdBPS"`
@@ -12502,7 +12508,7 @@ export const readNounsGovernorForkThresholdBps = /*#__PURE__*/ createReadContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'forkThresholdBPS',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"getActions"`
@@ -12514,7 +12520,7 @@ export const readNounsGovernorGetActions = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'getActions',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"getDynamicQuorumParamsAt"`
@@ -12526,7 +12532,7 @@ export const readNounsGovernorGetDynamicQuorumParamsAt = /*#__PURE__*/ createRea
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'getDynamicQuorumParamsAt',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"getReceipt"`
@@ -12538,7 +12544,7 @@ export const readNounsGovernorGetReceipt = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'getReceipt',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"lastMinuteWindowInBlocks"`
@@ -12550,7 +12556,7 @@ export const readNounsGovernorLastMinuteWindowInBlocks = /*#__PURE__*/ createRea
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'lastMinuteWindowInBlocks',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"latestProposalIds"`
@@ -12562,7 +12568,7 @@ export const readNounsGovernorLatestProposalIds = /*#__PURE__*/ createReadContra
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'latestProposalIds',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"maxQuorumVotes"`
@@ -12574,7 +12580,7 @@ export const readNounsGovernorMaxQuorumVotes = /*#__PURE__*/ createReadContract(
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'maxQuorumVotes',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"minQuorumVotes"`
@@ -12586,7 +12592,7 @@ export const readNounsGovernorMinQuorumVotes = /*#__PURE__*/ createReadContract(
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'minQuorumVotes',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"nouns"`
@@ -12598,7 +12604,7 @@ export const readNounsGovernorNouns = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'nouns',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"numTokensInForkEscrow"`
@@ -12610,7 +12616,7 @@ export const readNounsGovernorNumTokensInForkEscrow = /*#__PURE__*/ createReadCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'numTokensInForkEscrow',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"objectionPeriodDurationInBlocks"`
@@ -12622,7 +12628,7 @@ export const readNounsGovernorObjectionPeriodDurationInBlocks = /*#__PURE__*/ cr
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'objectionPeriodDurationInBlocks',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"pendingVetoer"`
@@ -12634,7 +12640,7 @@ export const readNounsGovernorPendingVetoer = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'pendingVetoer',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalCount"`
@@ -12646,7 +12652,7 @@ export const readNounsGovernorProposalCount = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalCount',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalDataForRewards"`
@@ -12658,7 +12664,7 @@ export const readNounsGovernorProposalDataForRewards = /*#__PURE__*/ createReadC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalDataForRewards',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalMaxOperations"`
@@ -12670,7 +12676,7 @@ export const readNounsGovernorProposalMaxOperations = /*#__PURE__*/ createReadCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalMaxOperations',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalThreshold"`
@@ -12682,7 +12688,7 @@ export const readNounsGovernorProposalThreshold = /*#__PURE__*/ createReadContra
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalThreshold',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalThresholdBPS"`
@@ -12694,7 +12700,7 @@ export const readNounsGovernorProposalThresholdBps = /*#__PURE__*/ createReadCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalThresholdBPS',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalUpdatablePeriodInBlocks"`
@@ -12706,7 +12712,7 @@ export const readNounsGovernorProposalUpdatablePeriodInBlocks = /*#__PURE__*/ cr
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalUpdatablePeriodInBlocks',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposals"`
@@ -12718,7 +12724,7 @@ export const readNounsGovernorProposals = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposals',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposalsV3"`
@@ -12730,7 +12736,7 @@ export const readNounsGovernorProposalsV3 = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposalsV3',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"quorumParamsCheckpoints"`
@@ -12742,7 +12748,7 @@ export const readNounsGovernorQuorumParamsCheckpoints = /*#__PURE__*/ createRead
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'quorumParamsCheckpoints',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"quorumVotes"`
@@ -12754,7 +12760,7 @@ export const readNounsGovernorQuorumVotes = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'quorumVotes',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"quorumVotesBPS"`
@@ -12766,7 +12772,7 @@ export const readNounsGovernorQuorumVotesBps = /*#__PURE__*/ createReadContract(
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'quorumVotesBPS',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"state"`
@@ -12778,7 +12784,7 @@ export const readNounsGovernorState = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'state',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"timelock"`
@@ -12790,7 +12796,7 @@ export const readNounsGovernorTimelock = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'timelock',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"timelockV1"`
@@ -12802,7 +12808,7 @@ export const readNounsGovernorTimelockV1 = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'timelockV1',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"vetoer"`
@@ -12814,7 +12820,7 @@ export const readNounsGovernorVetoer = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'vetoer',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"voteSnapshotBlockSwitchProposalId"`
@@ -12826,7 +12832,7 @@ export const readNounsGovernorVoteSnapshotBlockSwitchProposalId = /*#__PURE__*/ 
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'voteSnapshotBlockSwitchProposalId',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"votingDelay"`
@@ -12838,7 +12844,7 @@ export const readNounsGovernorVotingDelay = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'votingDelay',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"votingPeriod"`
@@ -12850,7 +12856,7 @@ export const readNounsGovernorVotingPeriod = /*#__PURE__*/ createReadContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'votingPeriod',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__
@@ -12861,7 +12867,7 @@ export const readNounsGovernorVotingPeriod = /*#__PURE__*/ createReadContract({
 export const writeNounsGovernor = /*#__PURE__*/ createWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"cancel"`
@@ -12873,7 +12879,7 @@ export const writeNounsGovernorCancel = /*#__PURE__*/ createWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'cancel',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"cancelSig"`
@@ -12885,7 +12891,7 @@ export const writeNounsGovernorCancelSig = /*#__PURE__*/ createWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'cancelSig',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castRefundableVote"`
@@ -12897,7 +12903,7 @@ export const writeNounsGovernorCastRefundableVote = /*#__PURE__*/ createWriteCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castRefundableVote',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castRefundableVoteWithReason"`
@@ -12909,7 +12915,7 @@ export const writeNounsGovernorCastRefundableVoteWithReason = /*#__PURE__*/ crea
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castRefundableVoteWithReason',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVote"`
@@ -12921,7 +12927,7 @@ export const writeNounsGovernorCastVote = /*#__PURE__*/ createWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVote',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVoteBySig"`
@@ -12933,7 +12939,7 @@ export const writeNounsGovernorCastVoteBySig = /*#__PURE__*/ createWriteContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVoteBySig',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVoteWithReason"`
@@ -12945,7 +12951,7 @@ export const writeNounsGovernorCastVoteWithReason = /*#__PURE__*/ createWriteCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVoteWithReason',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"escrowToFork"`
@@ -12957,7 +12963,7 @@ export const writeNounsGovernorEscrowToFork = /*#__PURE__*/ createWriteContract(
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'escrowToFork',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"execute"`
@@ -12969,7 +12975,7 @@ export const writeNounsGovernorExecute = /*#__PURE__*/ createWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'execute',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"executeFork"`
@@ -12981,7 +12987,7 @@ export const writeNounsGovernorExecuteFork = /*#__PURE__*/ createWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'executeFork',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"initialize"`
@@ -12993,7 +12999,7 @@ export const writeNounsGovernorInitialize = /*#__PURE__*/ createWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"joinFork"`
@@ -13005,7 +13011,7 @@ export const writeNounsGovernorJoinFork = /*#__PURE__*/ createWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'joinFork',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"propose"`
@@ -13017,7 +13023,7 @@ export const writeNounsGovernorPropose = /*#__PURE__*/ createWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'propose',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposeBySigs"`
@@ -13029,7 +13035,7 @@ export const writeNounsGovernorProposeBySigs = /*#__PURE__*/ createWriteContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposeBySigs',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposeOnTimelockV1"`
@@ -13041,7 +13047,7 @@ export const writeNounsGovernorProposeOnTimelockV1 = /*#__PURE__*/ createWriteCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposeOnTimelockV1',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"queue"`
@@ -13053,7 +13059,7 @@ export const writeNounsGovernorQueue = /*#__PURE__*/ createWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'queue',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposal"`
@@ -13065,7 +13071,7 @@ export const writeNounsGovernorUpdateProposal = /*#__PURE__*/ createWriteContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'updateProposal',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalBySigs"`
@@ -13077,7 +13083,7 @@ export const writeNounsGovernorUpdateProposalBySigs = /*#__PURE__*/ createWriteC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'updateProposalBySigs',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalDescription"`
@@ -13089,7 +13095,7 @@ export const writeNounsGovernorUpdateProposalDescription = /*#__PURE__*/ createW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'updateProposalDescription',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalTransactions"`
@@ -13101,7 +13107,7 @@ export const writeNounsGovernorUpdateProposalTransactions = /*#__PURE__*/ create
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'updateProposalTransactions',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"veto"`
@@ -13113,7 +13119,7 @@ export const writeNounsGovernorVeto = /*#__PURE__*/ createWriteContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'veto',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawDAONounsFromEscrowIncreasingTotalSupply"`
@@ -13126,7 +13132,7 @@ export const writeNounsGovernorWithdrawDaoNounsFromEscrowIncreasingTotalSupply =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'withdrawDAONounsFromEscrowIncreasingTotalSupply',
-  })
+  });
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawDAONounsFromEscrowToTreasury"`
@@ -13139,7 +13145,7 @@ export const writeNounsGovernorWithdrawDaoNounsFromEscrowToTreasury =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'withdrawDAONounsFromEscrowToTreasury',
-  })
+  });
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawFromForkEscrow"`
@@ -13151,7 +13157,7 @@ export const writeNounsGovernorWithdrawFromForkEscrow = /*#__PURE__*/ createWrit
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'withdrawFromForkEscrow',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__
@@ -13162,7 +13168,7 @@ export const writeNounsGovernorWithdrawFromForkEscrow = /*#__PURE__*/ createWrit
 export const simulateNounsGovernor = /*#__PURE__*/ createSimulateContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"cancel"`
@@ -13174,7 +13180,7 @@ export const simulateNounsGovernorCancel = /*#__PURE__*/ createSimulateContract(
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'cancel',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"cancelSig"`
@@ -13186,7 +13192,7 @@ export const simulateNounsGovernorCancelSig = /*#__PURE__*/ createSimulateContra
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'cancelSig',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castRefundableVote"`
@@ -13198,7 +13204,7 @@ export const simulateNounsGovernorCastRefundableVote = /*#__PURE__*/ createSimul
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castRefundableVote',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castRefundableVoteWithReason"`
@@ -13211,7 +13217,7 @@ export const simulateNounsGovernorCastRefundableVoteWithReason =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'castRefundableVoteWithReason',
-  })
+  });
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVote"`
@@ -13223,7 +13229,7 @@ export const simulateNounsGovernorCastVote = /*#__PURE__*/ createSimulateContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVote',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVoteBySig"`
@@ -13235,7 +13241,7 @@ export const simulateNounsGovernorCastVoteBySig = /*#__PURE__*/ createSimulateCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVoteBySig',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"castVoteWithReason"`
@@ -13247,7 +13253,7 @@ export const simulateNounsGovernorCastVoteWithReason = /*#__PURE__*/ createSimul
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'castVoteWithReason',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"escrowToFork"`
@@ -13259,7 +13265,7 @@ export const simulateNounsGovernorEscrowToFork = /*#__PURE__*/ createSimulateCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'escrowToFork',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"execute"`
@@ -13271,7 +13277,7 @@ export const simulateNounsGovernorExecute = /*#__PURE__*/ createSimulateContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'execute',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"executeFork"`
@@ -13283,7 +13289,7 @@ export const simulateNounsGovernorExecuteFork = /*#__PURE__*/ createSimulateCont
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'executeFork',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"initialize"`
@@ -13295,7 +13301,7 @@ export const simulateNounsGovernorInitialize = /*#__PURE__*/ createSimulateContr
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"joinFork"`
@@ -13307,7 +13313,7 @@ export const simulateNounsGovernorJoinFork = /*#__PURE__*/ createSimulateContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'joinFork',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"propose"`
@@ -13319,7 +13325,7 @@ export const simulateNounsGovernorPropose = /*#__PURE__*/ createSimulateContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'propose',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposeBySigs"`
@@ -13331,7 +13337,7 @@ export const simulateNounsGovernorProposeBySigs = /*#__PURE__*/ createSimulateCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposeBySigs',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"proposeOnTimelockV1"`
@@ -13343,7 +13349,7 @@ export const simulateNounsGovernorProposeOnTimelockV1 = /*#__PURE__*/ createSimu
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'proposeOnTimelockV1',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"queue"`
@@ -13355,7 +13361,7 @@ export const simulateNounsGovernorQueue = /*#__PURE__*/ createSimulateContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'queue',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposal"`
@@ -13367,7 +13373,7 @@ export const simulateNounsGovernorUpdateProposal = /*#__PURE__*/ createSimulateC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'updateProposal',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalBySigs"`
@@ -13379,7 +13385,7 @@ export const simulateNounsGovernorUpdateProposalBySigs = /*#__PURE__*/ createSim
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'updateProposalBySigs',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalDescription"`
@@ -13391,7 +13397,7 @@ export const simulateNounsGovernorUpdateProposalDescription = /*#__PURE__*/ crea
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'updateProposalDescription',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"updateProposalTransactions"`
@@ -13405,7 +13411,7 @@ export const simulateNounsGovernorUpdateProposalTransactions = /*#__PURE__*/ cre
     address: nounsGovernorAddress,
     functionName: 'updateProposalTransactions',
   },
-)
+);
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"veto"`
@@ -13417,7 +13423,7 @@ export const simulateNounsGovernorVeto = /*#__PURE__*/ createSimulateContract({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'veto',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawDAONounsFromEscrowIncreasingTotalSupply"`
@@ -13430,7 +13436,7 @@ export const simulateNounsGovernorWithdrawDaoNounsFromEscrowIncreasingTotalSuppl
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'withdrawDAONounsFromEscrowIncreasingTotalSupply',
-  })
+  });
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawDAONounsFromEscrowToTreasury"`
@@ -13443,7 +13449,7 @@ export const simulateNounsGovernorWithdrawDaoNounsFromEscrowToTreasury =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     functionName: 'withdrawDAONounsFromEscrowToTreasury',
-  })
+  });
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsGovernorAbi}__ and `functionName` set to `"withdrawFromForkEscrow"`
@@ -13455,7 +13461,7 @@ export const simulateNounsGovernorWithdrawFromForkEscrow = /*#__PURE__*/ createS
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   functionName: 'withdrawFromForkEscrow',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__
@@ -13466,7 +13472,7 @@ export const simulateNounsGovernorWithdrawFromForkEscrow = /*#__PURE__*/ createS
 export const watchNounsGovernorEvent = /*#__PURE__*/ createWatchContractEvent({
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"DAONounsSupplyIncreasedFromEscrow"`
@@ -13479,7 +13485,7 @@ export const watchNounsGovernorDaoNounsSupplyIncreasedFromEscrowEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'DAONounsSupplyIncreasedFromEscrow',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"DAOWithdrawNounsFromEscrow"`
@@ -13492,7 +13498,7 @@ export const watchNounsGovernorDaoWithdrawNounsFromEscrowEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'DAOWithdrawNounsFromEscrow',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ERC20TokensToIncludeInForkSet"`
@@ -13505,7 +13511,7 @@ export const watchNounsGovernorErc20TokensToIncludeInForkSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ERC20TokensToIncludeInForkSet',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"EscrowedToFork"`
@@ -13517,7 +13523,7 @@ export const watchNounsGovernorEscrowedToForkEvent = /*#__PURE__*/ createWatchCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'EscrowedToFork',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ExecuteFork"`
@@ -13529,7 +13535,7 @@ export const watchNounsGovernorExecuteForkEvent = /*#__PURE__*/ createWatchContr
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ExecuteFork',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ForkDAODeployerSet"`
@@ -13541,7 +13547,7 @@ export const watchNounsGovernorForkDaoDeployerSetEvent = /*#__PURE__*/ createWat
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ForkDAODeployerSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ForkPeriodSet"`
@@ -13553,7 +13559,7 @@ export const watchNounsGovernorForkPeriodSetEvent = /*#__PURE__*/ createWatchCon
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ForkPeriodSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ForkThresholdSet"`
@@ -13565,7 +13571,7 @@ export const watchNounsGovernorForkThresholdSetEvent = /*#__PURE__*/ createWatch
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ForkThresholdSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"JoinFork"`
@@ -13577,7 +13583,7 @@ export const watchNounsGovernorJoinForkEvent = /*#__PURE__*/ createWatchContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'JoinFork',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"LastMinuteWindowSet"`
@@ -13589,7 +13595,7 @@ export const watchNounsGovernorLastMinuteWindowSetEvent = /*#__PURE__*/ createWa
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'LastMinuteWindowSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"MaxQuorumVotesBPSSet"`
@@ -13601,7 +13607,7 @@ export const watchNounsGovernorMaxQuorumVotesBpsSetEvent = /*#__PURE__*/ createW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'MaxQuorumVotesBPSSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"MinQuorumVotesBPSSet"`
@@ -13613,7 +13619,7 @@ export const watchNounsGovernorMinQuorumVotesBpsSetEvent = /*#__PURE__*/ createW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'MinQuorumVotesBPSSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"NewAdmin"`
@@ -13625,7 +13631,7 @@ export const watchNounsGovernorNewAdminEvent = /*#__PURE__*/ createWatchContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'NewAdmin',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"NewPendingAdmin"`
@@ -13637,7 +13643,7 @@ export const watchNounsGovernorNewPendingAdminEvent = /*#__PURE__*/ createWatchC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'NewPendingAdmin',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"NewPendingVetoer"`
@@ -13649,7 +13655,7 @@ export const watchNounsGovernorNewPendingVetoerEvent = /*#__PURE__*/ createWatch
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'NewPendingVetoer',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"NewVetoer"`
@@ -13661,7 +13667,7 @@ export const watchNounsGovernorNewVetoerEvent = /*#__PURE__*/ createWatchContrac
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'NewVetoer',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ObjectionPeriodDurationSet"`
@@ -13674,7 +13680,7 @@ export const watchNounsGovernorObjectionPeriodDurationSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ObjectionPeriodDurationSet',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalCanceled"`
@@ -13686,7 +13692,7 @@ export const watchNounsGovernorProposalCanceledEvent = /*#__PURE__*/ createWatch
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ProposalCanceled',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalCreated"`
@@ -13698,7 +13704,7 @@ export const watchNounsGovernorProposalCreatedEvent = /*#__PURE__*/ createWatchC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ProposalCreated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalCreatedOnTimelockV1"`
@@ -13711,7 +13717,7 @@ export const watchNounsGovernorProposalCreatedOnTimelockV1Event =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalCreatedOnTimelockV1',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalCreatedWithRequirements"`
@@ -13724,7 +13730,7 @@ export const watchNounsGovernorProposalCreatedWithRequirementsEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalCreatedWithRequirements',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalDescriptionUpdated"`
@@ -13737,7 +13743,7 @@ export const watchNounsGovernorProposalDescriptionUpdatedEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalDescriptionUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalExecuted"`
@@ -13749,7 +13755,7 @@ export const watchNounsGovernorProposalExecutedEvent = /*#__PURE__*/ createWatch
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ProposalExecuted',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalObjectionPeriodSet"`
@@ -13762,7 +13768,7 @@ export const watchNounsGovernorProposalObjectionPeriodSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalObjectionPeriodSet',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalQueued"`
@@ -13774,7 +13780,7 @@ export const watchNounsGovernorProposalQueuedEvent = /*#__PURE__*/ createWatchCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ProposalQueued',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalThresholdBPSSet"`
@@ -13787,7 +13793,7 @@ export const watchNounsGovernorProposalThresholdBpsSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalThresholdBPSSet',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalTransactionsUpdated"`
@@ -13800,7 +13806,7 @@ export const watchNounsGovernorProposalTransactionsUpdatedEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalTransactionsUpdated',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalUpdatablePeriodSet"`
@@ -13813,7 +13819,7 @@ export const watchNounsGovernorProposalUpdatablePeriodSetEvent =
     abi: nounsGovernorAbi,
     address: nounsGovernorAddress,
     eventName: 'ProposalUpdatablePeriodSet',
-  })
+  });
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalUpdated"`
@@ -13825,7 +13831,7 @@ export const watchNounsGovernorProposalUpdatedEvent = /*#__PURE__*/ createWatchC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ProposalUpdated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"ProposalVetoed"`
@@ -13837,7 +13843,7 @@ export const watchNounsGovernorProposalVetoedEvent = /*#__PURE__*/ createWatchCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'ProposalVetoed',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"QuorumCoefficientSet"`
@@ -13849,7 +13855,7 @@ export const watchNounsGovernorQuorumCoefficientSetEvent = /*#__PURE__*/ createW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'QuorumCoefficientSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"QuorumVotesBPSSet"`
@@ -13861,7 +13867,7 @@ export const watchNounsGovernorQuorumVotesBpsSetEvent = /*#__PURE__*/ createWatc
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'QuorumVotesBPSSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"RefundableVote"`
@@ -13873,7 +13879,7 @@ export const watchNounsGovernorRefundableVoteEvent = /*#__PURE__*/ createWatchCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'RefundableVote',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"SignatureCancelled"`
@@ -13885,7 +13891,7 @@ export const watchNounsGovernorSignatureCancelledEvent = /*#__PURE__*/ createWat
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'SignatureCancelled',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"TimelocksAndAdminSet"`
@@ -13897,7 +13903,7 @@ export const watchNounsGovernorTimelocksAndAdminSetEvent = /*#__PURE__*/ createW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'TimelocksAndAdminSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"VoteCast"`
@@ -13909,7 +13915,7 @@ export const watchNounsGovernorVoteCastEvent = /*#__PURE__*/ createWatchContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'VoteCast',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"VoteCastWithClientId"`
@@ -13921,7 +13927,7 @@ export const watchNounsGovernorVoteCastWithClientIdEvent = /*#__PURE__*/ createW
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'VoteCastWithClientId',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"VotingDelaySet"`
@@ -13933,7 +13939,7 @@ export const watchNounsGovernorVotingDelaySetEvent = /*#__PURE__*/ createWatchCo
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'VotingDelaySet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"VotingPeriodSet"`
@@ -13945,7 +13951,7 @@ export const watchNounsGovernorVotingPeriodSetEvent = /*#__PURE__*/ createWatchC
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'VotingPeriodSet',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"Withdraw"`
@@ -13957,7 +13963,7 @@ export const watchNounsGovernorWithdrawEvent = /*#__PURE__*/ createWatchContract
   abi: nounsGovernorAbi,
   address: nounsGovernorAddress,
   eventName: 'Withdraw',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsGovernorAbi}__ and `eventName` set to `"WithdrawFromForkEscrow"`
@@ -13967,7 +13973,7 @@ export const watchNounsGovernorWithdrawEvent = /*#__PURE__*/ createWatchContract
  */
 export const watchNounsGovernorWithdrawFromForkEscrowEvent = /*#__PURE__*/ createWatchContractEvent(
   { abi: nounsGovernorAbi, address: nounsGovernorAddress, eventName: 'WithdrawFromForkEscrow' },
-)
+);
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__
@@ -13978,7 +13984,7 @@ export const watchNounsGovernorWithdrawFromForkEscrowEvent = /*#__PURE__*/ creat
 export const readNounsToken = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"DELEGATION_TYPEHASH"`
@@ -13990,7 +13996,7 @@ export const readNounsTokenDelegationTypehash = /*#__PURE__*/ createReadContract
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'DELEGATION_TYPEHASH',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"DOMAIN_TYPEHASH"`
@@ -14002,7 +14008,7 @@ export const readNounsTokenDomainTypehash = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'DOMAIN_TYPEHASH',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"balanceOf"`
@@ -14014,7 +14020,7 @@ export const readNounsTokenBalanceOf = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'balanceOf',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"checkpoints"`
@@ -14026,7 +14032,7 @@ export const readNounsTokenCheckpoints = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'checkpoints',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"contractURI"`
@@ -14038,7 +14044,7 @@ export const readNounsTokenContractUri = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'contractURI',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"dataURI"`
@@ -14050,7 +14056,7 @@ export const readNounsTokenDataUri = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'dataURI',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"decimals"`
@@ -14062,7 +14068,7 @@ export const readNounsTokenDecimals = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'decimals',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"delegates"`
@@ -14074,7 +14080,7 @@ export const readNounsTokenDelegates = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'delegates',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"descriptor"`
@@ -14086,7 +14092,7 @@ export const readNounsTokenDescriptor = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'descriptor',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"getApproved"`
@@ -14098,7 +14104,7 @@ export const readNounsTokenGetApproved = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'getApproved',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"getCurrentVotes"`
@@ -14110,7 +14116,7 @@ export const readNounsTokenGetCurrentVotes = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'getCurrentVotes',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"getPriorVotes"`
@@ -14122,7 +14128,7 @@ export const readNounsTokenGetPriorVotes = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'getPriorVotes',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"isApprovedForAll"`
@@ -14134,7 +14140,7 @@ export const readNounsTokenIsApprovedForAll = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'isApprovedForAll',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"isDescriptorLocked"`
@@ -14146,7 +14152,7 @@ export const readNounsTokenIsDescriptorLocked = /*#__PURE__*/ createReadContract
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'isDescriptorLocked',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"isMinterLocked"`
@@ -14158,7 +14164,7 @@ export const readNounsTokenIsMinterLocked = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'isMinterLocked',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"isSeederLocked"`
@@ -14170,7 +14176,7 @@ export const readNounsTokenIsSeederLocked = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'isSeederLocked',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"minter"`
@@ -14182,7 +14188,7 @@ export const readNounsTokenMinter = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'minter',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"name"`
@@ -14194,7 +14200,7 @@ export const readNounsTokenName = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'name',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"nonces"`
@@ -14206,7 +14212,7 @@ export const readNounsTokenNonces = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'nonces',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"noundersDAO"`
@@ -14218,7 +14224,7 @@ export const readNounsTokenNoundersDao = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'noundersDAO',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"numCheckpoints"`
@@ -14230,7 +14236,7 @@ export const readNounsTokenNumCheckpoints = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'numCheckpoints',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"owner"`
@@ -14242,7 +14248,7 @@ export const readNounsTokenOwner = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'owner',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"ownerOf"`
@@ -14254,7 +14260,7 @@ export const readNounsTokenOwnerOf = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'ownerOf',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"proxyRegistry"`
@@ -14266,7 +14272,7 @@ export const readNounsTokenProxyRegistry = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'proxyRegistry',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"seeder"`
@@ -14278,7 +14284,7 @@ export const readNounsTokenSeeder = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'seeder',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"seeds"`
@@ -14290,7 +14296,7 @@ export const readNounsTokenSeeds = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'seeds',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"supportsInterface"`
@@ -14302,7 +14308,7 @@ export const readNounsTokenSupportsInterface = /*#__PURE__*/ createReadContract(
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'supportsInterface',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"symbol"`
@@ -14314,7 +14320,7 @@ export const readNounsTokenSymbol = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'symbol',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"tokenByIndex"`
@@ -14326,7 +14332,7 @@ export const readNounsTokenTokenByIndex = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'tokenByIndex',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"tokenOfOwnerByIndex"`
@@ -14338,7 +14344,7 @@ export const readNounsTokenTokenOfOwnerByIndex = /*#__PURE__*/ createReadContrac
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'tokenOfOwnerByIndex',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"tokenURI"`
@@ -14350,7 +14356,7 @@ export const readNounsTokenTokenUri = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'tokenURI',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"totalSupply"`
@@ -14362,7 +14368,7 @@ export const readNounsTokenTotalSupply = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'totalSupply',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"votesToDelegate"`
@@ -14374,7 +14380,7 @@ export const readNounsTokenVotesToDelegate = /*#__PURE__*/ createReadContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'votesToDelegate',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__
@@ -14385,7 +14391,7 @@ export const readNounsTokenVotesToDelegate = /*#__PURE__*/ createReadContract({
 export const writeNounsToken = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"approve"`
@@ -14397,7 +14403,7 @@ export const writeNounsTokenApprove = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'approve',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"burn"`
@@ -14409,7 +14415,7 @@ export const writeNounsTokenBurn = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'burn',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"delegate"`
@@ -14421,7 +14427,7 @@ export const writeNounsTokenDelegate = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'delegate',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"delegateBySig"`
@@ -14433,7 +14439,7 @@ export const writeNounsTokenDelegateBySig = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'delegateBySig',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockDescriptor"`
@@ -14445,7 +14451,7 @@ export const writeNounsTokenLockDescriptor = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockDescriptor',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockMinter"`
@@ -14457,7 +14463,7 @@ export const writeNounsTokenLockMinter = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockMinter',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockSeeder"`
@@ -14469,7 +14475,7 @@ export const writeNounsTokenLockSeeder = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockSeeder',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"mint"`
@@ -14481,7 +14487,7 @@ export const writeNounsTokenMint = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'mint',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -14493,7 +14499,7 @@ export const writeNounsTokenRenounceOwnership = /*#__PURE__*/ createWriteContrac
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"safeTransferFrom"`
@@ -14505,7 +14511,7 @@ export const writeNounsTokenSafeTransferFrom = /*#__PURE__*/ createWriteContract
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'safeTransferFrom',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setApprovalForAll"`
@@ -14517,7 +14523,7 @@ export const writeNounsTokenSetApprovalForAll = /*#__PURE__*/ createWriteContrac
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setApprovalForAll',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setContractURIHash"`
@@ -14529,7 +14535,7 @@ export const writeNounsTokenSetContractUriHash = /*#__PURE__*/ createWriteContra
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setContractURIHash',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setDescriptor"`
@@ -14541,7 +14547,7 @@ export const writeNounsTokenSetDescriptor = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setDescriptor',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setMinter"`
@@ -14553,7 +14559,7 @@ export const writeNounsTokenSetMinter = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setMinter',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setNoundersDAO"`
@@ -14565,7 +14571,7 @@ export const writeNounsTokenSetNoundersDao = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setNoundersDAO',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setSeeder"`
@@ -14577,7 +14583,7 @@ export const writeNounsTokenSetSeeder = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setSeeder',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"transferFrom"`
@@ -14589,7 +14595,7 @@ export const writeNounsTokenTransferFrom = /*#__PURE__*/ createWriteContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'transferFrom',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"transferOwnership"`
@@ -14601,7 +14607,7 @@ export const writeNounsTokenTransferOwnership = /*#__PURE__*/ createWriteContrac
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__
@@ -14612,7 +14618,7 @@ export const writeNounsTokenTransferOwnership = /*#__PURE__*/ createWriteContrac
 export const simulateNounsToken = /*#__PURE__*/ createSimulateContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"approve"`
@@ -14624,7 +14630,7 @@ export const simulateNounsTokenApprove = /*#__PURE__*/ createSimulateContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'approve',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"burn"`
@@ -14636,7 +14642,7 @@ export const simulateNounsTokenBurn = /*#__PURE__*/ createSimulateContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'burn',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"delegate"`
@@ -14648,7 +14654,7 @@ export const simulateNounsTokenDelegate = /*#__PURE__*/ createSimulateContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'delegate',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"delegateBySig"`
@@ -14660,7 +14666,7 @@ export const simulateNounsTokenDelegateBySig = /*#__PURE__*/ createSimulateContr
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'delegateBySig',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockDescriptor"`
@@ -14672,7 +14678,7 @@ export const simulateNounsTokenLockDescriptor = /*#__PURE__*/ createSimulateCont
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockDescriptor',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockMinter"`
@@ -14684,7 +14690,7 @@ export const simulateNounsTokenLockMinter = /*#__PURE__*/ createSimulateContract
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockMinter',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"lockSeeder"`
@@ -14696,7 +14702,7 @@ export const simulateNounsTokenLockSeeder = /*#__PURE__*/ createSimulateContract
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'lockSeeder',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"mint"`
@@ -14708,7 +14714,7 @@ export const simulateNounsTokenMint = /*#__PURE__*/ createSimulateContract({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'mint',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"renounceOwnership"`
@@ -14720,7 +14726,7 @@ export const simulateNounsTokenRenounceOwnership = /*#__PURE__*/ createSimulateC
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'renounceOwnership',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"safeTransferFrom"`
@@ -14732,7 +14738,7 @@ export const simulateNounsTokenSafeTransferFrom = /*#__PURE__*/ createSimulateCo
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'safeTransferFrom',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setApprovalForAll"`
@@ -14744,7 +14750,7 @@ export const simulateNounsTokenSetApprovalForAll = /*#__PURE__*/ createSimulateC
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setApprovalForAll',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setContractURIHash"`
@@ -14756,7 +14762,7 @@ export const simulateNounsTokenSetContractUriHash = /*#__PURE__*/ createSimulate
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setContractURIHash',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setDescriptor"`
@@ -14768,7 +14774,7 @@ export const simulateNounsTokenSetDescriptor = /*#__PURE__*/ createSimulateContr
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setDescriptor',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setMinter"`
@@ -14780,7 +14786,7 @@ export const simulateNounsTokenSetMinter = /*#__PURE__*/ createSimulateContract(
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setMinter',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setNoundersDAO"`
@@ -14792,7 +14798,7 @@ export const simulateNounsTokenSetNoundersDao = /*#__PURE__*/ createSimulateCont
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setNoundersDAO',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"setSeeder"`
@@ -14804,7 +14810,7 @@ export const simulateNounsTokenSetSeeder = /*#__PURE__*/ createSimulateContract(
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'setSeeder',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"transferFrom"`
@@ -14816,7 +14822,7 @@ export const simulateNounsTokenTransferFrom = /*#__PURE__*/ createSimulateContra
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'transferFrom',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTokenAbi}__ and `functionName` set to `"transferOwnership"`
@@ -14828,7 +14834,7 @@ export const simulateNounsTokenTransferOwnership = /*#__PURE__*/ createSimulateC
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   functionName: 'transferOwnership',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__
@@ -14839,7 +14845,7 @@ export const simulateNounsTokenTransferOwnership = /*#__PURE__*/ createSimulateC
 export const watchNounsTokenEvent = /*#__PURE__*/ createWatchContractEvent({
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"Approval"`
@@ -14851,7 +14857,7 @@ export const watchNounsTokenApprovalEvent = /*#__PURE__*/ createWatchContractEve
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'Approval',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"ApprovalForAll"`
@@ -14863,7 +14869,7 @@ export const watchNounsTokenApprovalForAllEvent = /*#__PURE__*/ createWatchContr
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'ApprovalForAll',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"DelegateChanged"`
@@ -14875,7 +14881,7 @@ export const watchNounsTokenDelegateChangedEvent = /*#__PURE__*/ createWatchCont
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'DelegateChanged',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"DelegateVotesChanged"`
@@ -14887,7 +14893,7 @@ export const watchNounsTokenDelegateVotesChangedEvent = /*#__PURE__*/ createWatc
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'DelegateVotesChanged',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"DescriptorLocked"`
@@ -14899,7 +14905,7 @@ export const watchNounsTokenDescriptorLockedEvent = /*#__PURE__*/ createWatchCon
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'DescriptorLocked',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"DescriptorUpdated"`
@@ -14911,7 +14917,7 @@ export const watchNounsTokenDescriptorUpdatedEvent = /*#__PURE__*/ createWatchCo
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'DescriptorUpdated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"MinterLocked"`
@@ -14923,7 +14929,7 @@ export const watchNounsTokenMinterLockedEvent = /*#__PURE__*/ createWatchContrac
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'MinterLocked',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"MinterUpdated"`
@@ -14935,7 +14941,7 @@ export const watchNounsTokenMinterUpdatedEvent = /*#__PURE__*/ createWatchContra
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'MinterUpdated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"NounBurned"`
@@ -14947,7 +14953,7 @@ export const watchNounsTokenNounBurnedEvent = /*#__PURE__*/ createWatchContractE
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'NounBurned',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"NounCreated"`
@@ -14959,7 +14965,7 @@ export const watchNounsTokenNounCreatedEvent = /*#__PURE__*/ createWatchContract
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'NounCreated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"NoundersDAOUpdated"`
@@ -14971,7 +14977,7 @@ export const watchNounsTokenNoundersDaoUpdatedEvent = /*#__PURE__*/ createWatchC
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'NoundersDAOUpdated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"OwnershipTransferred"`
@@ -14983,7 +14989,7 @@ export const watchNounsTokenOwnershipTransferredEvent = /*#__PURE__*/ createWatc
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'OwnershipTransferred',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"SeederLocked"`
@@ -14995,7 +15001,7 @@ export const watchNounsTokenSeederLockedEvent = /*#__PURE__*/ createWatchContrac
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'SeederLocked',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"SeederUpdated"`
@@ -15007,7 +15013,7 @@ export const watchNounsTokenSeederUpdatedEvent = /*#__PURE__*/ createWatchContra
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'SeederUpdated',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTokenAbi}__ and `eventName` set to `"Transfer"`
@@ -15019,7 +15025,7 @@ export const watchNounsTokenTransferEvent = /*#__PURE__*/ createWatchContractEve
   abi: nounsTokenAbi,
   address: nounsTokenAddress,
   eventName: 'Transfer',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTreasuryAbi}__
@@ -15030,7 +15036,7 @@ export const watchNounsTokenTransferEvent = /*#__PURE__*/ createWatchContractEve
 export const readNounsTreasury = /*#__PURE__*/ createReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"GRACE_PERIOD"`
@@ -15042,7 +15048,7 @@ export const readNounsTreasuryGracePeriod = /*#__PURE__*/ createReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'GRACE_PERIOD',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"MAXIMUM_DELAY"`
@@ -15054,7 +15060,7 @@ export const readNounsTreasuryMaximumDelay = /*#__PURE__*/ createReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'MAXIMUM_DELAY',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"MINIMUM_DELAY"`
@@ -15066,7 +15072,7 @@ export const readNounsTreasuryMinimumDelay = /*#__PURE__*/ createReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'MINIMUM_DELAY',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"NAME"`
@@ -15078,7 +15084,7 @@ export const readNounsTreasuryName = /*#__PURE__*/ createReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'NAME',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"admin"`
@@ -15090,7 +15096,7 @@ export const readNounsTreasuryAdmin = /*#__PURE__*/ createReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'admin',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"delay"`
@@ -15102,7 +15108,7 @@ export const readNounsTreasuryDelay = /*#__PURE__*/ createReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'delay',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"pendingAdmin"`
@@ -15114,7 +15120,7 @@ export const readNounsTreasuryPendingAdmin = /*#__PURE__*/ createReadContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'pendingAdmin',
-})
+});
 
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"queuedTransactions"`
@@ -15126,7 +15132,7 @@ export const readNounsTreasuryQueuedTransactions = /*#__PURE__*/ createReadContr
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'queuedTransactions',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__
@@ -15137,7 +15143,7 @@ export const readNounsTreasuryQueuedTransactions = /*#__PURE__*/ createReadContr
 export const writeNounsTreasury = /*#__PURE__*/ createWriteContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"acceptAdmin"`
@@ -15149,7 +15155,7 @@ export const writeNounsTreasuryAcceptAdmin = /*#__PURE__*/ createWriteContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'acceptAdmin',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"cancelTransaction"`
@@ -15161,7 +15167,7 @@ export const writeNounsTreasuryCancelTransaction = /*#__PURE__*/ createWriteCont
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'cancelTransaction',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"executeTransaction"`
@@ -15173,7 +15179,7 @@ export const writeNounsTreasuryExecuteTransaction = /*#__PURE__*/ createWriteCon
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'executeTransaction',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"initialize"`
@@ -15185,7 +15191,7 @@ export const writeNounsTreasuryInitialize = /*#__PURE__*/ createWriteContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"queueTransaction"`
@@ -15197,7 +15203,7 @@ export const writeNounsTreasuryQueueTransaction = /*#__PURE__*/ createWriteContr
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'queueTransaction',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"sendERC20"`
@@ -15209,7 +15215,7 @@ export const writeNounsTreasurySendErc20 = /*#__PURE__*/ createWriteContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'sendERC20',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"sendETH"`
@@ -15221,7 +15227,7 @@ export const writeNounsTreasurySendEth = /*#__PURE__*/ createWriteContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'sendETH',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"setDelay"`
@@ -15233,7 +15239,7 @@ export const writeNounsTreasurySetDelay = /*#__PURE__*/ createWriteContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'setDelay',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"setPendingAdmin"`
@@ -15245,7 +15251,7 @@ export const writeNounsTreasurySetPendingAdmin = /*#__PURE__*/ createWriteContra
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'setPendingAdmin',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"upgradeTo"`
@@ -15257,7 +15263,7 @@ export const writeNounsTreasuryUpgradeTo = /*#__PURE__*/ createWriteContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'upgradeTo',
-})
+});
 
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"upgradeToAndCall"`
@@ -15269,7 +15275,7 @@ export const writeNounsTreasuryUpgradeToAndCall = /*#__PURE__*/ createWriteContr
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'upgradeToAndCall',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__
@@ -15280,7 +15286,7 @@ export const writeNounsTreasuryUpgradeToAndCall = /*#__PURE__*/ createWriteContr
 export const simulateNounsTreasury = /*#__PURE__*/ createSimulateContract({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"acceptAdmin"`
@@ -15292,7 +15298,7 @@ export const simulateNounsTreasuryAcceptAdmin = /*#__PURE__*/ createSimulateCont
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'acceptAdmin',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"cancelTransaction"`
@@ -15304,7 +15310,7 @@ export const simulateNounsTreasuryCancelTransaction = /*#__PURE__*/ createSimula
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'cancelTransaction',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"executeTransaction"`
@@ -15316,7 +15322,7 @@ export const simulateNounsTreasuryExecuteTransaction = /*#__PURE__*/ createSimul
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'executeTransaction',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"initialize"`
@@ -15328,7 +15334,7 @@ export const simulateNounsTreasuryInitialize = /*#__PURE__*/ createSimulateContr
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'initialize',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"queueTransaction"`
@@ -15340,7 +15346,7 @@ export const simulateNounsTreasuryQueueTransaction = /*#__PURE__*/ createSimulat
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'queueTransaction',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"sendERC20"`
@@ -15352,7 +15358,7 @@ export const simulateNounsTreasurySendErc20 = /*#__PURE__*/ createSimulateContra
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'sendERC20',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"sendETH"`
@@ -15364,7 +15370,7 @@ export const simulateNounsTreasurySendEth = /*#__PURE__*/ createSimulateContract
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'sendETH',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"setDelay"`
@@ -15376,7 +15382,7 @@ export const simulateNounsTreasurySetDelay = /*#__PURE__*/ createSimulateContrac
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'setDelay',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"setPendingAdmin"`
@@ -15388,7 +15394,7 @@ export const simulateNounsTreasurySetPendingAdmin = /*#__PURE__*/ createSimulate
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'setPendingAdmin',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"upgradeTo"`
@@ -15400,7 +15406,7 @@ export const simulateNounsTreasuryUpgradeTo = /*#__PURE__*/ createSimulateContra
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'upgradeTo',
-})
+});
 
 /**
  * Wraps __{@link simulateContract}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `functionName` set to `"upgradeToAndCall"`
@@ -15412,7 +15418,7 @@ export const simulateNounsTreasuryUpgradeToAndCall = /*#__PURE__*/ createSimulat
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   functionName: 'upgradeToAndCall',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__
@@ -15423,7 +15429,7 @@ export const simulateNounsTreasuryUpgradeToAndCall = /*#__PURE__*/ createSimulat
 export const watchNounsTreasuryEvent = /*#__PURE__*/ createWatchContractEvent({
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"AdminChanged"`
@@ -15435,7 +15441,7 @@ export const watchNounsTreasuryAdminChangedEvent = /*#__PURE__*/ createWatchCont
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'AdminChanged',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"BeaconUpgraded"`
@@ -15447,7 +15453,7 @@ export const watchNounsTreasuryBeaconUpgradedEvent = /*#__PURE__*/ createWatchCo
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'BeaconUpgraded',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"CancelTransaction"`
@@ -15459,7 +15465,7 @@ export const watchNounsTreasuryCancelTransactionEvent = /*#__PURE__*/ createWatc
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'CancelTransaction',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"ERC20Sent"`
@@ -15471,7 +15477,7 @@ export const watchNounsTreasuryErc20SentEvent = /*#__PURE__*/ createWatchContrac
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'ERC20Sent',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"ETHSent"`
@@ -15483,7 +15489,7 @@ export const watchNounsTreasuryEthSentEvent = /*#__PURE__*/ createWatchContractE
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'ETHSent',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"ExecuteTransaction"`
@@ -15495,7 +15501,7 @@ export const watchNounsTreasuryExecuteTransactionEvent = /*#__PURE__*/ createWat
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'ExecuteTransaction',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"NewAdmin"`
@@ -15507,7 +15513,7 @@ export const watchNounsTreasuryNewAdminEvent = /*#__PURE__*/ createWatchContract
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'NewAdmin',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"NewDelay"`
@@ -15519,7 +15525,7 @@ export const watchNounsTreasuryNewDelayEvent = /*#__PURE__*/ createWatchContract
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'NewDelay',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"NewPendingAdmin"`
@@ -15531,7 +15537,7 @@ export const watchNounsTreasuryNewPendingAdminEvent = /*#__PURE__*/ createWatchC
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'NewPendingAdmin',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"QueueTransaction"`
@@ -15543,7 +15549,7 @@ export const watchNounsTreasuryQueueTransactionEvent = /*#__PURE__*/ createWatch
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'QueueTransaction',
-})
+});
 
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link nounsTreasuryAbi}__ and `eventName` set to `"Upgraded"`
@@ -15555,4 +15561,4 @@ export const watchNounsTreasuryUpgradedEvent = /*#__PURE__*/ createWatchContract
   abi: nounsTreasuryAbi,
   address: nounsTreasuryAddress,
   eventName: 'Upgraded',
-})
+});
