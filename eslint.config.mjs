@@ -8,13 +8,17 @@ import tseslint from 'typescript-eslint';
 import typescriptEslintEslintPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 
-// React plugins (only for webapp)
+// React plugins
+import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 
 // Other plugins
 import unicornPlugin from 'eslint-plugin-unicorn';
 import turbo from 'eslint-plugin-turbo';
+import importPlugin from 'eslint-plugin-import';
+import linguiPlugin from 'eslint-plugin-lingui';
+import vitestPlugin from 'eslint-plugin-vitest';
 
 // Compatibility layer for traditional configs
 const compat = new FlatCompat({
@@ -28,11 +32,10 @@ export default defineConfig([
     ignores: [
       '**/node_modules/*',
       '**/dist',
-      '**/*.config.js',
-      '**/*.config.ts',
+      '**/*.config.{js,mjs,ts,mts}',
       '**/*.setup.ts',
       '**/.netlify',
-      'packages/nouns-subgraph/src/types/*'
+      'packages/nouns-subgraph/src/types/*',
     ],
   },
 
@@ -54,13 +57,30 @@ export default defineConfig([
       '@typescript-eslint': typescriptEslintEslintPlugin,
       turbo,
       unicorn: unicornPlugin,
+      import: importPlugin,
+      lingui: linguiPlugin,
     },
     extends: [
       ...tseslint.configs.recommended,
-      ...compat.extends('plugin:@typescript-eslint/recommended', 'prettier'),
+      ...compat.extends(
+        'plugin:@typescript-eslint/recommended',
+        'plugin:import/recommended',
+        'plugin:import/typescript',
+        'prettier',
+      ),
     ],
     rules: {
       '@typescript-eslint/explicit-module-boundary-types': 'off',
+      // Import plugin rules
+      'import/no-unresolved': 'error',
+      'import/named': 'error',
+      'import/default': 'error',
+      'import/namespace': 'error',
+      'import/export': 'error',
+      // Lingui plugin rules
+      'lingui/no-unlocalized-strings': 'off',
+      'lingui/t-call-in-function': 'error',
+      'lingui/no-single-variables-to-translate': 'error',
     },
   },
 
@@ -73,12 +93,21 @@ export default defineConfig([
       },
     },
     plugins: {
+      react: reactPlugin,
       'react-hooks': reactHooksPlugin,
       'react-refresh': reactRefreshPlugin,
     },
+    extends: [...compat.extends('plugin:react/recommended')],
     rules: {
-      ...reactHooksPlugin.configs.recommended.rules,
+      // React hooks rules
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      // React rules
+      'react/jsx-uses-react': 'error',
+      'react/jsx-uses-vars': 'error',
+      'react/prop-types': 'error',
+      'react/react-in-jsx-scope': 'off', // Not needed in React 17+
     },
   },
 
@@ -91,6 +120,17 @@ export default defineConfig([
       globals: {
         ...globals.node,
       },
+    },
+    plugins: {
+      import: importPlugin,
+    },
+    rules: {
+      // Import plugin rules for JS files
+      'import/no-unresolved': 'error',
+      'import/named': 'error',
+      'import/default': 'error',
+      'import/namespace': 'error',
+      'import/export': 'error',
     },
   },
 
