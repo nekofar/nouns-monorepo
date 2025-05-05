@@ -1,13 +1,15 @@
-import { useEtherBalance } from '@usedapp/core';
-import { BigNumber } from 'ethers';
+import { useBalance } from 'wagmi';
 import useLidoBalance from './useLidoBalance';
 
 function useForkTreasuryBalance(treasuryContractAddress?: string) {
-  const ethBalance = useEtherBalance(treasuryContractAddress);
+  const { data: ethBalanceData } = useBalance({
+    address: treasuryContractAddress as `0x${string}` | undefined,
+  });
   const lidoBalanceAsETH = useLidoBalance(treasuryContractAddress);
 
-  const zero = BigNumber.from(0);
-  return ethBalance?.add(lidoBalanceAsETH ?? zero) ?? zero;
+  const ethBalance = ethBalanceData?.value ?? 0n;
+
+  return ethBalance + ((lidoBalanceAsETH as bigint) ?? 0n);
 }
 
 export default useForkTreasuryBalance;
