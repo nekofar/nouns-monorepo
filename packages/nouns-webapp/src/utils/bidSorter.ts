@@ -1,4 +1,3 @@
-import { BigNumber } from '@ethersproject/bignumber';
 import { IBid } from '../wrappers/subgraph';
 
 /**
@@ -9,8 +8,8 @@ import { IBid } from '../wrappers/subgraph';
  */
 export const compareBidsChronologically = (a: IBid, b: IBid): number => {
   const adjustedTimes = {
-    a: BigNumber.from(a.blockTimestamp).mul(1_000_000).add(BigNumber.from(a.txIndex)),
-    b: BigNumber.from(b.blockTimestamp).mul(1_000_000).add(BigNumber.from(b.txIndex)),
+    a: BigInt(a.blockTimestamp) * 1_000_000n + BigInt(a.txIndex ?? 0),
+    b: BigInt(b.blockTimestamp) * 1_000_000n + BigInt(b.txIndex ?? 0),
   };
-  return adjustedTimes.b.sub(adjustedTimes.a).toNumber();
+  return Number(adjustedTimes.b - adjustedTimes.a);
 };
