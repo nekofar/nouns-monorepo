@@ -44,7 +44,7 @@ const CreateProposalPage = () => {
   const latestProposal = useProposal(latestProposalId ?? 0);
   const availableVotes = useUserVotes();
   const proposalThreshold = useProposalThreshold();
-  const { address:account } = useAccount();
+  const { address: account } = useAccount();
   const { propose, proposeState } = usePropose();
   const { proposeOnTimelockV1, proposeOnTimelockV1State } = useProposeOnTimelockV1();
   const dispatch = useAppDispatch();
@@ -237,7 +237,7 @@ const CreateProposalPage = () => {
     } else {
       handleAddProposalState(proposeState);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [
     propose,
     proposeState,
@@ -314,12 +314,17 @@ const CreateProposalPage = () => {
           onTitleInput={handleTitleInput}
           onBodyInput={handleBodyInput}
         />
-        <p className='m-0 p-0'>Looking for treasury v1?</p>
+        <p className="m-0 p-0">Looking for treasury v1?</p>
         <p className={classes.note}>
-          If you're not sure what this means, you probably don't need it. Otherwise, you can interact with the original treasury <button
+          If you're not sure what this means, you probably don't need it. Otherwise, you can
+          interact with the original treasury{' '}
+          <button
             className={classes.inlineButton}
             onClick={() => setIsV1OptionVisible(!isV1OptionVisible)}
-          >here</button>.
+          >
+            here
+          </button>
+          .
         </p>
 
         {isDaoGteV3 && config.featureToggles.proposeOnV1 && isV1OptionVisible && (
@@ -336,7 +341,8 @@ const CreateProposalPage = () => {
               Used to interact with any assets owned by the{' '}
               <a href={daoEtherscanLink} target="_blank" rel="noreferrer">
                 original treasury
-              </a>. Most proposers can ignore this.
+              </a>
+              . Most proposers can ignore this.
             </p>
           </div>
         )}

@@ -6,7 +6,6 @@ import { Link } from 'react-router';
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import testnetNoun from '../../assets/testnet-noun.png';
 import config, { CHAIN_ID } from '../../config';
-import { utils } from 'ethers';
 import { buildEtherscanHoldingsLink } from '../../utils/etherscan';
 import { ExternalURL, externalURL } from '../../utils/externalURL';
 import NavBarButton, { NavBarButtonStyle } from '../NavBarButton';
@@ -28,6 +27,7 @@ import NogglesIcon from '../../assets/icons/Noggles.svg?react';
 import { useTreasuryBalance } from '../../hooks/useTreasuryBalance';
 import clsx from 'clsx';
 import { useIsDaoGteV3 } from '../../wrappers/nounsDao';
+import { formatEther } from 'viem';
 
 const NavBar = () => {
   const isDaoGteV3 = useIsDaoGteV3();
@@ -114,7 +114,7 @@ const NavBar = () => {
                   rel="noreferrer"
                 >
                   <NavBarTreasury
-                    treasuryBalance={Number(utils.formatEther(treasuryBalance)).toFixed(0)}
+                    treasuryBalance={Number(formatEther(treasuryBalance)).toFixed(0)}
                     treasuryStyle={nonWalletButtonStyle}
                   />
                 </Nav.Link>

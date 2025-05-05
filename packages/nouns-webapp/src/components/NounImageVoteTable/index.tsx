@@ -1,5 +1,4 @@
-import { StandaloneNounCircular } from '../../components/StandaloneNoun';
-import { BigNumber as EthersBN } from 'ethers';
+import { StandaloneNounCircular } from '../StandaloneNoun';
 import classes from './NounImageVoteTable.module.css';
 import { GrayCircle } from '../GrayCircle';
 import { pseudoRandomPredictableShuffle } from '../../utils/pseudoRandomPredictableShuffle';
@@ -34,7 +33,7 @@ const NounImageVoteTable: React.FC<NounImageVoteTableProps> = props => {
             tip={nounId.toString()}
             id="nounHoverCard"
           >
-            <StandaloneNounCircular nounId={EthersBN.from(nounId)} />
+            <StandaloneNounCircular nounId={BigInt(nounId)} />
           </HoverCard>
         );
       })

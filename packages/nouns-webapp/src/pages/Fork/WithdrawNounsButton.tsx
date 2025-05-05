@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import classes from './Fork.module.css';
 import { useWithdrawFromForkEscrow } from '../../wrappers/nounsDao';
 import { Trans } from '@lingui/react/macro';
-import { TransactionStatus } from '@usedapp/core';
 import SolidColorBackgroundModal from '../../components/SolidColorBackgroundModal';
 import { buildEtherscanTxLink } from '../../utils/etherscan';
 

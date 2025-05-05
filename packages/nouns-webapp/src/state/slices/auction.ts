@@ -17,7 +17,16 @@ const initialState: AuctionState = {
   bids: [],
 };
 
-export const reduxSafeNewAuction = (auction: AuctionCreateEvent): IAuction => ({
+export const reduxSafeNewAuction = (
+  auction: AuctionCreateEvent,
+): {
+  amount: string;
+  bidder: string;
+  endTime: string;
+  nounId: string;
+  settled: false;
+  startTime: string;
+} => ({
   amount: BigInt(0).toString(),
   bidder: '',
   startTime: BigInt(auction.startTime).toString(),
@@ -26,7 +35,16 @@ export const reduxSafeNewAuction = (auction: AuctionCreateEvent): IAuction => ({
   settled: false,
 });
 
-export const reduxSafeAuction = (auction: IAuction): IAuction => ({
+export const reduxSafeAuction = (
+  auction: IAuction,
+): {
+  amount: string;
+  bidder: string;
+  endTime: string;
+  nounId: string;
+  settled: boolean;
+  startTime: string;
+} => ({
   amount: BigInt(auction.amount).toString(),
   bidder: auction.bidder,
   startTime: BigInt(auction.startTime).toString(),
@@ -47,14 +65,14 @@ export const reduxSafeBid = (bid: BidEvent): BidEvent => ({
 
 const maxBid = (bids: BidEvent[]): BidEvent => {
   return bids.reduce((prev, current) => {
-    return BigInt(prev.value).gt(BigInt(current.value)) ? prev : current;
+    return BigInt(prev.value) > BigInt(current.value) ? prev : current;
   });
 };
 
 const auctionsEqual = (
   a: IAuction,
   b: AuctionSettledEvent | AuctionCreateEvent | BidEvent | AuctionExtendedEvent,
-) => BigInt(a.nounId).eq(BigInt(b.nounId));
+) => BigInt(a.nounId) === BigInt(b.nounId);
 
 const containsBid = (bidEvents: BidEvent[], bidEvent: BidEvent) =>
   bidEvents.map(bid => bid.transactionHash).indexOf(bidEvent.transactionHash) >= 0;

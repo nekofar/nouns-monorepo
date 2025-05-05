@@ -1,4 +1,3 @@
-import { useReverseENSLookUp } from '../../utils/ensLookup';
 import { resolveNounContractAddress } from '../../utils/resolveNounsContractAddress';
 import classes from './ShortAddress.module.css';
 import { containsBlockedText } from '../../utils/moderation/containsBlockedText';
@@ -6,11 +5,14 @@ import { useShortAddress } from '../../utils/addressAndENSDisplayUtils';
 import React from 'react';
 import { useIsNetworkEnsSupported } from '../../hooks/useIsNetworkEnsSupported';
 import { blo } from 'blo';
+import { useEnsName } from 'wagmi';
 
 const ShortAddress: React.FC<{ address: string; avatar?: boolean; size?: number }> = props => {
   const { address, avatar, size = 24 } = props;
   const hasENS = useIsNetworkEnsSupported();
-  const ens = useReverseENSLookUp(address) || resolveNounContractAddress(address);
+  const { data: ens } = useEnsName({ address: address as `0x${string}` }) || {
+    data: resolveNounContractAddress(address),
+  };
   const ensMatchesBlocklistRegex = containsBlockedText(ens || '', 'en');
   const shortAddress = useShortAddress(address);
 

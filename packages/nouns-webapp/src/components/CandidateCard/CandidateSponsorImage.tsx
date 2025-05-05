@@ -1,4 +1,3 @@
-import { BigNumber } from 'ethers';
 import { StandaloneNounImage } from '../StandaloneNoun';
 import classes from './CandidateSponsors.module.css';
 
@@ -9,7 +8,7 @@ type Props = {
 export default function CandidateSponsorImage({ nounId }: Props) {
   return (
     <div className={classes.sponsorAvatar}>
-      <StandaloneNounImage nounId={BigNumber.from(nounId)} />
+      <StandaloneNounImage nounId={BigInt(nounId)} />
     </div>
   );
 }

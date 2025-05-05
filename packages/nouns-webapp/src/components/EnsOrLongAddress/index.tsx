@@ -1,8 +1,8 @@
-import { useReverseENSLookUp } from '../../utils/ensLookup';
 import { containsBlockedText } from '../../utils/moderation/containsBlockedText';
+import { useEnsName } from 'wagmi';
 
 interface EnsOrLongAddressProps {
-  address: string;
+  address: `0x${string}`;
 }
 
 /**
@@ -10,7 +10,7 @@ interface EnsOrLongAddressProps {
  */
 const EnsOrLongAddress: React.FC<EnsOrLongAddressProps> = props => {
   const { address } = props;
-  const ens = useReverseENSLookUp(address);
+  const { data: ens } = useEnsName({ address });
   const ensMatchesBlocklistRegex = containsBlockedText(ens || '', 'en');
   return <>{ens && !ensMatchesBlocklistRegex ? ens : address}</>;
 };

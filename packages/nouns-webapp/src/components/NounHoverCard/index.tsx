@@ -1,5 +1,4 @@
 import { useQuery } from '@apollo/client';
-import { BigNumber } from '@ethersproject/bignumber';
 import { Trans } from '@lingui/react/macro';
 import React from 'react';
 import { Spinner } from 'react-bootstrap';
@@ -40,7 +39,7 @@ const NounHoverCard: React.FC<NounHoverCardProps> = props => {
     );
   }
   const numericNounId = parseInt(nounId);
-  const nounIdForQuery = isNounderNoun(BigNumber.from(nounId)) ? numericNounId + 1 : numericNounId;
+  const nounIdForQuery = isNounderNoun(BigInt(nounId)) ? numericNounId + 1 : numericNounId;
   const startTime = getNounBirthday(nounIdForQuery, pastAuctions);
 
   if (error || !startTime) {
@@ -53,7 +52,7 @@ const NounHoverCard: React.FC<NounHoverCardProps> = props => {
       {/* First Row */}
       <div className={classes.titleWrapper}>
         <div className={classes.nounWrapper}>
-          <StandaloneNounCircular nounId={BigNumber.from(nounId)} />
+          <StandaloneNounCircular nounId={BigInt(nounId)} />
         </div>
         <div>
           <h1>Noun {nounId}</h1>

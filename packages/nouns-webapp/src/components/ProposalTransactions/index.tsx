@@ -22,7 +22,7 @@ const ProposalTransactions = ({
 
     const [, types] = tx.signature.substring(0, tx.signature.length - 1).split(/\((.*)/s);
     if (isProposalUpdate && types) {
-      const paramTypes = types.split(/,(?![^(]*\))/g).map((type) => ({ type }));
+      const paramTypes = types.split(/,(?![^(]*\))/g).map(type => ({ type }));
       const decoded = decodeAbiParameters(paramTypes, `0x${tx.calldata.slice(10)}`);
       calldata = JSON.stringify([decoded.map(String).join(',')]);
     }
@@ -46,7 +46,9 @@ const ProposalTransactions = ({
               <b>Value</b>
             </Col>
             <Col sm="9">
-              {tx.value && BigInt(tx.value) !== 0n ? `${formatEther(BigInt(tx.value))} ETH` : 'None'}
+              {tx.value && BigInt(tx.value) !== 0n
+                ? `${formatEther(BigInt(tx.value))} ETH`
+                : 'None'}
             </Col>
           </Row>
           <Row>

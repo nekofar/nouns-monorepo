@@ -6,7 +6,6 @@ import {
   Vote,
 } from '../../wrappers/nounsDao';
 import { ReactNode, useCallback, useEffect, useState } from 'react';
-import { TransactionStatus } from '@usedapp/core';
 import NavBarButton, { NavBarButtonStyle } from '../NavBarButton';
 import clsx from 'clsx';
 import { Trans } from '@lingui/react/macro';
@@ -155,8 +154,8 @@ const VoteModal = ({
                     vote === Vote.FOR
                       ? ''
                       : vote === undefined
-                      ? classes.inactive
-                      : classes.unselected
+                        ? classes.inactive
+                        : classes.unselected
                   }
                 />
               </div>
@@ -172,8 +171,8 @@ const VoteModal = ({
                 vote === Vote.AGAINST
                   ? ''
                   : vote === undefined
-                  ? classes.inactive
-                  : classes.unselected
+                    ? classes.inactive
+                    : classes.unselected
               }
             />
           </div>
@@ -189,8 +188,8 @@ const VoteModal = ({
                     vote === Vote.ABSTAIN
                       ? ''
                       : vote === undefined
-                      ? classes.inactive
-                      : classes.unselected
+                        ? classes.inactive
+                        : classes.unselected
                   }
                 />
               </div>

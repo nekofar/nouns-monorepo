@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import classes from './Fork.module.css';
 import { useExecuteFork } from '../../wrappers/nounsDao';
 import { Trans } from '@lingui/react/macro';
-import { TransactionStatus } from '@usedapp/core';
 import SolidColorBackgroundModal from '../../components/SolidColorBackgroundModal';
 import { buildEtherscanTxLink } from '../../utils/etherscan';
 import { Spinner } from 'react-bootstrap';
@@ -25,7 +24,7 @@ function DeployForkButton(props: Props) {
   const [errorMessage, setErrorMessage] = useState<ReactNode>('');
   const [isTxSuccessful, setIsTxSuccessful] = useState(false);
 
-  const handleExecuteForkStateChange = useCallback((state: TransactionStatus) => {
+  const handleExecuteForkStateChange = useCallback((state: any) => {
     switch (state.status) {
       case 'None':
         setIsLoading(false);

@@ -55,7 +55,7 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
   const proposalThreshold = useProposalThreshold();
   const dispatch = useAppDispatch();
   const setModal = useCallback((modal: AlertModal) => dispatch(setAlertModal(modal)), [dispatch]);
-  const { address:account } = useAccount();
+  const { address: account } = useAccount();
   const { updateProposal, updateProposalState } = useUpdateProposal();
   const { updateProposalDescription, updateProposalDescriptionState } =
     useUpdateProposalDescription();
@@ -85,7 +85,7 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
     // add random string to slug to make it unique
     const randomString = Math.random().toString(36).substring(7);
     return `${slug}-update-${randomString}`;
-  }
+  };
 
   const handleAddProposalAction = useCallback(
     (transactions: ProposalTransaction | ProposalTransaction[]) => {
@@ -307,7 +307,6 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
 
   const isProposer = () => {
     return proposal?.proposer?.toLowerCase() === account?.toLowerCase();
-
   };
 
   const isTransactionsEdited = () => {
@@ -367,8 +366,6 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
     }
   };
 
-
-
   // set initial values on page load
   useEffect(() => {
     if (
@@ -388,7 +385,10 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
           signature: txn.functionSig ?? '',
         };
       });
-      const slugValue = proposal.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+      const slugValue = proposal.title
+        .toLowerCase()
+        .replace(/ /g, '-')
+        .replace(/[^\w-]+/g, '');
       setTitleValue(proposal.title);
       if (isProposedBySigners) {
         // new candidate will need to be created, which needs a unique slug, so add a random string to the slug here
@@ -406,12 +406,14 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
   }, [proposal]);
 
   const handleCreateNewCandidate = async () => {
-    if (!proposalTransactions?.length ||
+    if (
+      !proposalTransactions?.length ||
       !titleValue ||
       !bodyValue ||
       !slug ||
       !props.match.params.id
-    ) return;
+    )
+      return;
     await createProposalCandidate(
       proposalTransactions.map(({ address }) => address), // Targets
       proposalTransactions.map(({ value }) => value ?? '0'), // Values
@@ -468,13 +470,14 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
   }, [createProposalCandidateState, setModal]);
 
   const isFormInvalid = () => {
-    return !(isProposalEdited || isTransactionsEdited() || isDescriptionEdited()) ||
+    return (
+      !(isProposalEdited || isTransactionsEdited() || isDescriptionEdited()) ||
       !proposalTransactions.length ||
       titleValue === '' ||
       bodyValue === '' ||
-      slug === '';
-
-  }
+      slug === ''
+    );
+  };
   if (!isProposer()) {
     return null;
   }
@@ -560,9 +563,7 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
           proposalThreshold={proposalThreshold}
           hasActiveOrPendingProposal={false} // not relevant for edit
           hasEnoughVote={isProposer() ? true : hasEnoughVote}
-          isFormInvalid={
-            isFormInvalid()
-          }
+          isFormInvalid={isFormInvalid()}
           handleCreateProposal={
             isProposedBySigners ? handleCreateNewCandidate : handleUpdateProposal
           }

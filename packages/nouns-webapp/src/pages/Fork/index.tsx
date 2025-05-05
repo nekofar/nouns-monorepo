@@ -18,7 +18,6 @@ import dayjs from 'dayjs';
 import NotFoundPage from '../NotFound';
 import useForkTreasuryBalance from '../../hooks/useForkTreasuryBalance';
 
-
 import {
   useReadNounsGovernorAdjustedTotalSupply,
   useReadNounsGovernorForkThreshold,
@@ -50,7 +49,7 @@ const ForkPage = () => {
   const { data: adjustedTotalSupply } = useReadNounsGovernorAdjustedTotalSupply();
   const { data: forkThreshold } = useReadNounsGovernorForkThreshold();
   const { data: forkThresholdBPS } = useReadNounsGovernorForkThresholdBps();
-  const { data: numTokensInForkEscrow} = useReadNounsGovernorNumTokensInForkEscrow();
+  const { data: numTokensInForkEscrow } = useReadNounsGovernorNumTokensInForkEscrow();
 
   const userEscrowedNounIds = useUserEscrowedNounIds(dataFetchPollInterval, Number(id).toString());
   const userOwnedNounIds = useUserOwnedNounIds(dataFetchPollInterval);
@@ -74,10 +73,12 @@ const ForkPage = () => {
   const handlePercentageToThreshold = () => {
     if (forkThreshold !== undefined && adjustedTotalSupply && numTokensInForkEscrow) {
       if (isForkPeriodActive || isForked) {
-        const currentPercentage = (forkDetails.data.tokensForkingCount / (Number(forkThreshold) + 1)) * 100;
+        const currentPercentage =
+          (forkDetails.data.tokensForkingCount / (Number(forkThreshold) + 1)) * 100;
         setCurrentEscrowPercentage(+currentPercentage.toFixed(2));
       } else {
-        const currentPercentage = (Number(numTokensInForkEscrow) / (Number(forkThreshold) + 1)) * 100;
+        const currentPercentage =
+          (Number(numTokensInForkEscrow) / (Number(forkThreshold) + 1)) * 100;
         setCurrentEscrowPercentage(+currentPercentage.toFixed(2));
       }
     }
@@ -233,9 +234,9 @@ const ForkPage = () => {
                 {!isForked && !isForkPeriodActive && (
                   <p className={classes.note}>
                     <Trans>
-                      More than {forkThreshold === undefined ? '...' : forkThreshold.toString()} Nouns{' '}
-                      {`(${forkThresholdBPS && Number(forkThresholdBPS) / 100}% of the DAO)`} are required
-                      to pass the threshold
+                      More than {forkThreshold === undefined ? '...' : forkThreshold.toString()}{' '}
+                      Nouns {`(${forkThresholdBPS && Number(forkThresholdBPS) / 100}% of the DAO)`}{' '}
+                      are required to pass the threshold
                     </Trans>
                   </p>
                 )}
@@ -284,8 +285,10 @@ const ForkPage = () => {
                     <ForkingPeriodTimer
                       endTime={+forkDetails.data.forkingPeriodEndTimestamp}
                       isPeriodEnded={
-                        !!(forkDetails?.data?.executed &&
-                          +forkDetails.data.forkingPeriodEndTimestamp < now.getTime() / 1000)
+                        !!(
+                          forkDetails?.data?.executed &&
+                          +forkDetails.data.forkingPeriodEndTimestamp < now.getTime() / 1000
+                        )
                       }
                     />
                   </div>
@@ -325,10 +328,7 @@ const ForkPage = () => {
                     </>
                   )}
                 </p>
-                <p>
-                  Fork treasury balance: Ξ
-                  {Number(formatEther(forkTreasuryBalance)).toFixed(2)}
-                </p>
+                <p>Fork treasury balance: Ξ{Number(formatEther(forkTreasuryBalance)).toFixed(2)}</p>
               </div>
             </div>
           </Col>
@@ -426,12 +426,7 @@ const ForkPage = () => {
                         return null;
                       }
                     }
-                    return (
-                      <ForkEvent
-                        event={event}
-                        isOnlyEvent={escrowEvents.data.length <= 1}
-                      />
-                    );
+                    return <ForkEvent event={event} isOnlyEvent={escrowEvents.data.length <= 1} />;
                   })}
               </Col>
             </Row>

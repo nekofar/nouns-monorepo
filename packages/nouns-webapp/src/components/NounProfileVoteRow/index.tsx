@@ -112,7 +112,7 @@ const selectProposalText = (proposal: Proposal) => {
 const NounProfileVoteRow: React.FC<NounProfileVoteRowProps> = props => {
   const { proposal, vote } = props;
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const proposalOnClickHandler = () => navigate(proposal.id ? `/vote/${proposal.id}` : '/vote');
   const activeLocale = useActiveLocale();
 
