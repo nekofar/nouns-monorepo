@@ -15,12 +15,12 @@ const AuctionNavigation: React.FC<{
   const navigate = useNavigate();
   const onDisplayAuction = useOnDisplayAuction();
   const lastAuctionNounId = useAppSelector(state => state.onDisplayAuction.lastAuctionNounId);
-  const onDisplayAuctionNounId = onDisplayAuction?.nounId.toNumber();
+  const onDisplayAuctionNounId = Number(onDisplayAuction?.nounId);
 
   // Page through Nouns via keyboard
   // handle what happens on key press
   const handleKeyPress = useCallback(
-      (event: { key: string; }) => {
+    (event: { key: string }) => {
       if (event.key === 'ArrowLeft') {
         // This is a hack. If we don't put this the first keystoke
         // from the noun at / doesn't work (i.e. to go from current noun to current noun - 1 would take two arrow presses)
