@@ -18,7 +18,7 @@ import {
 import { useUserVotes, useUserVotesAsOfBlock } from '../../wrappers/nounToken';
 import classes from './Vote.module.css';
 import { Link } from 'react-router';
-import { TransactionStatus, useBlockNumber, useEthers } from '@usedapp/core';
+
 import { AlertModal, setAlertModal } from '../../state/slices/application';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
@@ -58,6 +58,7 @@ import { SUPPORTED_LOCALE_TO_DAYSJS_LOCALE, SupportedLocale } from '../../i18n/l
 import { isProposalUpdatable } from '../../utils/proposals';
 import { useProposalFeedback } from '../../wrappers/nounsData';
 import { useParams } from 'react-router';
+import { useAccount, useBlockNumber } from 'wagmi';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -113,7 +114,7 @@ const VotePage = () => {
   const activeLocale = useActiveLocale();
   const dispatch = useAppDispatch();
   const setModal = useCallback((modal: AlertModal) => dispatch(setAlertModal(modal)), [dispatch]);
-  const { account } = useEthers();
+  const { address: account } = useAccount();
   const {
     data: dqInfo,
     loading: loadingDQInfo,
@@ -131,11 +132,11 @@ const VotePage = () => {
   const [isForkActive, setIsForkActive] = useState<boolean>(false);
   // Get and format date from data
   const timestamp = Date.now();
-  const currentBlock = useBlockNumber();
+  const { data: currentBlock } = useBlockNumber();
   const startDate =
     proposal && timestamp && currentBlock
       ? dayjs(timestamp).add(
-          AVERAGE_BLOCK_TIME_IN_SECS * (proposal.startBlock - currentBlock),
+          AVERAGE_BLOCK_TIME_IN_SECS * (proposal.startBlock - Number(currentBlock)),
           'seconds',
         )
       : undefined;
@@ -146,7 +147,10 @@ const VotePage = () => {
       : proposal?.endBlock;
   const endDate =
     proposal && timestamp && currentBlock
-      ? dayjs(timestamp).add(AVERAGE_BLOCK_TIME_IN_SECS * (endBlock! - currentBlock), 'seconds')
+      ? dayjs(timestamp).add(
+          AVERAGE_BLOCK_TIME_IN_SECS * (endBlock! - Number(currentBlock)),
+          'seconds',
+        )
       : undefined;
   const now = dayjs();
 
@@ -161,7 +165,10 @@ const VotePage = () => {
   // Use user votes as of the current or proposal snapshot block
   const currentOrSnapshotBlock = useMemo(
     () =>
-      Math.min(proposal?.voteSnapshotBlock ?? 0, currentBlock ? currentBlock - 1 : 0) || undefined,
+      Math.min(
+        Number(proposal?.voteSnapshotBlock ?? 0),
+        currentBlock ? Number(currentBlock) - 1 : 0,
+      ) || undefined,
     [proposal, currentBlock],
   );
   const userVotes = useUserVotesAsOfBlock(currentOrSnapshotBlock);
@@ -179,17 +186,23 @@ const VotePage = () => {
     return versionDetails?.createdAt;
   };
   const hasSucceeded = proposal?.status === ProposalState.SUCCEEDED;
-  const isInNonFinalState = [
-    ProposalState.UPDATABLE,
-    ProposalState.PENDING,
-    ProposalState.ACTIVE,
-    ProposalState.SUCCEEDED,
-    ProposalState.QUEUED,
-    ProposalState.OBJECTION_PERIOD,
-  ].includes(proposal?.status!);
+  const isInNonFinalState =
+    proposal?.status !== undefined &&
+    [
+      ProposalState.UPDATABLE,
+      ProposalState.PENDING,
+      ProposalState.ACTIVE,
+      ProposalState.SUCCEEDED,
+      ProposalState.QUEUED,
+      ProposalState.OBJECTION_PERIOD,
+    ].includes(proposal.status);
   const signers = proposal && proposal?.signers?.map(signer => signer.id.toLowerCase());
-  const isProposalSigner =
-    account && proposal && signers && signers.includes(account?.toLowerCase()) ? true : false;
+  const isProposalSigner = !!(
+    account &&
+    proposal &&
+    signers &&
+    signers.includes(account?.toLowerCase())
+  );
   const hasManyVersions = proposalVersions && proposalVersions.length > 1;
   const isProposer = () => proposal?.proposer?.toLowerCase() === account?.toLowerCase();
   const isUpdateable = () => {
@@ -197,7 +210,7 @@ const VotePage = () => {
     if (
       proposal &&
       currentBlock &&
-      isProposalUpdatable(proposal.status, proposal.updatePeriodEndBlock, currentBlock)
+      isProposalUpdatable(proposal.status, proposal.updatePeriodEndBlock, Number(currentBlock))
     ) {
       return true;
     }
@@ -262,7 +275,8 @@ const VotePage = () => {
     const time =
       proposal && timestamp && currentBlock
         ? dayjs(timestamp).add(
-            AVERAGE_BLOCK_TIME_IN_SECS * (proposal.objectionPeriodEndBlock! - currentBlock),
+            AVERAGE_BLOCK_TIME_IN_SECS *
+              (Number(proposal.objectionPeriodEndBlock!) - Number(currentBlock)),
             'seconds',
           )
         : undefined;
@@ -316,6 +330,11 @@ const VotePage = () => {
   const handleRefetchData = () => {
     proposalFeedback.refetch();
   };
+
+  interface TransactionStatus {
+    status: 'None' | 'Mining' | 'Success' | 'Fail' | 'Exception';
+    errorMessage?: string;
+  }
 
   const onTransactionStateChange = useCallback(
     (
@@ -603,7 +622,11 @@ const VotePage = () => {
                     {isProposer() && isUpdateable() && (
                       <>
                         <Trans>This proposal can be edited for </Trans>{' '}
-                        {getUpdatableCountdownCopy(proposal, currentBlock || 0, activeLocale)}{' '}
+                        {getUpdatableCountdownCopy(
+                          proposal,
+                          Number(currentBlock || 0),
+                          activeLocale,
+                        )}{' '}
                       </>
                     )}
                   </p>
@@ -720,7 +743,7 @@ const VotePage = () => {
                   <div
                     data-for="view-dq-info"
                     data-tip="View Dynamic Quorum Info"
-                    onClick={() => setShowDynamicQuorumInfoModal(true && isV2Prop)}
+                    onClick={() => setShowDynamicQuorumInfoModal(isV2Prop)}
                     className={clsx(classes.thresholdInfo, isV2Prop ? classes.cursorPointer : '')}
                   >
                     <span>
@@ -761,16 +784,20 @@ const VotePage = () => {
                     </h3>
                   </div>
                 </div>
-                {currentBlock && proposal?.objectionPeriodEndBlock > 0 && (
-                  <div className={classes.objectionPeriodActive}>
-                    <p>
-                      <strong>
-                        <Trans>Objection period triggered</Trans>
-                      </strong>
-                    </p>
-                    {currentBlock < proposal?.endBlock && <p>{objectionNoteCopy}</p>}
-                  </div>
-                )}
+                {Boolean(currentBlock) &&
+                  proposal?.objectionPeriodEndBlock &&
+                  proposal?.objectionPeriodEndBlock > 0 && (
+                    <div className={classes.objectionPeriodActive}>
+                      <p>
+                        <strong>
+                          <Trans>Objection period triggered</Trans>
+                        </strong>
+                      </p>
+                      {Boolean(currentBlock) &&
+                        currentBlock !== undefined &&
+                        currentBlock < proposal?.endBlock && <p>{objectionNoteCopy}</p>}
+                    </div>
+                  )}
               </Card.Body>
             </Card>
           </Col>
