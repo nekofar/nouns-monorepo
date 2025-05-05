@@ -4,13 +4,12 @@ import { ProposalTransaction, useProposalThreshold } from '../../wrappers/nounsD
 import { useUserVotes } from '../../wrappers/nounToken';
 import classes from '../CreateProposal/CreateProposal.module.css';
 import { Link } from 'react-router';
-import { useBlockNumber, useEthers } from '@usedapp/core';
 import { AlertModal, setAlertModal } from '../../state/slices/application';
 import ProposalEditor from '../../components/ProposalEditor';
 import { processProposalDescriptionText } from '../../utils/processProposalDescriptionText';
 import EditProposalButton from '../../components/EditProposalButton/index';
 import ProposalTransactions from '../../components/ProposalTransactions';
-import { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useAppDispatch } from '../../hooks';
 import { Trans } from '@lingui/react/macro';
 import clsx from 'clsx';
@@ -23,7 +22,8 @@ import {
   useCandidateProposal,
   useGetUpdateCandidateCost,
 } from '../../wrappers/nounsData';
-import { ethers } from 'ethers';
+import { useAccount, useBlockNumber } from 'wagmi';
+import { formatEther } from 'viem';
 
 interface EditCandidateProps {
   match: {
@@ -42,7 +42,7 @@ const EditCandidatePage: React.FC<EditCandidateProps> = props => {
   const [tokenBuyerTopUpEth, setTokenBuyerTopUpETH] = useState<string>('0');
   const [commitMessage, setCommitMessage] = useState<string>('');
   const [currentBlock, setCurrentBlock] = useState<number>();
-  const { account } = useEthers();
+  const { address: account } = useAccount();
   const { updateProposalCandidate, updateProposalCandidateState } = useUpdateProposalCandidate();
   const candidate = useCandidateProposal(props.match.params.id, 0, true, currentBlock); // get updatable transaction details
   const availableVotes = useUserVotes();
@@ -55,12 +55,12 @@ const EditCandidatePage: React.FC<EditCandidateProps> = props => {
   );
   const proposal = candidate.data?.version;
   const updateCandidateCost = useGetUpdateCandidateCost();
-  const blockNumber = useBlockNumber();
+  const { data: blockNumber } = useBlockNumber();
 
   useEffect(() => {
     // prevent live-updating the block resulting in undefined block number
     if (blockNumber && !currentBlock) {
-      setCurrentBlock(blockNumber);
+      setCurrentBlock(Number(blockNumber));
     }
   }, [blockNumber, currentBlock]);
 
@@ -83,7 +83,7 @@ const EditCandidatePage: React.FC<EditCandidateProps> = props => {
       setShowTransactionFormModal(false);
       setIsProposalEdited(true);
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     [proposalTransactions, totalUSDCPayment],
   );
 
@@ -93,7 +93,7 @@ const EditCandidatePage: React.FC<EditCandidateProps> = props => {
       setTotalUSDCPayment(totalUSDCPayment - (proposalTransactions[index].usdcValue ?? 0));
       setProposalTransactions(proposalTransactions.filter((_, i) => i !== index));
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     [proposalTransactions, totalUSDCPayment],
   );
 
@@ -173,7 +173,11 @@ const EditCandidatePage: React.FC<EditCandidateProps> = props => {
   );
 
   useEffect(() => {
-    isTitleEdited || isBodyEdited ? setIsProposalEdited(true) : setIsProposalEdited(false);
+    if (isTitleEdited || isBodyEdited) {
+      setIsProposalEdited(true);
+    } else {
+      setIsProposalEdited(false);
+    }
   }, [isTitleEdited, isBodyEdited]);
 
   const [showTransactionFormModal, setShowTransactionFormModal] = useState(false);
@@ -214,14 +218,13 @@ const EditCandidatePage: React.FC<EditCandidateProps> = props => {
         setProposePending(false);
         break;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [updateProposalCandidateState, setModal]);
 
   // set initial values on page load
   useEffect(() => {
     if (proposal && candidate && !titleValue && !bodyValue && !proposalTransactions?.length) {
       const transactions = candidate.data?.version.content.details.map(
-        (txn: { target: any; value: any; callData: any; functionSig: any }) => {
+        (txn: { target: never; value: never; callData: string; functionSig: string }) => {
           return {
             address: txn.target,
             value: txn.value ?? '0',
@@ -236,8 +239,7 @@ const EditCandidatePage: React.FC<EditCandidateProps> = props => {
       );
       setProposalTransactions(transactions);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [proposal, candidate]);
+  }, [proposal, candidate, titleValue, bodyValue, proposalTransactions?.length]);
 
   if (candidate.data?.proposer.toLowerCase() !== account?.toLowerCase()) {
     return null;
@@ -256,7 +258,7 @@ const EditCandidatePage: React.FC<EditCandidateProps> = props => {
       candidate.data?.slug, // Slug
       candidate.data?.proposalIdToUpdate ? candidate.data?.proposalIdToUpdate : 0, // if candidate is an update to a proposal, use the proposalIdToUpdate number
       commitMessage,
-      { value: hasVotes ? 0 : updateCandidateCost ?? 0 }, // Fee for non-nouners
+      { value: hasVotes ? 0 : (updateCandidateCost ?? 0) }, // Fee for non-nouners
     );
   };
 
@@ -331,15 +333,14 @@ const EditCandidatePage: React.FC<EditCandidateProps> = props => {
           proposalThreshold={proposalThreshold}
           hasActiveOrPendingProposal={false} // not relevant for edit
           hasEnoughVote={true}
-          isFormInvalid={isProposalEdited ? false : true}
+          isFormInvalid={!isProposalEdited}
           handleCreateProposal={handleUpdateProposal}
           isCandidate={true}
         />
 
-        {!hasVotes && updateCandidateCost && +ethers.utils.formatEther(updateCandidateCost) > 0 && (
+        {!hasVotes && updateCandidateCost && +formatEther(updateCandidateCost) > 0 && (
           <p className={classes.feeNotice}>
-            {updateCandidateCost && ethers.utils.formatEther(updateCandidateCost)} ETH fee upon
-            submission
+            {updateCandidateCost && formatEther(updateCandidateCost)} ETH fee upon submission
           </p>
         )}
 
