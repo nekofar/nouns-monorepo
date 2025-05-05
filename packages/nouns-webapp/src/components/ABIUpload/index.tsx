@@ -1,6 +1,6 @@
-import classes from './ABIUpload.module.css';
 import React from 'react';
 import { Form } from 'react-bootstrap';
+import classes from './ABIUpload.module.css';
 
 interface ABIUploadProps {
   abiFileName?: string;
@@ -9,13 +9,12 @@ interface ABIUploadProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const ABIUpload: React.FC<ABIUploadProps> = props => {
-  const { abiFileName, isValid, isInvalid, onChange } = props;
+const ABIUpload: React.FC<ABIUploadProps> = ({ abiFileName, isValid, isInvalid, onChange }) => {
+  const displayLabel = abiFileName === 'etherscan-abi-download.json' ? abiFileName : 'ABI';
+
   return (
     <div className={classes.wrapper}>
-      <span className={classes.label}>
-        {abiFileName === 'etherscan-abi-download.json' ? abiFileName : 'ABI'}
-      </span>
+      <span className={classes.label}>{displayLabel}</span>
       <Form.Control
         className={classes.form}
         type="file"
