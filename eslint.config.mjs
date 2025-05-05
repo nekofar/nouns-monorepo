@@ -64,6 +64,8 @@ export default defineConfig([
       sonarjs: sonarjsPlugin,
       prettier: prettierPlugin,
       unicorn: unicornPlugin,
+      import: importPlugin,
+      lingui: linguiPlugin,
     },
     extends: [
       ...tseslint.configs.recommended,
