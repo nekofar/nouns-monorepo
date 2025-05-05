@@ -14,7 +14,9 @@ const ABIUpload: React.FC<ABIUploadProps> = ({ abiFileName, isValid, isInvalid, 
 
   return (
     <div className={classes.wrapper}>
-      <span className={classes.label}>{displayLabel}</span>
+      <label htmlFor="import-abi" className={classes.label}>
+        {displayLabel}
+      </label>
       <Form.Control
         className={classes.form}
         type="file"
