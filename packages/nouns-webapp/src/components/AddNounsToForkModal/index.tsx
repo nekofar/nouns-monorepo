@@ -6,9 +6,7 @@ import { useAllProposals, useEscrowToFork, useJoinFork } from '../../wrappers/no
 import clsx from 'clsx';
 import { MinusCircleIcon } from '@heroicons/react/solid';
 import { Trans } from '@lingui/react/macro';
-import { TransactionStatus } from '@usedapp/core';
 import config from '../../config';
-import { useSetApprovalForAll, useIsApprovedForAll } from '../../wrappers/nounToken';
 import { faCircleCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { buildEtherscanTxLink } from '../../utils/etherscan';

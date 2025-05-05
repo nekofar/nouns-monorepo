@@ -1,15 +1,5 @@
 import { NounsDAOV3ABI, NounsDaoLogicFactory } from '@nouns/sdk';
-import {
-  ChainId,
-  useBlockNumber,
-  useContractCall,
-  useContractCalls,
-  useContractFunction,
-  connectContractToSigner,
-  useEthers,
-} from '@usedapp/core';
-import { utils, BigNumber as EthersBN } from 'ethers';
-import { defaultAbiCoder, keccak256, Result, toUtf8Bytes } from 'ethers/lib/utils';
+
 import { useMemo } from 'react';
 import { useLogs } from '../hooks/useLogs';
 import * as R from 'ramda';
@@ -29,7 +19,7 @@ import {
   isForkActiveQuery,
   updatableProposalsQuery,
 } from './subgraph';
-import BigNumber from 'bignumber.js';
+
 import { useBlockTimestamp } from '../hooks/useBlockTimestamp';
 
 export interface DynamicQuorumParams {
@@ -66,21 +56,21 @@ export enum ForkState {
 }
 
 interface ProposalCallResult {
-  id: EthersBN;
-  abstainVotes: EthersBN;
-  againstVotes: EthersBN;
-  forVotes: EthersBN;
+  id: bigint;
+  abstainVotes: bigint;
+  againstVotes: bigint;
+  forVotes: bigint;
   canceled: boolean;
   vetoed: boolean;
   executed: boolean;
-  startBlock: EthersBN;
-  endBlock: EthersBN;
-  eta: EthersBN;
-  proposalThreshold: EthersBN;
+  startBlock: bigint;
+  endBlock: bigint;
+  eta: bigint;
+  proposalThreshold: bigint;
   proposer: string;
-  quorumVotes: EthersBN;
-  objectionPeriodEndBlock: EthersBN;
-  updatePeriodEndBlock: EthersBN;
+  quorumVotes: bigint;
+  objectionPeriodEndBlock: bigint;
+  updatePeriodEndBlock: bigint;
 }
 
 export interface ProposalDetail {
@@ -348,7 +338,7 @@ export const useCurrentQuorum = (
       args: [proposalId],
     };
   };
-  const [quorum] = useContractCall<[EthersBN]>(request()) || [];
+  const [quorum] = useContractCall<[bigint]>(request()) || [];
   return quorum?.toNumber();
 };
 
@@ -408,7 +398,7 @@ export const useProposalVote = (proposalId: string | undefined): string => {
 
 export const useProposalCount = (): number | undefined => {
   const [count] =
-    useContractCall<[EthersBN]>({
+    useContractCall<[bigint]>({
       abi,
       address: nounsDaoContract.address,
       method: 'proposalCount',
@@ -419,7 +409,7 @@ export const useProposalCount = (): number | undefined => {
 
 export const useProposalThreshold = (): number | undefined => {
   const [count] =
-    useContractCall<[EthersBN]>({
+    useContractCall<[bigint]>({
       abi,
       address: nounsDaoContract.address,
       method: 'proposalThreshold',
@@ -442,7 +432,7 @@ export const concatSelectorToCalldata = (signature: string, callData: string) =>
 export const formatProposalTransactionDetails = (details: ProposalTransactionDetails | Result) => {
   return details?.targets?.map((target: string, i: number) => {
     const signature: string = details.signatures[i];
-    const value = EthersBN.from(
+    const value = bigint.from(
       // Handle both logs and subgraph responses
       (details as ProposalTransactionDetails).values?.[i] ?? (details as Result)?.[3]?.[i] ?? 0,
     );
@@ -492,7 +482,7 @@ export const formatProposalTransactionDetailsToUpdate = (
 ) => {
   return details?.targets.map((target: string, i: number) => {
     const signature: string = details.signatures[i];
-    const value = EthersBN.from(
+    const value = bigint.from(
       // Handle both logs and subgraph responses
       (details as ProposalTransactionDetails).values?.[i] ?? (details as Result)?.[3]?.[i],
     );
@@ -845,7 +835,7 @@ export const useCastRefundableVote = () => {
   const functionSig = 'castRefundableVote(uint256,uint8)';
   const { send: castRefundableVote, state: castRefundableVoteState } = useContractFunction(
     nounsDaoContract,
-    functionSig
+    functionSig,
   );
 
   return {
@@ -979,7 +969,7 @@ export const useIsForkPeriodActive = (): boolean => {
 
 export const useForkThreshold = () => {
   const [forkThreshold] =
-    useContractCall<[EthersBN]>({
+    useContractCall<[bigint]>({
       abi,
       address: config.addresses.nounsDAOProxy,
       method: 'forkThreshold',
@@ -990,7 +980,7 @@ export const useForkThreshold = () => {
 
 export const useNumTokensInForkEscrow = (): number | undefined => {
   const [numTokensInForkEscrow] =
-    useContractCall<[EthersBN]>({
+    useContractCall<[bigint]>({
       abi,
       address: nounsDaoContract.address,
       method: 'numTokensInForkEscrow',
@@ -1234,7 +1224,7 @@ export const useExecuteFork = () => {
 
 export const useAdjustedTotalSupply = (): number | undefined => {
   const [totalSupply] =
-    useContractCall<[EthersBN]>({
+    useContractCall<[bigint]>({
       abi,
       address: nounsDaoContract.address,
       method: 'adjustedTotalSupply',
@@ -1244,7 +1234,7 @@ export const useAdjustedTotalSupply = (): number | undefined => {
 
 export const useForkThresholdBPS = (): number | undefined => {
   const [forkThresholdBPS] =
-    useContractCall<[EthersBN]>({
+    useContractCall<[bigint]>({
       abi,
       address: nounsDaoContract.address,
       method: 'forkThresholdBPS',
@@ -1279,37 +1269,8 @@ export const useActivePendingUpdatableProposers = (blockNumber: number) => {
     error,
   };
 };
-
-export const checkHasActiveOrPendingProposalOrCandidate = (
-  latestProposalStatus: ProposalState,
-  latestProposalProposer: string | undefined,
-  account: string | null | undefined,
-) => {
-  if (
-    account &&
-    latestProposalProposer &&
-    (latestProposalStatus === ProposalState.ACTIVE ||
-      latestProposalStatus === ProposalState.PENDING ||
-      latestProposalStatus === ProposalState.UPDATABLE) &&
-    latestProposalProposer.toLowerCase() === account?.toLowerCase()
-  ) {
-    return true;
-  }
-  return false;
-};
-
 export const useIsDaoGteV3 = (): boolean => {
   return true;
-};
-
-export const useLastMinuteWindowInBlocks = (): number | undefined => {
-  const [lastMinuteWindowInBlocks] =
-    useContractCall({
-      abi,
-      address: nounsDaoContract.address,
-      method: 'lastMinuteWindowInBlocks',
-    }) || [];
-  return lastMinuteWindowInBlocks?.toNumber();
 };
 
 export const useUpdatableProposalIds = (blockNumber: number) => {
