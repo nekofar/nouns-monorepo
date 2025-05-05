@@ -1,8 +1,8 @@
-import { useContractCall } from '@usedapp/core';
-import { utils } from 'ethers';
-import { SupportedCurrency } from '../../components/ProposalActionsModal/steps/TransferFundsDetailsStep';
+import { useReadContract } from 'wagmi';
 import config from '../../config';
 import StreamFactoryABI from './streamFactory.abi.json';
+import { SupportedCurrency } from '../../components/ProposalActionsModal/steps/TransferFundsDetailsStep';
+import { parseEther } from 'viem';
 
 interface UsePredictStreamAddressProps {
   msgSender?: string;
@@ -14,8 +14,6 @@ interface UsePredictStreamAddressProps {
   endTime?: number;
 }
 
-const abi = new utils.Interface(StreamFactoryABI);
-
 export function usePredictStreamAddress({
   msgSender,
   payer,
@@ -25,13 +23,13 @@ export function usePredictStreamAddress({
   startTime,
   endTime,
 }: UsePredictStreamAddressProps) {
-  const [predictedAddress] =
-    useContractCall<[string]>({
-      abi,
-      address: config.addresses.nounsStreamFactory ?? '',
-      method: 'predictStreamAddress',
-      args: [msgSender, payer, recipient, tokenAmount, tokenAddress, startTime, endTime],
-    }) || [];
+  const { data: predictedAddress } = useReadContract({
+    abi: StreamFactoryABI,
+    address: (config.addresses.nounsStreamFactory ?? '') as `0x${string}`,
+    functionName: 'predictStreamAddress',
+    args: [msgSender, payer, recipient, tokenAmount, tokenAddress, startTime, endTime],
+  });
+
   return predictedAddress?.toString();
 }
 
@@ -42,7 +40,7 @@ export function formatTokenAmount(amount?: string, currency?: SupportedCurrency)
       return Math.round(parseFloat(amt) * 1_000_000).toString();
     case SupportedCurrency.WETH:
     case SupportedCurrency.STETH:
-      return utils.parseEther(amt).toString();
+      return parseEther(amt).toString();
     default:
       return amt;
   }
