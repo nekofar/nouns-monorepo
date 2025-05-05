@@ -1,5 +1,4 @@
 import React from 'react';
-import { useBlockNumber } from '@usedapp/core';
 import { Link } from 'react-router';
 import classes from './ProposalHeader.module.css';
 import navBarButtonClasses from '../NavBarButton/NavBarButton.module.css';
@@ -15,6 +14,7 @@ import { Locales } from '../../i18n/locales';
 import HoverCard from '../HoverCard';
 import ByLineHoverCard from '../ByLineHoverCard';
 import { relativeTimestamp } from '../../utils/timeUtils';
+import { useBlockNumber } from 'wagmi';
 
 interface CandidateHeaderProps {
   title: string;
@@ -43,8 +43,9 @@ const CandidateHeader: React.FC<CandidateHeaderProps> = props => {
     isUpdateToProposal,
   } = props;
   const isMobile = isMobileScreen();
-  const currentBlock = useBlockNumber();
-  const availableVotes = useUserVotesAsOfBlock(currentBlock) ?? 0;
+  const { data: currentBlock } = useBlockNumber();
+  const availableVotes =
+    useUserVotesAsOfBlock(currentBlock ? Number(currentBlock) : undefined) ?? 0;
   const activeLocale = useActiveLocale();
 
   const voteButton = (
