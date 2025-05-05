@@ -359,6 +359,9 @@ importers:
       bad-words:
         specifier: ^3.0.4
         version: 3.0.4
+      blo:
+        specifier: ^2.0.0
+        version: 2.0.0
       bootstrap:
         specifier: ^5.1
         version: 5.3.5(@popperjs/core@2.11.8)
@@ -4092,6 +4095,9 @@ packages:
 
   blakejs@1.2.1:
     resolution: {integrity: sha512-QXUSXI3QVc/gJME0dBpXrag1kbzOqCjCX8/b54ntNyW6sjtoqxqRk3LTmXzaJoh71zMsDCjM+47jS7XiwN/+fQ==}
+
+  blo@2.0.0:
+    resolution: {integrity: sha512-VUUr1+vWisNSaHVswkbPbk1+GhygClKILkGchae7nsyuJ4ZVz5l1hEW4eR5F/ly/asM5vzigYGXjPnvrd//CVg==}
 
   blob-to-it@2.0.8:
     resolution: {integrity: sha512-1MKnG2ul1DtSgrxFHqhdJgIJODJbNj7alOLSJRD7O9S2iCJ72ZWU6j8+CVpjIdLueqwpWhy4ouvpanYlFLqkRw==}
@@ -17508,6 +17514,8 @@ snapshots:
       readable-stream: 3.6.2
 
   blakejs@1.2.1: {}
+
+  blo@2.0.0: {}
 
   blob-to-it@2.0.8:
     dependencies:
