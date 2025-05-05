@@ -1,8 +1,10 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
-
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import globals from 'globals';
+
+// TypeScript plugins and parsers
+import tseslint from 'typescript-eslint';
 import typescriptEslintEslintPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 
@@ -20,12 +22,14 @@ import vitestPlugin from 'eslint-plugin-vitest';
 import sonarjsPlugin from 'eslint-plugin-sonarjs';
 import prettierPlugin from 'eslint-plugin-prettier';
 
+// Compatibility layer for traditional configs
 const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all,
 });
 
 export default defineConfig([
+  // Common ignores
   {
     ignores: [
       '**/node_modules/*',
@@ -36,20 +40,21 @@ export default defineConfig([
       'packages/nouns-subgraph/src/types/*',
     ],
   },
+
+  // Base TypeScript configuration for all TypeScript files
   {
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsParser,
       sourceType: 'module',
-
-      parserOptions: {
-        project: true,
-      },
-
+      ecmaVersion: 2020,
       globals: {
         ...globals.node,
       },
+      parserOptions: {
+        project: true,
+      },
     },
-
     plugins: {
       '@typescript-eslint': typescriptEslintEslintPlugin,
       turbo: turboPlugin,
@@ -58,6 +63,7 @@ export default defineConfig([
       lingui: linguiPlugin,
       sonarjs: sonarjsPlugin,
       prettier: prettierPlugin,
+      unicorn: unicornPlugin,
     },
     extends: [
       ...tseslint.configs.recommended,
