@@ -20,6 +20,7 @@ import importPlugin from 'eslint-plugin-import';
 import linguiPlugin from 'eslint-plugin-lingui';
 import vitestPlugin from 'eslint-plugin-vitest';
 import sonarjsPlugin from 'eslint-plugin-sonarjs';
+import prettierPlugin from 'eslint-plugin-prettier';
 
 // Compatibility layer for traditional configs
 const compat = new FlatCompat({
@@ -61,6 +62,7 @@ export default defineConfig([
       import: importPlugin,
       lingui: linguiPlugin,
       sonarjs: sonarjsPlugin,
+      prettier: prettierPlugin,
     },
     extends: [
       ...tseslint.configs.recommended,
@@ -69,6 +71,7 @@ export default defineConfig([
         'plugin:import/recommended',
         'plugin:import/typescript',
         'plugin:sonarjs/recommended',
+        'plugin:prettier/recommended',
         'prettier',
       ),
     ],
@@ -84,6 +87,8 @@ export default defineConfig([
       'lingui/no-unlocalized-strings': 'off',
       'lingui/t-call-in-function': 'error',
       'lingui/no-single-variables-to-translate': 'error',
+      // Prettier rules
+      'prettier/prettier': 'error',
     },
   },
 
@@ -99,8 +104,14 @@ export default defineConfig([
       react: reactPlugin,
       'react-hooks': reactHooksPlugin,
       'react-refresh': reactRefreshPlugin,
+      prettier: prettierPlugin,
     },
-    extends: [...compat.extends('plugin:react/recommended')],
+    extends: [
+      ...compat.extends(
+        'plugin:react/recommended',
+        'plugin:prettier/recommended'
+      )
+    ],
     rules: {
       // React hooks rules
       'react-hooks/rules-of-hooks': 'error',
@@ -111,13 +122,18 @@ export default defineConfig([
       'react/jsx-uses-vars': 'error',
       'react/prop-types': 'error',
       'react/react-in-jsx-scope': 'off', // Not needed in React 17+
+      // Prettier rules
+      'prettier/prettier': 'error',
     },
   },
 
   // Base JS configuration
   {
     files: ['**/*.js', '**/*.mjs'],
-    extends: [js.configs.recommended],
+    extends: [
+      js.configs.recommended,
+      ...compat.extends('plugin:prettier/recommended'),
+    ],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -126,6 +142,7 @@ export default defineConfig([
     },
     plugins: {
       import: importPlugin,
+      prettier: prettierPlugin,
     },
     rules: {
       // Import plugin rules for JS files
@@ -134,6 +151,8 @@ export default defineConfig([
       'import/default': 'error',
       'import/namespace': 'error',
       'import/export': 'error',
+      // Prettier rules
+      'prettier/prettier': 'error',
     },
   },
 
