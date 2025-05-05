@@ -2,7 +2,7 @@ import Auction from '../../components/Auction';
 import Documentation from '../../components/Documentation';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { setOnDisplayAuctionNounId } from '../../state/slices/onDisplayAuction';
-import { push } from 'connected-react-router';
+import { useNavigate } from 'react-router-dom';
 import { nounPath } from '../../utils/history';
 import useOnDisplayAuction from '../../wrappers/onDisplayAuction';
 import { useEffect } from 'react';
@@ -14,12 +14,14 @@ interface AuctionPageProps {
 }
 
 const AuctionPage: React.FC<AuctionPageProps> = props => {
+  // eslint-disable-next-line react/prop-types
   const { initialAuctionId } = props;
   const onDisplayAuction = useOnDisplayAuction();
   const lastAuctionNounId = useAppSelector(state => state.onDisplayAuction.lastAuctionNounId);
   const onDisplayAuctionNounId = onDisplayAuction?.nounId.toNumber();
 
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!lastAuctionNounId) return;
@@ -28,7 +30,7 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
       // handle out of bounds noun path ids
       if (initialAuctionId > lastAuctionNounId || initialAuctionId < 0) {
         dispatch(setOnDisplayAuctionNounId(lastAuctionNounId));
-        dispatch(push(nounPath(lastAuctionNounId)));
+        navigate(nounPath(lastAuctionNounId));
       } else {
         if (onDisplayAuction === undefined) {
           // handle regular noun path ids on first load
@@ -41,7 +43,7 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
         dispatch(setOnDisplayAuctionNounId(lastAuctionNounId));
       }
     }
-  }, [lastAuctionNounId, dispatch, initialAuctionId, onDisplayAuction]);
+  }, [lastAuctionNounId, dispatch, initialAuctionId, onDisplayAuction, navigate]);
 
   const isCoolBackground = useAppSelector(state => state.application.isCoolBackground);
   const backgroundColor = isCoolBackground
