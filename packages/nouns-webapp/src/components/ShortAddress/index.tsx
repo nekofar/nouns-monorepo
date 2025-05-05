@@ -1,16 +1,14 @@
 import { useReverseENSLookUp } from '../../utils/ensLookup';
 import { resolveNounContractAddress } from '../../utils/resolveNounsContractAddress';
-import { useEthers } from '@usedapp/core';
 import classes from './ShortAddress.module.css';
 import { containsBlockedText } from '../../utils/moderation/containsBlockedText';
 import { useShortAddress } from '../../utils/addressAndENSDisplayUtils';
 import React from 'react';
-import Identicon from '../Identicon';
 import { useIsNetworkEnsSupported } from '../../hooks/useIsNetworkEnsSupported';
+import { blo } from 'blo';
 
 const ShortAddress: React.FC<{ address: string; avatar?: boolean; size?: number }> = props => {
   const { address, avatar, size = 24 } = props;
-  const { library: provider } = useEthers();
   const hasENS = useIsNetworkEnsSupported();
   const ens = useReverseENSLookUp(address) || resolveNounContractAddress(address);
   const ensMatchesBlocklistRegex = containsBlockedText(ens || '', 'en');
@@ -21,7 +19,7 @@ const ShortAddress: React.FC<{ address: string; avatar?: boolean; size?: number 
       <div className={classes.shortAddress}>
         {hasENS && avatar && (
           <div key={address}>
-            <Identicon size={size} address={address} provider={provider} />
+            <img width={size} height={size} src={blo(address as `0x${string}`)} alt={ens} />
           </div>
         )}
         <span>{ens && !ensMatchesBlocklistRegex ? ens : shortAddress}</span>
