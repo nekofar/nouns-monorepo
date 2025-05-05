@@ -13,7 +13,6 @@ import {
 import { useUserVotes } from '../../wrappers/nounToken';
 import classes from './CreateProposal.module.css';
 import { Link } from 'react-router';
-import { TransactionStatus, useEthers } from '@usedapp/core';
 import { AlertModal, setAlertModal } from '../../state/slices/application';
 import ProposalEditor from '../../components/ProposalEditor';
 import CreateProposalButton from '../../components/CreateProposalButton';
@@ -28,6 +27,7 @@ import ProposalActionModal from '../../components/ProposalActionsModal';
 import config from '../../config';
 import { useEthNeeded } from '../../utils/tokenBuyerContractUtils/tokenBuyer';
 import { buildEtherscanHoldingsLink } from '../../utils/etherscan';
+import { useAccount } from 'wagmi';
 
 const CreateProposalPage = () => {
   const [proposalTransactions, setProposalTransactions] = useState<ProposalTransaction[]>([]);
@@ -44,7 +44,7 @@ const CreateProposalPage = () => {
   const latestProposal = useProposal(latestProposalId ?? 0);
   const availableVotes = useUserVotes();
   const proposalThreshold = useProposalThreshold();
-  const { account } = useEthers();
+  const { address:account } = useAccount();
   const { propose, proposeState } = usePropose();
   const { proposeOnTimelockV1, proposeOnTimelockV1State } = useProposeOnTimelockV1();
   const dispatch = useAppDispatch();
@@ -184,6 +184,11 @@ const CreateProposalPage = () => {
       );
     }
   };
+
+  interface TransactionStatus {
+    status: 'None' | 'Mining' | 'Success' | 'Fail' | 'Exception';
+    errorMessage?: string;
+  }
 
   const handleAddProposalState = useCallback((proposeState: TransactionStatus) => {
     switch (proposeState.status) {
