@@ -11,12 +11,11 @@ import {
 } from '../../wrappers/nounsDao';
 import classes from '../CreateProposal/CreateProposal.module.css';
 import { Link } from 'react-router';
-import { useEthers } from '@usedapp/core';
 import { AlertModal, setAlertModal } from '../../state/slices/application';
 import ProposalEditor from '../../components/ProposalEditor';
 import EditProposalButton from '../../components/EditProposalButton/index';
 import ProposalTransactions from '../../components/ProposalTransactions';
-import { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useAppDispatch } from '../../hooks';
 import { Trans } from '@lingui/react/macro';
 import clsx from 'clsx';
@@ -26,6 +25,7 @@ import config from '../../config';
 import { useEthNeeded } from '../../utils/tokenBuyerContractUtils/tokenBuyer';
 import { useUserVotes } from '../../wrappers/nounToken';
 import { useCreateProposalCandidate, useGetCreateCandidateCost } from '../../wrappers/nounsData';
+import { useAccount } from 'wagmi';
 
 interface EditProposalProps {
   match: {
@@ -55,7 +55,7 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
   const proposalThreshold = useProposalThreshold();
   const dispatch = useAppDispatch();
   const setModal = useCallback((modal: AlertModal) => dispatch(setAlertModal(modal)), [dispatch]);
-  const { account } = useEthers();
+  const { address:account } = useAccount();
   const { updateProposal, updateProposalState } = useUpdateProposal();
   const { updateProposalDescription, updateProposalDescriptionState } =
     useUpdateProposalDescription();
@@ -79,7 +79,7 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
   };
   const isolatedDescription =
     proposal?.description && removeTitleFromDescription(proposal?.description, titleValue);
-  const isProposedBySigners = proposal?.signers && proposal?.signers?.length > 0 ? true : false;
+  const isProposedBySigners = !!(proposal?.signers && proposal?.signers?.length > 0);
 
   const candidateUpdateSlug = (slug: string) => {
     // add random string to slug to make it unique
@@ -306,10 +306,8 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
   }, [updateProposaTransactionsState, setModal, updateProposaTransactionsState?.errorMessage]);
 
   const isProposer = () => {
-    if (proposal?.proposer?.toLowerCase() === account?.toLowerCase()) {
-      return true;
-    }
-    return false;
+    return proposal?.proposer?.toLowerCase() === account?.toLowerCase();
+
   };
 
   const isTransactionsEdited = () => {
@@ -328,7 +326,7 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
   };
 
   const isDescriptionEdited = () => {
-    return originalTitleValue !== titleValue || originalBodyValue !== bodyValue ? true : false;
+    return originalTitleValue !== titleValue || originalBodyValue !== bodyValue;
   };
 
   const handleUpdateProposal = async () => {
@@ -470,16 +468,12 @@ const EditProposalPage: React.FC<EditProposalProps> = props => {
   }, [createProposalCandidateState, setModal]);
 
   const isFormInvalid = () => {
-    if (
-      !(isProposalEdited || isTransactionsEdited() || isDescriptionEdited()) ||
+    return !(isProposalEdited || isTransactionsEdited() || isDescriptionEdited()) ||
       !proposalTransactions.length ||
       titleValue === '' ||
       bodyValue === '' ||
-      slug === ''
-    ) {
-      return true;
-    }
-    return false;
+      slug === '';
+
   }
   if (!isProposer()) {
     return null;
