@@ -6,28 +6,27 @@ import Section from '../../layout/Section';
 import { Col, Container, Row } from 'react-bootstrap';
 import AddNounsToForkModal from '../../components/AddNounsToForkModal';
 import ForkingPeriodTimer from '../../components/ForkingPeriodTimer';
-import {
-  useEscrowEvents,
-  useForkDetails,
-  useForkThreshold,
-  useForks,
-  useNumTokensInForkEscrow,
-  useAdjustedTotalSupply,
-  useForkThresholdBPS,
-} from '../../wrappers/nounsDao';
-import { useEthers } from '@usedapp/core';
+import { useEscrowEvents, useForkDetails, useForks } from '../../wrappers/nounsDao';
 import { useUserEscrowedNounIds, useUserOwnedNounIds } from '../../wrappers/nounToken';
 import ForkEvent from './ForkEvent';
 import DeployForkButton from './DeployForkButton';
 import WithdrawNounsButton from './WithdrawNounsButton';
 import { useScrollToLocation } from '../../hooks/useScrollToLocation';
-import { useParams } from 'react-router';
-import { Link } from 'react-router';
+import { Link, useParams } from 'react-router';
 import { buildEtherscanAddressLink } from '../../utils/etherscan';
 import dayjs from 'dayjs';
 import NotFoundPage from '../NotFound';
 import useForkTreasuryBalance from '../../hooks/useForkTreasuryBalance';
-import { utils } from 'ethers/lib/ethers';
+
+
+import {
+  useReadNounsGovernorAdjustedTotalSupply,
+  useReadNounsGovernorForkThreshold,
+  useReadNounsGovernorForkThresholdBps,
+  useReadNounsGovernorNumTokensInForkEscrow,
+} from '../../contracts';
+import { useAccount } from 'wagmi';
+import { formatEther } from 'viem';
 
 const now = new Date();
 
@@ -47,16 +46,20 @@ const ForkPage = () => {
   const [dataFetchPollInterval, setDataFetchPollInterval] = useState(0);
   const [forkStatusLabel, setForkStatusLabel] = useState('Escrow');
   const [addNounsButtonLabel, setAddNounsButtonLabel] = useState('Add Nouns to escrow');
-  const adjustedTotalSupply = useAdjustedTotalSupply();
-  const forkThreshold = useForkThreshold();
-  const forkThresholdBPS = useForkThresholdBPS();
-  const numTokensInForkEscrow = useNumTokensInForkEscrow();
+
+  const { data: adjustedTotalSupply } = useReadNounsGovernorAdjustedTotalSupply();
+  const { data: forkThreshold } = useReadNounsGovernorForkThreshold();
+  const { data: forkThresholdBPS } = useReadNounsGovernorForkThresholdBps();
+  const { data: numTokensInForkEscrow} = useReadNounsGovernorNumTokensInForkEscrow();
+
   const userEscrowedNounIds = useUserEscrowedNounIds(dataFetchPollInterval, Number(id).toString());
   const userOwnedNounIds = useUserOwnedNounIds(dataFetchPollInterval);
   const escrowEvents = useEscrowEvents(dataFetchPollInterval, Number(id).toString());
   const forkDetails = useForkDetails(dataFetchPollInterval, id || '');
   const forks = useForks(dataFetchPollInterval);
-  const { account } = useEthers();
+
+  const { address: account, isConnected } = useAccount();
+
   const phantomListItems = new Array(4 - (forkDetails.data.addedNouns.length! % 4)).fill(0);
   const forkTreasuryBalance = useForkTreasuryBalance(forkDetails.data.forkTreasury || '');
   useScrollToLocation();
@@ -71,10 +74,10 @@ const ForkPage = () => {
   const handlePercentageToThreshold = () => {
     if (forkThreshold !== undefined && adjustedTotalSupply && numTokensInForkEscrow) {
       if (isForkPeriodActive || isForked) {
-        const currentPercentage = (forkDetails.data.tokensForkingCount / (forkThreshold + 1)) * 100;
+        const currentPercentage = (forkDetails.data.tokensForkingCount / (Number(forkThreshold) + 1)) * 100;
         setCurrentEscrowPercentage(+currentPercentage.toFixed(2));
       } else {
-        const currentPercentage = (numTokensInForkEscrow / (forkThreshold + 1)) * 100;
+        const currentPercentage = (Number(numTokensInForkEscrow) / (Number(forkThreshold) + 1)) * 100;
         setCurrentEscrowPercentage(+currentPercentage.toFixed(2));
       }
     }
@@ -125,7 +128,7 @@ const ForkPage = () => {
       setIsThresholdMet(false);
     }
     if (forkThresholdBPS !== undefined && adjustedTotalSupply && numTokensInForkEscrow) {
-      const percentage = forkThresholdBPS / 100;
+      const percentage = Number(forkThresholdBPS) / 100;
       setThresholdPercentage(+percentage.toFixed());
       handlePercentageToThreshold();
     }
@@ -230,8 +233,8 @@ const ForkPage = () => {
                 {!isForked && !isForkPeriodActive && (
                   <p className={classes.note}>
                     <Trans>
-                      More than {forkThreshold === undefined ? '...' : forkThreshold} Nouns{' '}
-                      {`(${forkThresholdBPS && forkThresholdBPS / 100}% of the DAO)`} are required
+                      More than {forkThreshold === undefined ? '...' : forkThreshold.toString()} Nouns{' '}
+                      {`(${forkThresholdBPS && Number(forkThresholdBPS) / 100}% of the DAO)`} are required
                       to pass the threshold
                     </Trans>
                   </p>
@@ -281,10 +284,8 @@ const ForkPage = () => {
                     <ForkingPeriodTimer
                       endTime={+forkDetails.data.forkingPeriodEndTimestamp}
                       isPeriodEnded={
-                        forkDetails?.data?.executed &&
-                        +forkDetails.data.forkingPeriodEndTimestamp < now.getTime() / 1000
-                          ? true
-                          : false
+                        !!(forkDetails?.data?.executed &&
+                          +forkDetails.data.forkingPeriodEndTimestamp < now.getTime() / 1000)
                       }
                     />
                   </div>
@@ -326,7 +327,7 @@ const ForkPage = () => {
                 </p>
                 <p>
                   Fork treasury balance: Ξ
-                  {Number(utils.formatEther(forkTreasuryBalance)).toFixed(2)}
+                  {Number(formatEther(forkTreasuryBalance)).toFixed(2)}
                 </p>
               </div>
             </div>
@@ -362,7 +363,7 @@ const ForkPage = () => {
                       ? forkDetails.data?.tokensForkingCount === 1
                         ? ''
                         : 's'
-                      : numTokensInForkEscrow === 1
+                      : numTokensInForkEscrow !== undefined && Number(numTokensInForkEscrow) === 1
                         ? ''
                         : 's'}
                   </strong>
@@ -382,7 +383,7 @@ const ForkPage = () => {
                   setIsDeployModalOpen={setIsDeployModalOpen}
                   isForkPeriodActive={isForkPeriodActive}
                   isThresholdMet={isThresholdMet}
-                  isUserConnected={account ? true : false}
+                  isUserConnected={isConnected}
                 />
 
                 {(isForkPeriodActive || isForked) && (
@@ -428,7 +429,7 @@ const ForkPage = () => {
                     return (
                       <ForkEvent
                         event={event}
-                        isOnlyEvent={escrowEvents.data.length > 1 ? false : true}
+                        isOnlyEvent={escrowEvents.data.length <= 1}
                       />
                     );
                   })}
