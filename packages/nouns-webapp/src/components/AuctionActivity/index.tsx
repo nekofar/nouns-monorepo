@@ -1,6 +1,5 @@
 import { Auction } from '../../wrappers/nounsAuction';
 import React, { useState, useEffect } from 'react';
-import BigNumber from 'bignumber.js';
 import { Row, Col } from 'react-bootstrap';
 import classes from './AuctionActivity.module.css';
 import bidHistoryClasses from './BidHistory.module.css';
@@ -114,17 +113,14 @@ const AuctionActivity: React.FC<AuctionActivityProps> = (props: AuctionActivityP
           </Row>
           <Row className={classes.activityRow}>
             <Col lg={4} className={classes.currentBidCol}>
-              <CurrentBid
-                currentBid={new BigNumber(auction.amount.toString())}
-                auctionEnded={auctionEnded}
-              />
+              <CurrentBid currentBid={auction.amount} auctionEnded={auctionEnded} />
             </Col>
             <Col lg={6} className={classes.auctionTimerCol}>
               {auctionEnded ? (
                 isLastAuction ? (
                   <Winner winner={auction.bidder} />
                 ) : (
-                  <Holder nounId={auction.nounId.toNumber()} />
+                  <Holder nounId={Number(auction.nounId)} />
                 )
               ) : (
                 <AuctionTimer auction={auction} auctionEnded={auctionEnded} />
@@ -155,7 +151,7 @@ const AuctionActivity: React.FC<AuctionActivityProps> = (props: AuctionActivityP
           <Col lg={12}>
             {!isLastAuction ? (
               <NounInfoCard
-                nounId={auction.nounId.toNumber()}
+                nounId={Number(auction.nounId)}
                 bidHistoryOnClickHandler={showBidModalHandler}
               />
             ) : (
@@ -163,14 +159,25 @@ const AuctionActivity: React.FC<AuctionActivityProps> = (props: AuctionActivityP
                 <BidHistory
                   auctionId={auction.nounId.toString()}
                   max={3}
-                  classes={bidHistoryClasses}
+                  classes={{
+                    bidRowCool: bidHistoryClasses.bidRowCool,
+                    bidRowWarm: bidHistoryClasses.bidRowWarm,
+                    bidItem: bidHistoryClasses.bidItem,
+                    leftSectionWrapper: bidHistoryClasses.leftSectionWrapper,
+                    bidder: bidHistoryClasses.bidder,
+                    bidDate: bidHistoryClasses.bidDate,
+                    rightSectionWrapper: bidHistoryClasses.rightSectionWrapper,
+                    bidAmount: bidHistoryClasses.bidAmount,
+                    linkSymbol: bidHistoryClasses.linkSymbol,
+                    bidCollection: bidHistoryClasses.bidCollection,
+                  }}
                 />
               )
             )}
             {/* If no bids, show nothing. If bids avail:graph is stable? show bid history modal,
             else show etherscan contract link */}
             {isLastAuction &&
-              !auction.amount.eq(0) &&
+              auction.amount !== 0n &&
               (displayGraphDepComps ? (
                 <BidHistoryBtn onClick={showBidModalHandler} />
               ) : (
