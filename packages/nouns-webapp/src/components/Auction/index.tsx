@@ -1,7 +1,6 @@
-import { Col } from 'react-bootstrap';
+import { Col, Row, Container } from 'react-bootstrap';
 import { StandaloneNounWithSeed } from '../StandaloneNoun';
 import AuctionActivity from '../AuctionActivity';
-import { Row, Container } from 'react-bootstrap';
 import { setStateBackgroundColor } from '../../state/slices/application';
 import { LoadingNoun } from '../Noun';
 import { Auction as IAuction } from '../../wrappers/nounsAuction';
