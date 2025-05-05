@@ -1,8 +1,8 @@
-import { useBlockNumber } from '@usedapp/core';
 import { useEffect, useMemo } from 'react';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { addListener, removeListener } from '../state/slices/logs';
 import { EventFilter, filterToKey, Log } from '../utils/logParsing';
+import { useBlockNumber } from 'wagmi';
 
 enum LogsState {
   // The filter is invalid
@@ -27,7 +27,7 @@ export interface UseLogsResult {
  * @param filter The logs filter, without `blockHash`, `fromBlock` or `toBlock` defined.
  */
 export function useLogs(filter: EventFilter | undefined): UseLogsResult {
-  const blockNumber = useBlockNumber();
+  const { data: blockNumber } = useBlockNumber();
 
   const logs = useAppSelector(state => state.logs);
   const dispatch = useAppDispatch();
