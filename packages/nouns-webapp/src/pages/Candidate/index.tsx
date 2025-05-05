@@ -1,9 +1,8 @@
 import { Row, Col, Button, Spinner, Alert } from 'react-bootstrap';
 import Section from '../../layout/Section';
 import classes from './Candidate.module.css';
-import {  useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { Link } from 'react-router';
-import { TransactionStatus, useBlockNumber, useEthers } from '@usedapp/core';
 import { AlertModal, setAlertModal } from '../../state/slices/application';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
@@ -31,6 +30,7 @@ import {
 import { useUserVotes } from '../../wrappers/nounToken';
 import { checkHasActiveOrPendingProposalOrCandidate } from '../../utils/proposals';
 import VoteSignals from '../../components/VoteSignals/VoteSignals';
+import { useAccount, useBlockNumber } from 'wagmi';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -48,14 +48,14 @@ const CandidatePage = () => {
   const { cancelCandidate, cancelCandidateState } = useCancelCandidate();
   const activeAccount = useAppSelector(state => state.account.activeAccount);
   const isWalletConnected = !(activeAccount === undefined);
-  const blockNumber = useBlockNumber();
+  const { data: blockNumber } = useBlockNumber();
   const candidate = useCandidateProposal(
     Number(id).toString(),
     dataFetchPollInterval,
     false,
     currentBlock,
   );
-  const { account } = useEthers();
+  const { address: account } = useAccount();
   const threshold = useProposalThreshold();
   const userVotes = useUserVotes();
   const latestProposalId = useProposalCount();
@@ -73,7 +73,7 @@ const CandidatePage = () => {
   useEffect(() => {
     // prevent live-updating the block resulting in undefined block number
     if (blockNumber && !currentBlock) {
-      setCurrentBlock(blockNumber);
+      setCurrentBlock(Number(blockNumber));
     }
   }, [blockNumber, currentBlock]);
 
@@ -104,6 +104,12 @@ const CandidatePage = () => {
   const setModal = useCallback((modal: AlertModal) => dispatch(setAlertModal(modal)), [dispatch]);
   const handleRefetchCandidateData = () => {
     candidate.refetch();
+  };
+
+  // Define the TransactionStatus type
+  type TransactionStatus = {
+    status: 'None' | 'Mining' | 'Success' | 'Fail' | 'Exception';
+    errorMessage?: string;
   };
 
   const onTransactionStateChange = useCallback(
@@ -277,7 +283,11 @@ const CandidatePage = () => {
                   id={candidate.data.id}
                   isProposer={isProposer}
                   handleRefetchCandidateData={handleRefetchCandidateData}
-                  setDataFetchPollInterval={setDataFetchPollInterval}
+                  setDataFetchPollInterval={(interval: number | null) => {
+                    if (interval !== null) {
+                      setDataFetchPollInterval(interval);
+                    }
+                  }}
                   currentBlock={currentBlock - 1}
                   requiredVotes={threshold + 1}
                   userVotes={userVotes}
@@ -285,7 +295,7 @@ const CandidatePage = () => {
                   latestProposal={latestProposal}
                   isUpdateToProposal={isUpdateToProposal}
                   originalProposal={originalProposal}
-                  blockNumber={blockNumber}
+                  blockNumber={blockNumber ? Number(blockNumber) : undefined}
                 />
               )}
             <VoteSignals
@@ -296,7 +306,11 @@ const CandidatePage = () => {
               userVotes={userVotes}
               isCandidate={true}
               candidateSlug={candidate.data.slug}
-              setDataFetchPollInterval={setDataFetchPollInterval}
+              setDataFetchPollInterval={(interval: number | null) => {
+                if (interval !== null) {
+                  setDataFetchPollInterval(interval);
+                }
+              }}
               handleRefetch={handleRefetchData}
               isFeedbackClosed={isUpdateToProposal && !isParentProposalUpdatable}
             />
