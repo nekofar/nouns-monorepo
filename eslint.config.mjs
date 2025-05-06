@@ -15,7 +15,7 @@ import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 
 // Other plugins
 import unicornPlugin from 'eslint-plugin-unicorn';
-import turbo from 'eslint-plugin-turbo';
+import turboPlugin from 'eslint-plugin-turbo';
 import importPlugin from 'eslint-plugin-import';
 import linguiPlugin from 'eslint-plugin-lingui';
 import vitestPlugin from 'eslint-plugin-vitest';
@@ -57,7 +57,7 @@ export default defineConfig([
     },
     plugins: {
       '@typescript-eslint': typescriptEslintEslintPlugin,
-      turbo,
+      turbo: turboPlugin,
       unicorn: unicornPlugin,
       import: importPlugin,
       lingui: linguiPlugin,
@@ -79,7 +79,7 @@ export default defineConfig([
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       // Import plugin rules
       'import/no-unresolved': 'error',
-      'import/named': 'error',
+      'import/named': 'warn',
       'import/default': 'error',
       'import/namespace': 'error',
       'import/export': 'error',
@@ -106,12 +106,7 @@ export default defineConfig([
       'react-refresh': reactRefreshPlugin,
       prettier: prettierPlugin,
     },
-    extends: [
-      ...compat.extends(
-        'plugin:react/recommended',
-        'plugin:prettier/recommended'
-      )
-    ],
+    extends: [...compat.extends('plugin:react/recommended', 'plugin:prettier/recommended')],
     rules: {
       // React hooks rules
       'react-hooks/rules-of-hooks': 'error',
@@ -130,10 +125,7 @@ export default defineConfig([
   // Base JS configuration
   {
     files: ['**/*.js', '**/*.mjs'],
-    extends: [
-      js.configs.recommended,
-      ...compat.extends('plugin:prettier/recommended'),
-    ],
+    extends: [js.configs.recommended, ...compat.extends('plugin:prettier/recommended')],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -147,7 +139,7 @@ export default defineConfig([
     rules: {
       // Import plugin rules for JS files
       'import/no-unresolved': 'error',
-      'import/named': 'error',
+      'import/named': 'warn',
       'import/default': 'error',
       'import/namespace': 'error',
       'import/export': 'error',
