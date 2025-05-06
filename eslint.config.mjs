@@ -155,12 +155,7 @@ export default defineConfig([
       'react-refresh': reactRefreshPlugin,
       prettier: prettierPlugin,
     },
-    extends: [
-      ...compat.extends(
-        'plugin:react/recommended',
-        'plugin:prettier/recommended'
-      )
-    ],
+    extends: [...compat.extends('plugin:react/recommended', 'plugin:prettier/recommended')],
     rules: {
       // React hooks rules
       'react-hooks/rules-of-hooks': 'error',
