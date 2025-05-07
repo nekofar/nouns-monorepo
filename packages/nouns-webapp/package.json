@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prebuild": "wagmi generate",
     "build": "tsc -b && vite build",
     "build:contracts": "wagmi generate",
     "dev": "vite",
