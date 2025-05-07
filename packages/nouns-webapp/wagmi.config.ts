@@ -1,5 +1,5 @@
 import { defineConfig } from '@wagmi/cli';
-import { etherscan, react, actions } from '@wagmi/cli/plugins';
+import { sourcify, react, actions } from '@wagmi/cli/plugins';
 import 'dotenv/config';
 import { mainnet, sepolia } from 'wagmi/chains';
 
@@ -114,8 +114,7 @@ export default defineConfig(
   contractConfigs.map(({ name, fileName, address }) => ({
     out: `src/contracts/${fileName}.gen.ts`,
     plugins: [
-      etherscan({
-        apiKey: process.env.VITE_ETHERSCAN_API_KEY!,
+      sourcify({
         chainId: mainnet.id,
         cacheDuration: 86_400_000,
         contracts: [
@@ -124,7 +123,6 @@ export default defineConfig(
             address: address as Record<1, `0x${string}`> & Partial<Record<number, `0x${string}`>>,
           },
         ],
-        tryFetchProxyImplementation: true,
       }),
       react(),
       actions(),
