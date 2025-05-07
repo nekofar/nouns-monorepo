@@ -29,7 +29,7 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([
-  // Common ignores
+  // Commonly ignores
   {
     ignores: [
       '**/node_modules/*',
@@ -58,11 +58,6 @@ export default defineConfig([
     plugins: {
       '@typescript-eslint': typescriptEslintEslintPlugin,
       turbo: turboPlugin,
-      unicorn: unicornPlugin,
-      import: importPlugin,
-      lingui: linguiPlugin,
-      sonarjs: sonarjsPlugin,
-      prettier: prettierPlugin,
       unicorn: unicornPlugin,
       import: importPlugin,
       lingui: linguiPlugin,
