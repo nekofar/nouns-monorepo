@@ -42,13 +42,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-
 
-      - name: Cache contracts
-        uses: actions/cache@v4
+      - name: Cache wagmi ABI cache
+        uses: actions/cache@v3
         with:
-          path: packages/nouns-webapp/src/contracts
-          key: ${{ runner.os }}-contracts-${{ hashFiles('packages/nouns-webapp/wagmi.config.ts') }}
-          restore-keys: |
-            ${{ runner.os }}-contracts-
+          path: ~/.wagmi-cli/plugins/cache
+          key: ${{ runner.os }}-wagmi-cache-${{ hashFiles('**/wagmi.config.ts') }}
 
       - name: Install dependencies
         run: pnpm install
