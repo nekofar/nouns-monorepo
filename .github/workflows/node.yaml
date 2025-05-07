@@ -42,6 +42,8 @@ jobs:
 
       - name: Build packages
         run: pnpm build
+        env:
+          VITE_ETHERSCAN_API_KEY: ${{ secrets.VITE_ETHERSCAN_API_KEY }}
 
       - name: Build Netlify
         run: pnpm netlify build --offline --filter packages/nouns-webapp

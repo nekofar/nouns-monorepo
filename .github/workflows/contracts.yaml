@@ -47,6 +47,8 @@ jobs:
 
       - name: Build packages
         run: pnpm build
+        env:
+          VITE_ETHERSCAN_API_KEY: ${{ secrets.VITE_ETHERSCAN_API_KEY }}
 
       - name: Run contract tests
         run: |
