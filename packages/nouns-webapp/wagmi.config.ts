@@ -1,10 +1,13 @@
 import { defineConfig } from '@wagmi/cli';
-import { sourcify, react, actions } from '@wagmi/cli/plugins';
+import { react, actions } from '@wagmi/cli/plugins';
 import 'dotenv/config';
 import { mainnet, sepolia } from 'wagmi/chains';
+import { erc20Abi } from 'viem'
+import { NounsAuctionHouseABI, NounsDAODataABI, NounsDAOExecutorV2ABI, NounsDAOV3ABI, NounsDescriptorABI, NounsTokenABI } from '@nouns/contracts';
 
 const contractConfigs = [
   {
+    abi: NounsDAOV3ABI,
     name: 'NounsGovernor',
     fileName: 'nouns-governor',
     address: {
@@ -13,6 +16,7 @@ const contractConfigs = [
     },
   },
   {
+    abi: NounsDAOExecutorV2ABI,
     name: 'NounsTreasury',
     fileName: 'nouns-treasury',
     address: {
@@ -21,6 +25,7 @@ const contractConfigs = [
     },
   },
   {
+    abi: NounsDAODataABI,
     name: 'NounsData',
     fileName: 'nouns-data',
     address: {
@@ -29,6 +34,7 @@ const contractConfigs = [
     },
   },
   {
+    abi: NounsTokenABI,
     name: 'NounsToken',
     fileName: 'nouns-token',
     address: {
@@ -37,6 +43,7 @@ const contractConfigs = [
     },
   },
   {
+    abi: NounsAuctionHouseABI,
     name: 'NounsAuctionHouse',
     fileName: 'nouns-auction-house',
     address: {
@@ -45,6 +52,7 @@ const contractConfigs = [
     },
   },
   {
+    abi: NounsDescriptorABI,
     name: 'NounsDescriptor',
     fileName: 'nouns-descriptor',
     address: {
@@ -77,6 +85,7 @@ const contractConfigs = [
     },
   },
   {
+    abi: erc20Abi,
     name: 'USDC',
     fileName: 'usdc',
     address: {
@@ -85,6 +94,7 @@ const contractConfigs = [
     },
   },
   {
+    abi: erc20Abi,
     name: 'WETH',
     fileName: 'weth',
     address: {
@@ -93,6 +103,7 @@ const contractConfigs = [
     },
   },
   {
+    abi: erc20Abi,
     name: 'stETH',
     fileName: 'steth',
     address: {
@@ -111,21 +122,15 @@ const contractConfigs = [
 ];
 
 export default defineConfig(
-  contractConfigs.map(({ name, fileName, address }) => ({
+  contractConfigs.map(({ abi, name, fileName, address }) => ({
     out: `src/contracts/${fileName}.gen.ts`,
-    plugins: [
-      sourcify({
-        chainId: mainnet.id,
-        cacheDuration: 86_400_000,
-        contracts: [
-          {
-            name,
-            address: address as Record<1, `0x${string}`> & Partial<Record<number, `0x${string}`>>,
-          },
-        ],
-      }),
-      react(),
-      actions(),
-    ],
+    contracts: [
+      {
+        abi,
+        name,
+        address: address as Record<1, `0x${string}`> & Partial<Record<number, `0x${string}`>>,
+      },
+    ],,
+    plugins: [react(), actions()],
   })),
 );
