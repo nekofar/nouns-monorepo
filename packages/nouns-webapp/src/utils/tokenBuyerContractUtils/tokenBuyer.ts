@@ -1,5 +1,4 @@
 import { useContractCall } from '@usedapp/core';
-import { BigNumber as EthersBN } from 'ethers';
 import { Interface } from 'ethers/lib/utils';
 
 import tokenBuyerABI from './tokenBuyerABI.json';
@@ -18,7 +17,7 @@ export const useEthNeeded = (address: string, additionalTokens: number, skip?: b
     };
   };
 
-  const [ethNeeded] = useContractCall<[EthersBN]>(request()) || [];
+  const [ethNeeded] = useContractCall<[bigint]>(request()) || [];
 
   return ethNeeded?.toString();
 };
