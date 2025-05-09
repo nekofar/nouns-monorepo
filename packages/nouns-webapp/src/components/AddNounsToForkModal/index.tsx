@@ -8,15 +8,19 @@ import { TransactionStatus } from '@usedapp/core';
 import clsx from 'clsx';
 import { InputGroup, FormText, FormControl, FormSelect, Spinner } from 'react-bootstrap';
 
+import { useAccount } from 'wagmi';
 import link from '@/assets/icons/Link.svg';
 import SolidColorBackgroundModal from '@/components/SolidColorBackgroundModal';
 import config from '@/config';
+import {
+  useReadNounsTokenIsApprovedForAll,
+  useWriteNounsTokenSetApprovalForAll,
+} from '@/contracts';
 import { buildEtherscanTxLink } from '@/utils/etherscan';
+import { Address } from '@/utils/types';
 import { useAllProposals, useEscrowToFork, useJoinFork } from '@/wrappers/nounsDao';
-import { useSetApprovalForAll, useIsApprovedForAll } from '@/wrappers/nounToken';
 
 import classes from './AddNounsToForkModal.module.css';
-import { Address } from '@/utils/types';
 
 type Props = {
   setIsModalOpen: (isOpen: boolean) => void;
@@ -46,7 +50,15 @@ export default function AddNounsToForkModal(props: Props) {
   const [isApprovalLoading, setIsApprovalLoading] = useState(false);
   const [approvalErrorMessage, setApprovalErrorMessage] = useState<ReactNode>('');
   const [isApprovalTxSuccessful, setIsApprovalTxSuccessful] = useState(false);
-  const { setApproval, setApprovalState } = useSetApprovalForAll();
+  const {
+    writeContractAsync: setApproval,
+    isPending: isSettingApproval,
+    isSuccess: didSetApproval,
+    isError: didApprovalFail,
+    isIdle: isApprovalIdle,
+    error: setApprovalError,
+  } = useWriteNounsTokenSetApprovalForAll();
+
   // handle transactions
   const [isLoading, setIsLoading] = useState(false);
   const [isWaiting, setIsWaiting] = useState(false);
@@ -56,14 +68,19 @@ export default function AddNounsToForkModal(props: Props) {
   const { joinFork, joinForkState } = useJoinFork();
   // etc
   const { data: proposals } = useAllProposals();
-  const isApprovedForAll = useIsApprovedForAll();
+  const { address } = useAccount();
+  const { data: isApprovedForAll } = useReadNounsTokenIsApprovedForAll({
+    args: [address as Address, config.addresses.nounsDAOProxy as Address],
+    query: { enabled: !!address },
+  });
+
   const proposalsList = proposals
     ?.map((proposal, i) => {
       return (
         <option
           key={i}
           value={proposal.id}
-          disabled={proposal.id && selectedProposals.includes(+proposal.id) ? true : false}
+          disabled={!!(proposal.id && selectedProposals.includes(+proposal.id))}
         >
           {proposal.id} - {proposal.title}
         </option>
@@ -123,39 +140,6 @@ export default function AddNounsToForkModal(props: Props) {
     }
   };
 
-  const handleSetApprovalForAllAndAddToEscrowStateChange = useCallback(
-    (state: TransactionStatus, selectedNouns: number[]) => {
-      switch (state.status) {
-        case 'None':
-          setIsApprovalLoading(false);
-          break;
-        case 'PendingSignature':
-          setIsApprovalWaiting(true);
-          break;
-        case 'Mining':
-          setIsApprovalLoading(true);
-          setIsApprovalWaiting(false);
-          break;
-        case 'Success':
-          setIsApprovalLoading(false);
-          setIsApprovalTxSuccessful(true);
-          // successfully approved, now escrow
-          addNounsToEscrow(selectedNouns);
-          break;
-        case 'Fail':
-          setApprovalErrorMessage(state?.errorMessage || <Trans>Please try again.</Trans>);
-          setIsApprovalLoading(false);
-          break;
-        case 'Exception':
-          setApprovalErrorMessage(state?.errorMessage || <Trans>Please try again.</Trans>);
-          setIsApprovalLoading(false);
-          setIsApprovalWaiting(false);
-          break;
-      }
-    },
-    [],
-  );
-
   const handleAddToForkStateChange = useCallback((state: TransactionStatus) => {
     switch (state.status) {
       case 'None':
@@ -202,9 +186,31 @@ export default function AddNounsToForkModal(props: Props) {
   }, [escrowToForkState, joinForkState, handleAddToForkStateChange]);
 
   useEffect(() => {
-    handleSetApprovalForAllAndAddToEscrowStateChange(setApprovalState, selectedNouns);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [setApprovalState, handleSetApprovalForAllAndAddToEscrowStateChange]);
+    (() => {
+      if (isApprovalIdle) {
+        setIsApprovalLoading(false);
+      } else if (isSettingApproval) {
+        setIsApprovalWaiting(true);
+        setIsApprovalWaiting(false);
+      } else if (didSetApproval) {
+        setIsApprovalLoading(false);
+        setIsApprovalTxSuccessful(true);
+        // successfully approved, now escrow
+        addNounsToEscrow(selectedNouns);
+      } else if (didApprovalFail) {
+        setApprovalErrorMessage(setApprovalError?.message || <Trans>Please try again.</Trans>);
+        setIsApprovalLoading(false);
+      }
+    })();
+  }, [
+    addNounsToEscrow,
+    didApprovalFail,
+    didSetApproval,
+    isApprovalIdle,
+    isSettingApproval,
+    selectedNouns,
+    setApprovalError?.message,
+  ]);
 
   const confirmModalContent = (
     <div className={classes.confirmModalContent}>
@@ -508,7 +514,7 @@ export default function AddNounsToForkModal(props: Props) {
           </>
         )}
         {!isApprovedForAll && (!isApprovalWaiting || !isApprovalLoading) && (
-          <p className={classes.approvalNote}>You'll be asked to approve access</p>
+          <p className={classes.approvalNote}>You&apos;ll be asked to approve access</p>
         )}
         {selectedNouns.length > 0 && !isTxSuccessful && (
           <>

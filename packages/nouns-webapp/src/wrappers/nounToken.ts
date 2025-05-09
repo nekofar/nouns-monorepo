@@ -195,30 +195,6 @@ export const useUserEscrowedNounIds = (pollInterval: number, forkId: string) => 
   return { loading, data: userEscrowedNounIds, error, refetch };
 };
 
-export const useSetApprovalForAll = () => {
-  const { writeContractAsync, status, error } = useWriteNounsTokenSetApprovalForAll({});
-
-  const isApprovedForAll = status === 'success';
-
-  return {
-    setApproval: (operator: Address, approved: boolean) =>
-      writeContractAsync({ args: [operator, approved] }),
-    setApprovalState: { status, errorMessage: error?.message },
-    isApprovedForAll,
-  };
-};
-
-export const useIsApprovedForAll = () => {
-  const { address } = useAccount();
-
-  const { data: isApprovedForAll } = useReadNounsTokenIsApprovedForAll({
-    args: [address as Address, config.addresses.nounsDAOProxy as Address],
-    query: { enabled: !!address },
-  });
-
-  return (isApprovedForAll as boolean) || false;
-};
-
 export const useDelegateNounsAtBlockQuery = (signers: string[], block: number) => {
   const { loading, data, error } = useQuery<Delegates>(delegateNounsAtBlockQuery(signers, block));
   return { loading, data, error };
