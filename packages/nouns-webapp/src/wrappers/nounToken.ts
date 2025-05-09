@@ -16,12 +16,6 @@ import {
   seedsQuery,
 } from './subgraph';
 
-interface NounToken {
-  name: string;
-  description: string;
-  image: string;
-}
-
 export interface NounId {
   id: string;
 }
@@ -41,10 +35,6 @@ export interface INounSeed {
   head: number;
 }
 
-export enum NounsTokenContractFunction {
-  delegateVotes = 'votesToDelegate',
-}
-
 const abi = new utils.Interface(NounsTokenABI);
 const seedCacheKey = cacheKey(cache.seed, CHAIN_ID, config.addresses.nounsToken);
 const nounsTokenContract = NounsTokenFactory.connect(config.addresses.nounsToken, undefined!);
@@ -53,25 +43,6 @@ const isSeedValid = (seed: INounSeed | Record<string, never> | undefined) => {
   const hasExpectedKeys = expectedKeys.every(key => (seed || {}).hasOwnProperty(key));
   const hasValidValues = Object.values(seed || {}).some(v => v !== 0);
   return hasExpectedKeys && hasValidValues;
-};
-
-export const useNounToken = (nounId: bigint) => {
-  const [noun] =
-    useContractCall<[string]>({
-      abi,
-      address: config.addresses.nounsToken,
-      method: 'dataURI',
-      args: [nounId],
-    }) || [];
-
-  if (!noun) {
-    return;
-  }
-
-  const nounImgData = noun.split(';base64,').pop() as string;
-  const json: NounToken = JSON.parse(atob(nounImgData));
-
-  return json;
 };
 
 const seedArrayToObject = (seeds: (INounSeed & { id: string })[]) => {
@@ -191,30 +162,6 @@ export const useNounTokenBalance = (address: string): number | undefined => {
     }) || [];
   return Number(tokenBalance);
 };
-
-export const useUserNounTokenBalance = (): number | undefined => {
-  const { account } = useEthers();
-
-  const [tokenBalance] =
-    useContractCall<[bigint]>({
-      abi,
-      address: config.addresses.nounsToken,
-      method: 'balanceOf',
-      args: [account],
-    }) || [];
-  return Number(tokenBalance);
-};
-
-export const useTotalSupply = (): number | undefined => {
-  const [totalSupply] =
-    useContractCall<[bigint]>({
-      abi,
-      address: config.addresses.nounsToken,
-      method: 'totalSupply',
-    }) || [];
-  return Number(totalSupply);
-};
-
 export const useUserOwnedNounIds = (pollInterval: number) => {
   const { account } = useEthers();
   const { loading, data, error, refetch } = useQuery(
@@ -271,13 +218,6 @@ export const useIsApprovedForAll = () => {
       args: [account, config.addresses.nounsDAOProxy],
     }) || [];
   return isApprovedForAll || false;
-};
-export const useSetApprovalForTokenId = () => {
-  const { send: approveTokenId, state: approveTokenIdState } = useContractFunction(
-    nounsTokenContract,
-    'approve',
-  );
-  return { approveTokenId, approveTokenIdState };
 };
 
 export const useDelegateNounsAtBlockQuery = (signers: string[], block: number) => {
