@@ -9,17 +9,17 @@ import clsx from 'clsx';
 import { InputGroup, FormText, FormControl, FormSelect, Spinner } from 'react-bootstrap';
 
 import link from '@/assets/icons/Link.svg';
-import config from '@/config';
-import { useAllProposals, useEscrowToFork, useJoinFork } from '@/wrappers/nounsDao';
-
-import { useSetApprovalForAll, useIsApprovedForAll } from '@/wrappers/nounToken';
-import { buildEtherscanTxLink } from '@/utils/etherscan';
 import SolidColorBackgroundModal from '@/components/SolidColorBackgroundModal';
+import config from '@/config';
+import { buildEtherscanTxLink } from '@/utils/etherscan';
+import { useAllProposals, useEscrowToFork, useJoinFork } from '@/wrappers/nounsDao';
+import { useSetApprovalForAll, useIsApprovedForAll } from '@/wrappers/nounToken';
 
 import classes from './AddNounsToForkModal.module.css';
+import { Address } from '@/utils/types';
 
 type Props = {
-  setIsModalOpen: Function;
+  setIsModalOpen: (isOpen: boolean) => void;
   isModalOpen: boolean;
   isConfirmModalOpen: boolean;
   isForkingPeriod: boolean;
@@ -30,9 +30,9 @@ type Props = {
   account: string;
   ownedNouns: number[] | undefined;
   userEscrowedNouns: number[] | undefined;
-  refetchData: Function;
-  setDataFetchPollInterval: Function;
-  setIsConfirmModalOpen: Function;
+  refetchData: () => void;
+  setDataFetchPollInterval: (interval: number) => void;
+  setIsConfirmModalOpen: (isOpen: boolean) => void;
 };
 
 export default function AddNounsToForkModal(props: Props) {
@@ -109,7 +109,7 @@ export default function AddNounsToForkModal(props: Props) {
       addNounsToEscrow(selectedNouns);
     } else {
       setIsTwoStepProcess(true);
-      setApproval(config.addresses.nounsDAOProxy, true);
+      setApproval(config.addresses.nounsDAOProxy as Address, true);
     }
   };
 
