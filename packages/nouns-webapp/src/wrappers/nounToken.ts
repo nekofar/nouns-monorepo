@@ -1,12 +1,23 @@
+import type { Address } from '@/utils/types';
+
 import { useEffect } from 'react';
 
 import { useQuery } from '@apollo/client';
-import { NounsTokenABI, NounsTokenFactory } from '@nouns/contracts';
-import { useContractCall, useContractFunction, useEthers } from '@usedapp/core';
-import { utils } from 'ethers';
 import { zeroAddress } from 'viem';
+import { useAccount } from 'wagmi';
 
-import config, { cache, cacheKey, CHAIN_ID } from '../config';
+import config, { cache, cacheKey, CHAIN_ID } from '@/config';
+import {
+  useReadNounsTokenBalanceOf,
+  useReadNounsTokenDelegates,
+  useReadNounsTokenGetCurrentVotes,
+  useReadNounsTokenGetPriorVotes,
+  useReadNounsTokenIsApprovedForAll,
+  useReadNounsTokenSeeds,
+  useWriteNounsTokenDelegate,
+  useWriteNounsTokenSetApprovalForAll,
+} from '@/contracts';
+import { EscrowedNoun, Noun } from '@/subgraphs';
 
 import {
   Delegates,
@@ -19,13 +30,6 @@ import {
 export interface NounId {
   id: string;
 }
-interface ForkId {
-  id: string;
-}
-interface EscrowedNoun {
-  noun: NounId;
-  fork: ForkId;
-}
 
 export interface INounSeed {
   accessory: number;
@@ -35,9 +39,7 @@ export interface INounSeed {
   head: number;
 }
 
-const abi = new utils.Interface(NounsTokenABI);
 const seedCacheKey = cacheKey(cache.seed, CHAIN_ID, config.addresses.nounsToken);
-const nounsTokenContract = NounsTokenFactory.connect(config.addresses.nounsToken, undefined!);
 const isSeedValid = (seed: INounSeed | Record<string, never> | undefined) => {
   const expectedKeys = ['background', 'body', 'accessory', 'head', 'glasses'];
   const hasExpectedKeys = expectedKeys.every(key => (seed || {}).hasOwnProperty(key));
@@ -77,147 +79,144 @@ const useNounSeeds = () => {
 export const useNounSeed = (nounId: bigint): INounSeed => {
   const seeds = useNounSeeds();
   const seed = seeds?.[nounId.toString()];
-  // prettier-ignore
-  const request = seed ? false : {
-    abi,
-    address: config.addresses.nounsToken,
-    method: 'seeds',
+
+  const { data: response } = useReadNounsTokenSeeds({
     args: [nounId],
-  };
-  const response = useContractCall<INounSeed>(request);
+    query: { enabled: !seed },
+  });
+
   if (response) {
     const seedCache = localStorage.getItem(seedCacheKey);
-    if (seedCache && isSeedValid(response)) {
+    if (seedCache && isSeedValid(response as unknown as INounSeed)) {
+      const seedData = response as unknown as INounSeed;
       const updatedSeedCache = JSON.stringify({
         ...JSON.parse(seedCache),
         [nounId.toString()]: {
-          accessory: response.accessory,
-          background: response.background,
-          body: response.body,
-          glasses: response.glasses,
-          head: response.head,
+          accessory: seedData.accessory,
+          background: seedData.background,
+          body: seedData.body,
+          glasses: seedData.glasses,
+          head: seedData.head,
         },
       });
       localStorage.setItem(seedCacheKey, updatedSeedCache);
     }
-    return response;
+    return response as unknown as INounSeed;
   }
   return seed;
 };
 
 export const useUserVotes = (): number | undefined => {
-  const { account } = useEthers();
-  return useAccountVotes(account ?? zeroAddress);
+  const { address } = useAccount();
+  return useAccountVotes(address ?? zeroAddress);
 };
 
 export const useAccountVotes = (account?: string): number | undefined => {
-  const [votes] =
-    useContractCall<[bigint]>({
-      abi,
-      address: config.addresses.nounsToken,
-      method: 'getCurrentVotes',
-      args: [account],
-    }) || [];
-  return Number(votes);
+  const { data: votes } = useReadNounsTokenGetCurrentVotes({
+    args: [account as Address],
+    query: { enabled: !!account },
+  });
+
+  return votes ? Number(votes as bigint) : undefined;
 };
 
 export const useUserDelegatee = (): string | undefined => {
-  const { account } = useEthers();
-  const [delegate] =
-    useContractCall<[string]>({
-      abi,
-      address: config.addresses.nounsToken,
-      method: 'delegates',
-      args: [account],
-    }) || [];
-  return delegate;
+  const { address } = useAccount();
+
+  const { data: delegate } = useReadNounsTokenDelegates({
+    args: [address as Address],
+    query: { enabled: !!address },
+  });
+
+  return delegate as string | undefined;
 };
 
 export const useUserVotesAsOfBlock = (block: number | undefined): number | undefined => {
-  const { account } = useEthers();
-  // Check for available votes
-  const [votes] =
-    useContractCall<[bigint]>({
-      abi,
-      address: config.addresses.nounsToken,
-      method: 'getPriorVotes',
-      args: [account, block],
-    }) || [];
-  return Number(votes);
+  const { address } = useAccount();
+
+  const { data: votes } = useReadNounsTokenGetPriorVotes({
+    args: [address as Address, BigInt(block || 0)],
+    query: { enabled: !!address && !!block },
+  });
+
+  return votes ? Number(votes as bigint) : undefined;
 };
 
 export const useDelegateVotes = () => {
-  const nounsToken = new NounsTokenFactory().attach(config.addresses.nounsToken);
-  const { send, state } = useContractFunction(nounsToken, 'delegate');
-  return { send, state };
+  const { writeContractAsync, status, error } = useWriteNounsTokenDelegate({});
+
+  return {
+    send: (delegatee: Address) => writeContractAsync({ args: [delegatee] }),
+    state: { status, errorMessage: error?.message },
+  };
 };
 
 export const useNounTokenBalance = (address: string): number | undefined => {
-  const [tokenBalance] =
-    useContractCall<[bigint]>({
-      abi,
-      address: config.addresses.nounsToken,
-      method: 'balanceOf',
-      args: [address],
-    }) || [];
-  return Number(tokenBalance);
+  const { data: tokenBalance } = useReadNounsTokenBalanceOf({
+    args: [address as Address],
+    query: { enabled: !!address },
+  });
+
+  return tokenBalance ? Number(tokenBalance as bigint) : undefined;
 };
+
 export const useUserOwnedNounIds = (pollInterval: number) => {
-  const { account } = useEthers();
-  const { loading, data, error, refetch } = useQuery(
-    ownedNounsQuery(account?.toLowerCase() ?? ''),
-    {
-      pollInterval: pollInterval,
-    },
-  );
-  const userOwnedNouns: number[] = data?.nouns?.map((noun: NounId) => Number(noun.id));
+  const { address } = useAccount();
+  const {
+    loading,
+    data: nouns,
+    error,
+    refetch,
+  } = useQuery<Array<Noun>>(ownedNounsQuery(address?.toLowerCase() ?? ''), {
+    pollInterval: pollInterval,
+  });
+  const userOwnedNouns: number[] = nouns?.map(noun => Number(noun.id)) || [];
   return { loading, data: userOwnedNouns, error, refetch };
 };
 
 export const useUserEscrowedNounIds = (pollInterval: number, forkId: string) => {
-  const { account } = useEthers();
-  const { loading, data, error, refetch } = useQuery(
-    accountEscrowedNounsQuery(account?.toLowerCase() ?? ''),
-    {
-      pollInterval: pollInterval,
-    },
-  );
+  const { address } = useAccount();
+  const {
+    loading,
+    data: escrowedNouns,
+    error,
+    refetch,
+  } = useQuery<Array<EscrowedNoun>>(accountEscrowedNounsQuery(address?.toLowerCase() ?? ''), {
+    pollInterval: pollInterval,
+  });
   // filter escrowed nouns to just this fork
-  const userEscrowedNounIds: number[] = data?.escrowedNouns.reduce(
-    (acc: number[], escrowedNoun: EscrowedNoun) => {
+  const userEscrowedNounIds: number[] =
+    escrowedNouns?.reduce((acc: number[], escrowedNoun) => {
       if (escrowedNoun.fork.id === forkId) {
         acc.push(+escrowedNoun.noun.id);
       }
       return acc;
-    },
-    [],
-  );
+    }, []) || [];
   return { loading, data: userEscrowedNounIds, error, refetch };
 };
 
 export const useSetApprovalForAll = () => {
-  let isApprovedForAll = false;
-  const { send: setApproval, state: setApprovalState } = useContractFunction(
-    nounsTokenContract,
-    'setApprovalForAll',
-  );
-  if (setApprovalState.status === 'Success') {
-    isApprovedForAll = true;
-  }
+  const { writeContractAsync, status, error } = useWriteNounsTokenSetApprovalForAll({});
 
-  return { setApproval, setApprovalState, isApprovedForAll };
+  const isApprovedForAll = status === 'success';
+
+  return {
+    setApproval: (operator: Address, approved: boolean) =>
+      writeContractAsync({ args: [operator, approved] }),
+    setApprovalState: { status, errorMessage: error?.message },
+    isApprovedForAll,
+  };
 };
 
 export const useIsApprovedForAll = () => {
-  const { account } = useEthers();
-  const [isApprovedForAll] =
-    useContractCall<[boolean]>({
-      abi,
-      address: config.addresses.nounsToken,
-      method: 'isApprovedForAll',
-      args: [account, config.addresses.nounsDAOProxy],
-    }) || [];
-  return isApprovedForAll || false;
+  const { address } = useAccount();
+
+  const { data: isApprovedForAll } = useReadNounsTokenIsApprovedForAll({
+    args: [address as Address, config.addresses.nounsDAOProxy as Address],
+    query: { enabled: !!address },
+  });
+
+  return (isApprovedForAll as boolean) || false;
 };
 
 export const useDelegateNounsAtBlockQuery = (signers: string[], block: number) => {
