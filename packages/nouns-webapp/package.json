@@ -37,7 +37,7 @@
     "@nouns/assets": "workspace:*",
     "@nouns/contracts": "workspace:*",
     "@nouns/sdk": "workspace:*",
-    "@reduxjs/toolkit": "^1.9.7",
+    "@reduxjs/toolkit": "^2.8.1",
     "@tanstack/react-query": "^5.75.5",
     "@testing-library/jest-dom": "^6.6.3",
     "@usedapp/core": "npm:usedapp-core-fork",
