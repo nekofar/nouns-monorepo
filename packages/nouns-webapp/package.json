@@ -85,7 +85,7 @@
     "remeda": "^2.21.3",
     "viem": "^2.29.1",
     "wagmi": "^2.15.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^5.0.0"
   },
   "devDependencies": {
     "@graphprotocol/graph-ts": "^0.38.0",
