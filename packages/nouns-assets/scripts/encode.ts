@@ -1,6 +1,8 @@
-import { PNGCollectionEncoder, PngImage } from '@nouns/sdk';
 import { promises as fs } from 'fs';
 import path from 'path';
+
+import { PNGCollectionEncoder } from '@nouns/sdk';
+
 import { readPngImage } from './utils';
 
 const DESTINATION = path.join(__dirname, '../src/image-data.json');

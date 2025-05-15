@@ -1,8 +1,11 @@
-import { PNGCollectionEncoder } from '@nouns/sdk';
 import { promises as fs } from 'fs';
 import path from 'path';
-import { readPngImage } from './utils';
+
+import { PNGCollectionEncoder } from '@nouns/sdk';
+
 import { palette } from '../src/image-data.json';
+
+import { readPngImage } from './utils';
 
 /**
  * @notice creates an additional art json file. it assumes it's not the first one.

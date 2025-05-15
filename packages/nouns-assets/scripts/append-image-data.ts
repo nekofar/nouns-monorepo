@@ -1,5 +1,6 @@
-import { ImageData } from '@nouns/sdk/src/image/types';
 import { promises as fs } from 'fs';
+
+import { ImageData } from '@nouns/sdk/src/image/types';
 
 /**
  * Appends an image-data.json file to an existing one.
