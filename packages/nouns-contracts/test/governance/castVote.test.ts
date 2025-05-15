@@ -1,28 +1,26 @@
 import chai from 'chai';
 import { solidity } from 'ethereum-waffle';
 import hardhat from 'hardhat';
-
-const { ethers } = hardhat;
-
 import { BigNumber as EthersBN } from 'ethers';
 
 import {
-  NounsToken,
   NounsDescriptorV3__factory as NounsDescriptorV3Factory,
-  NounsDAOLogicV4,
+  NounsToken,
 } from '../../typechain';
 import {
+  deployGovernorV3WithV3Proxy,
   deployNounsToken,
   getSigners,
-  TestSigners,
-  setTotalSupply,
-  propose,
-  deployGovernorV3WithV3Proxy,
-  populateDescriptorV2,
   mineBlock,
+  populateDescriptorV2,
+  propose,
+  setTotalSupply,
+  TestSigners,
 } from '../utils';
 
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
+
+const { ethers } = hardhat;
 
 chai.use(solidity);
 const { expect } = chai;
