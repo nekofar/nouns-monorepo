@@ -1,12 +1,11 @@
 import { Address, BigInt, Bytes } from '@graphprotocol/graph-ts';
 import {
-  assert,
-  clearStore,
-  test,
-  describe,
-  beforeEach,
   afterEach,
-  log,
+  assert,
+  beforeEach,
+  clearStore,
+  describe,
+  test,
 } from 'matchstick-as/assembly/index';
 
 import { handleProposalCandidateCreated, handleSignatureAdded } from '../src/nouns-dao-data';
