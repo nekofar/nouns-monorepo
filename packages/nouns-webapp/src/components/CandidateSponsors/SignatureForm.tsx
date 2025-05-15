@@ -18,12 +18,12 @@ import { useChainId, useSignTypedData } from 'wagmi';
 
 import link from '@/assets/icons/Link.svg';
 import { CHAIN_ID } from '@/config';
+import { nounsGovernorAddress } from '@/contracts';
 import { buildEtherscanTxLink } from '@/utils/etherscan';
 import { Address } from '@/utils/types';
 import { ProposalCandidate, useAddSignature } from '@/wrappers/nounsData';
 
 import classes from './CandidateSponsors.module.css';
-import { nounsGovernorAddress } from '@/contracts';
 
 const createProposalTypes = {
   Proposal: [

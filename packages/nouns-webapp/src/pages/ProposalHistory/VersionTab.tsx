@@ -4,9 +4,9 @@ import { Trans } from '@lingui/react/macro';
 import clsx from 'clsx';
 import dayjs from 'dayjs';
 import { Link } from 'react-router';
+import { useBlockNumber } from 'wagmi';
 
 import classes from './Vote.module.css';
-import { useBlockNumber } from 'wagmi';
 
 type Props = {
   isActive: boolean;

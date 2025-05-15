@@ -4,13 +4,14 @@ import { Trans } from '@lingui/react/macro';
 import { blo } from 'blo';
 
 import BrandSpinner from '@/components/BrandSpinner';
-import { ChangeDelegateState } from '../ChangeDelegatePanel';
 import DelegationCandidateVoteCountInfo from '@/components/DelegationCandidateVoteCountInfo';
 import ShortAddress from '@/components/ShortAddress';
 import { useShortAddress } from '@/utils/addressAndENSDisplayUtils';
 import { usePickByState } from '@/utils/pickByState';
 import { Address } from '@/utils/types';
 import { useAccountVotes } from '@/wrappers/nounToken';
+
+import { ChangeDelegateState } from '../ChangeDelegatePanel';
 
 import classes from './DelegationCandidateInfo.module.css';
 

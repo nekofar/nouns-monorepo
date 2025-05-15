@@ -5,6 +5,8 @@ import clsx from 'clsx';
 import dayjs from 'dayjs';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router';
+import { formatEther } from 'viem';
+import { useAccount } from 'wagmi';
 
 import AddNounsToForkModal from '@/components/AddNounsToForkModal';
 import ForkingPeriodTimer from '@/components/ForkingPeriodTimer';
@@ -12,6 +14,7 @@ import useForkTreasuryBalance from '@/hooks/useForkTreasuryBalance';
 import { useScrollToLocation } from '@/hooks/useScrollToLocation';
 import Section from '@/layout/Section';
 import { buildEtherscanAddressLink } from '@/utils/etherscan';
+import { Address } from '@/utils/types';
 import {
   useAdjustedTotalSupply,
   useEscrowEvents,
@@ -29,9 +32,6 @@ import DeployForkButton from './DeployForkButton';
 import classes from './Fork.module.css';
 import ForkEvent from './ForkEvent';
 import WithdrawNounsButton from './WithdrawNounsButton';
-import { Address } from '@/utils/types';
-import { formatEther } from 'viem';
-import { useAccount } from 'wagmi';
 
 const now = new Date();
 

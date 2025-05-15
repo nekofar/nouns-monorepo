@@ -5,12 +5,14 @@ import clsx from 'clsx';
 import { Alert, Button, Col, FormControl, InputGroup } from 'react-bootstrap';
 import { Link, useParams } from 'react-router';
 import { formatEther } from 'viem';
+import { useAccount, useBlockNumber, useChainId } from 'wagmi';
 
 import EditProposalButton from '@/components/EditProposalButton/index';
 import ProposalActionModal from '@/components/ProposalActionsModal';
 import ProposalEditor from '@/components/ProposalEditor';
 import ProposalTransactions from '@/components/ProposalTransactions';
 import config from '@/config';
+import { nounsTokenBuyerAddress } from '@/contracts';
 import { useAppDispatch } from '@/hooks';
 import Section from '@/layout/Section';
 import { AlertModal, setAlertModal } from '@/state/slices/application';
@@ -27,8 +29,6 @@ import { useUserVotes } from '@/wrappers/nounToken';
 import classes from '../CreateProposal/CreateProposal.module.css';
 
 import navBarButtonClasses from '@/components/NavBarButton/NavBarButton.module.css';
-import { nounsTokenBuyerAddress } from '@/contracts';
-import { useAccount, useBlockNumber, useChainId } from 'wagmi';
 
 interface EditCandidateProps {
   match: {

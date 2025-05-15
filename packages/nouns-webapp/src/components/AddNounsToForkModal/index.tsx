@@ -1,5 +1,4 @@
 import React, { ReactNode, useCallback, useEffect, useState } from 'react';
-import { map } from 'remeda';
 
 import { faCircleCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +6,7 @@ import { MinusCircleIcon } from '@heroicons/react/solid';
 import { Trans } from '@lingui/react/macro';
 import clsx from 'clsx';
 import { FormControl, FormSelect, FormText, InputGroup, Spinner } from 'react-bootstrap';
+import { map } from 'remeda';
 
 import link from '@/assets/icons/Link.svg';
 import SolidColorBackgroundModal from '@/components/SolidColorBackgroundModal';

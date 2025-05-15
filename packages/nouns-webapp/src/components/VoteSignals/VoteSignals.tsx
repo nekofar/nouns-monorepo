@@ -4,6 +4,7 @@ import { Trans } from '@lingui/react/macro';
 import clsx from 'clsx';
 import dayjs from 'dayjs';
 import { FormControl, Spinner } from 'react-bootstrap';
+import { useAccount } from 'wagmi';
 
 import { useAppDispatch } from '@/hooks';
 import { AlertModal, setAlertModal } from '@/state/slices/application';
@@ -11,7 +12,6 @@ import { useSendFeedback, VoteSignalDetail } from '@/wrappers/nounsData';
 
 import VoteSignalGroup from './VoteSignalGroup';
 import classes from './VoteSignals.module.css';
-import { useAccount } from 'wagmi';
 
 type VoteSignalsProps = {
   proposalId?: string;

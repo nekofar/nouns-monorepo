@@ -9,11 +9,11 @@ import link from '@/assets/icons/Link.svg';
 import ShortAddress from '@/components/ShortAddress';
 import SolidColorBackgroundModal from '@/components/SolidColorBackgroundModal';
 import { buildEtherscanTxLink } from '@/utils/etherscan';
+import { Address, Hex } from '@/utils/types';
 import { usePropose } from '@/wrappers/nounsDao';
 import { CandidateSignature, ProposalCandidate, useProposeBySigs } from '@/wrappers/nounsData';
 
 import classes from './SelectSponsorsToPropose.module.css';
-import { Address, Hex } from '@/utils/types';
 
 type Props = {
   isModalOpen: boolean;

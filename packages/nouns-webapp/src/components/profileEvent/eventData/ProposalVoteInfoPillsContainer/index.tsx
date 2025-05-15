@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { useProposalStatus } from '@/hooks/useProposalStatus';
-import { Proposal } from '@/wrappers/nounsDao';
 import ProposalStatusCopy from '@/components/ProposalStatusCopy';
 import VoteStatusPill from '@/components/VoteStatusPill';
+import { useProposalStatus } from '@/hooks/useProposalStatus';
+import { Proposal } from '@/wrappers/nounsDao';
 
 import classes from './ProposalVoteInfoPills.module.css';
 

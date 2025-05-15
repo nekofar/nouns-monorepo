@@ -1,5 +1,6 @@
-import { CHAIN_ID, ETHERSCAN_API_KEY } from '@/config';
 import { sepolia } from 'viem/chains';
+
+import { CHAIN_ID, ETHERSCAN_API_KEY } from '@/config';
 
 const getBaseURL = (network: number) => {
   switch (network) {

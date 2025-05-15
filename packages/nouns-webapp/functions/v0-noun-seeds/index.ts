@@ -1,6 +1,7 @@
 import { Handler } from '@netlify/functions';
-import { nounsQuery, Seed } from '../theGraph';
 import * as R from 'remeda';
+
+import { nounsQuery, Seed } from '../theGraph';
 import { sharedResponseHeaders } from '../utils';
 
 interface SeededNoun {

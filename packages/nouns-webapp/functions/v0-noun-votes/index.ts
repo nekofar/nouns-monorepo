@@ -1,6 +1,7 @@
 import { Handler } from '@netlify/functions';
-import { NormalizedVote, nounsQuery } from '../theGraph';
 import * as R from 'remeda';
+
+import { NormalizedVote, nounsQuery } from '../theGraph';
 import { sharedResponseHeaders } from '../utils';
 
 interface NounVote {

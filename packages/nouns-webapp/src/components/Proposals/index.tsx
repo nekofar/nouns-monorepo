@@ -1,19 +1,19 @@
-import { ClockIcon } from '@heroicons/react/solid';
-import proposalStatusClasses from '@/components/ProposalStatus/ProposalStatus.module.css';
-import dayjs from 'dayjs';
-import relativeTime from 'dayjs/plugin/relativeTime';
-import { SUPPORTED_LOCALE_TO_DAYSJS_LOCALE, SupportedLocale } from '@/i18n/locales';
 import { useEffect, useState } from 'react';
-import DelegationModal from '@/components/DelegationModal';
 
+import { ClockIcon } from '@heroicons/react/solid';
 import { i18n } from '@lingui/core';
 import { Trans } from '@lingui/react/macro';
 import clsx from 'clsx';
+import dayjs from 'dayjs';
 import en from 'dayjs/locale/en';
+import relativeTime from 'dayjs/plugin/relativeTime';
+
 import { Alert, Button, Col, Container, Row, Spinner } from 'react-bootstrap';
+import DelegationModal from '@/components/DelegationModal';
+import { SUPPORTED_LOCALE_TO_DAYSJS_LOCALE, SupportedLocale } from '@/i18n/locales';
+
 import { Link, useLocation, useNavigate } from 'react-router';
 
-import config from '@/config';
 import Section from '@/layout/Section';
 import { AVERAGE_BLOCK_TIME_IN_SECS } from '@/utils/constants';
 import { isMobileScreen } from '@/utils/isMobile';
@@ -30,8 +30,13 @@ import CandidateCard from '@/components/CandidateCard';
 import ProposalStatus from '@/components/ProposalStatus';
 
 import classes from './Proposals.module.css';
+
 import { useAccount, useBlockNumber } from 'wagmi';
+
+import config from '@/config';
 import { useActiveLocale } from '@/hooks/useActivateLocale';
+
+import proposalStatusClasses from '@/components/ProposalStatus/ProposalStatus.module.css';
 
 dayjs.extend(relativeTime);
 

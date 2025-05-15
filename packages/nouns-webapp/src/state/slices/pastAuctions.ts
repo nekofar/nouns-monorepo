@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { AuctionState } from './auction';
-
 import { IBid } from '@/wrappers/subgraph';
+
+import { AuctionState } from './auction';
 
 interface PastAuctionsState {
   pastAuctions: AuctionState[];

@@ -1,7 +1,8 @@
 import { Handler } from '@netlify/functions';
 import { verifyMessage } from 'viem';
-import { sharedResponseHeaders } from '../utils';
+
 import { isNounDelegate, isNounOwner, nounsQuery } from '../theGraph';
+import { sharedResponseHeaders } from '../utils';
 
 interface ErrorReason {
   error: string;

@@ -1,4 +1,5 @@
 import { Handler } from '@netlify/functions';
+
 import { isNounOwner, nounsQuery } from '../theGraph';
 import { sharedResponseHeaders } from '../utils';
 

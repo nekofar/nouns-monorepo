@@ -1,6 +1,7 @@
 import { Handler } from '@netlify/functions';
-import { nounsQuery } from '../theGraph';
 import * as R from 'remeda';
+
+import { nounsQuery } from '../theGraph';
 import { sharedResponseHeaders } from '../utils';
 
 export interface LiteNoun {

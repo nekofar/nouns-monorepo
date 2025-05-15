@@ -23,7 +23,12 @@ import {
 
 import config, { cache, cacheKey, CHAIN_ID } from '../config';
 
-import { accountEscrowedNounsQuery, delegateNounsAtBlockQuery, ownedNounsQuery, seedsQuery } from './subgraph';
+import {
+  accountEscrowedNounsQuery,
+  delegateNounsAtBlockQuery,
+  ownedNounsQuery,
+  seedsQuery,
+} from './subgraph';
 
 interface NounToken {
   name: string;

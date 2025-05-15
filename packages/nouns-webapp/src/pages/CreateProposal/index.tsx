@@ -1,21 +1,23 @@
-import ProposalTransactions from '@/components/ProposalTransactions';
-import { withStepProgress } from 'react-stepz';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useAppDispatch } from '@/hooks';
+
 import { Trans } from '@lingui/react/macro';
 import clsx from 'clsx';
 import { Alert, Button, Col, Form } from 'react-bootstrap';
 import { Link } from 'react-router';
-import CreateProposalButton from '@/components/CreateProposalButton';
+import { withStepProgress } from 'react-stepz';
+import { useAccount, useChainId } from 'wagmi';
 
-import navBarButtonClasses from '@/components/NavBarButton/NavBarButton.module.css';
+import CreateProposalButton from '@/components/CreateProposalButton';
 import ProposalActionModal from '@/components/ProposalActionsModal';
+import { useAppDispatch } from '@/hooks';
+
 import ProposalEditor from '@/components/ProposalEditor';
 import config from '@/config';
 import Section from '@/layout/Section';
 import { AlertModal, setAlertModal } from '@/state/slices/application';
 import { buildEtherscanHoldingsLink } from '@/utils/etherscan';
 import { useEthNeeded } from '@/utils/tokenBuyerContractUtils/tokenBuyer';
+import { Hex } from '@/utils/types';
 import {
   ProposalState,
   ProposalTransaction,
@@ -29,9 +31,11 @@ import {
 import { useUserVotes } from '@/wrappers/nounToken';
 
 import classes from './CreateProposal.module.css';
+
 import { nounsTokenBuyerAddress } from '@/contracts';
-import { useAccount, useChainId } from 'wagmi';
-import { Hex } from '@/utils/types';
+import ProposalTransactions from '@/components/ProposalTransactions';
+
+import navBarButtonClasses from '@/components/NavBarButton/NavBarButton.module.css';
 
 const CreateProposalPage = () => {
   const [proposalTransactions, setProposalTransactions] = useState<ProposalTransaction[]>([]);
@@ -232,7 +236,6 @@ const CreateProposalPage = () => {
           setProposePending(false);
           break;
       }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     },
     [],
   );

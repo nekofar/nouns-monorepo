@@ -1,4 +1,3 @@
-import type { Address, Hash, Hex } from '@/utils/types';
 import type {
   EscrowDeposit as GraphQLEscrowDeposit,
   EscrowWithdrawal as GraphQLEscrowWithdrawal,
@@ -8,9 +7,12 @@ import type {
   Proposal as GraphQLProposal,
   ProposalVersion as GraphQLProposalVersion,
 } from '@/subgraphs';
+import type { Address, Hash, Hex } from '@/utils/types';
 
 import { useMemo } from 'react';
+
 import { useQuery } from '@apollo/client';
+import { useQuery as useReactQuery } from '@tanstack/react-query';
 import { filter, flatMap, isNonNullish, isNullish, isTruthy, map, pipe, sort } from 'remeda';
 import {
   AbiParameter,
@@ -21,24 +23,9 @@ import {
   parseAbiItem,
   stringToBytes,
 } from 'viem';
-import { useQuery as useReactQuery } from '@tanstack/react-query';
+import { mainnet } from 'viem/chains';
+import { useAccount, useBlockNumber, useChainId, usePublicClient, useReadContracts } from 'wagmi';
 
-import { useBlockTimestamp } from '@/hooks/useBlockTimestamp';
-
-import {
-  activePendingUpdatableProposersQuery,
-  escrowDepositEventsQuery,
-  escrowWithdrawEventsQuery,
-  forkDetailsQuery,
-  forkJoinsQuery,
-  forksQuery,
-  isForkActiveQuery,
-  partialProposalsQuery,
-  proposalQuery,
-  proposalTitlesQuery,
-  proposalVersionsQuery,
-  updatableProposalsQuery,
-} from './subgraph';
 import {
   nounsGovernorAbi,
   nounsGovernorAddress,
@@ -65,8 +52,22 @@ import {
   useWriteNounsGovernorUpdateProposalTransactions,
   useWriteNounsGovernorWithdrawFromForkEscrow,
 } from '@/contracts';
-import { useAccount, useBlockNumber, useChainId, usePublicClient, useReadContracts } from 'wagmi';
-import { mainnet } from 'viem/chains';
+import { useBlockTimestamp } from '@/hooks/useBlockTimestamp';
+
+import {
+  activePendingUpdatableProposersQuery,
+  escrowDepositEventsQuery,
+  escrowWithdrawEventsQuery,
+  forkDetailsQuery,
+  forkJoinsQuery,
+  forksQuery,
+  isForkActiveQuery,
+  partialProposalsQuery,
+  proposalQuery,
+  proposalTitlesQuery,
+  proposalVersionsQuery,
+  updatableProposalsQuery,
+} from './subgraph';
 
 export interface DynamicQuorumParams {
   minQuorumVotesBPS: number;
@@ -643,7 +644,7 @@ const parseSubgraphProposal = (
 
   const description = addMissingSchemes(
     replaceInvalidDropboxImageLinks(
-      proposal.description?.replace(/\\n/g, '\n').replace(/(^['"]|['"]$)/g, ''),
+      proposal.description?.replace(/\\n/g, '\n').replace(/(^["']|["']$)/g, ''),
     ),
   );
   const transactionDetails: ProposalTransactionDetails = {

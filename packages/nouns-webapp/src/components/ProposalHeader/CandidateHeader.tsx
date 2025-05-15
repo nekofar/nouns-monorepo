@@ -3,6 +3,7 @@ import React from 'react';
 import { Trans } from '@lingui/react/macro';
 import clsx from 'clsx';
 import { Link } from 'react-router';
+import { useBlockNumber } from 'wagmi';
 
 import ByLineHoverCard from '@/components/ByLineHoverCard';
 import HoverCard from '@/components/HoverCard';
@@ -18,7 +19,6 @@ import { useUserVotesAsOfBlock } from '@/wrappers/nounToken';
 import classes from './ProposalHeader.module.css';
 
 import navBarButtonClasses from '@/components/NavBarButton/NavBarButton.module.css';
-import { useBlockNumber } from 'wagmi';
 
 interface CandidateHeaderProps {
   title: string;

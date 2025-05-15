@@ -3,34 +3,22 @@ import type { Address } from '@/utils/types';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { useQuery } from '@apollo/client';
-import timezone from 'dayjs/plugin/timezone';
-import advanced from 'dayjs/plugin/advancedFormat';
-import en from 'dayjs/locale/en';
-import { useAppDispatch, useAppSelector } from '@/hooks';
-import clsx from 'clsx';
-import { Trans } from '@lingui/react/macro';
-import { i18n } from '@lingui/core';
-import { ReactNode } from 'react-markdown/lib/react-markdown';
 import { SearchIcon } from '@heroicons/react/solid';
+import { i18n } from '@lingui/core';
+import { Trans } from '@lingui/react/macro';
+import clsx from 'clsx';
 import dayjs from 'dayjs';
+import en from 'dayjs/locale/en';
+import advanced from 'dayjs/plugin/advancedFormat';
+import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
 import { Button, Card, Col, Row, Spinner } from 'react-bootstrap';
+import { ReactNode } from 'react-markdown/lib/react-markdown';
 import { Link, useParams } from 'react-router';
 import ReactTooltip from 'react-tooltip';
+import { zeroAddress } from 'viem';
 
-import { AVERAGE_BLOCK_TIME_IN_SECS } from '@/utils/constants';
-import ProposalHeader from '@/components/ProposalHeader';
-import ProposalContent from '@/components/ProposalContent';
-import VoteCard, { VoteCardVariant } from '@/components/VoteCard';
-import VoteModal from '@/components/VoteModal';
-import {
-  delegateNounsAtBlockQuery,
-  Delegates,
-  ProposalVotes,
-  proposalVotesQuery,
-  propUsingDynamicQuorum,
-} from '@/wrappers/subgraph';
-import { getNounVotes } from '@/utils/getNounsVotes';
+import { useAccount, useBlockNumber } from 'wagmi';
 import DynamicQuorumInfoModal from '@/components/DynamicQuorumInfoModal';
 import ShortAddress from '@/components/ShortAddress';
 import StreamWithdrawModal from '@/components/StreamWithdrawModal';
@@ -58,10 +46,24 @@ import { useProposalFeedback } from '@/wrappers/nounsData';
 import { useUserVotes, useUserVotesAsOfBlock } from '@/wrappers/nounToken';
 
 import classes from './Vote.module.css';
-import { zeroAddress } from 'viem';
 import { useReadNounsGovernorQuorumVotes } from '@/contracts';
-import { useAccount, useBlockNumber } from 'wagmi';
+
 import { isNonNullish } from 'remeda';
+
+import ProposalContent from '@/components/ProposalContent';
+import ProposalHeader from '@/components/ProposalHeader';
+import VoteCard, { VoteCardVariant } from '@/components/VoteCard';
+import VoteModal from '@/components/VoteModal';
+import { useAppDispatch, useAppSelector } from '@/hooks';
+import { AVERAGE_BLOCK_TIME_IN_SECS } from '@/utils/constants';
+import { getNounVotes } from '@/utils/getNounsVotes';
+import {
+  delegateNounsAtBlockQuery,
+  Delegates,
+  ProposalVotes,
+  proposalVotesQuery,
+  propUsingDynamicQuorum,
+} from '@/wrappers/subgraph';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
