@@ -13,6 +13,7 @@ export default {
       screens: {
         xs: '425px',
         '2xl': '1440px',
+        'lg-max': { max: '992px' },
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -56,6 +57,8 @@ export default {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
+        'brand-black': 'var(--brand-black)',
+        'brand-dark-red': 'var(--brand-dark-red)',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
