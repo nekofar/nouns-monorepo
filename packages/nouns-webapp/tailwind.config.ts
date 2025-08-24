@@ -64,6 +64,8 @@ export default {
         'brand-color-green-translucent': 'var(--brand-color-green-translucent)',
         'brand-color-red': 'var(--brand-color-red)',
         'brand-color-red-translucent': 'var(--brand-color-red-translucent)',
+        'brand-color-blue': 'var(--brand-color-blue)',
+        'brand-color-blue-darker': 'var(--brand-color-blue-darker)',
         'brand-gray-light-text': 'var(--brand-gray-light-text)',
         'brand-gray-light-text-translucent': 'var(--brand-gray-light-text-translucent)',
         border: 'hsl(var(--border))',
