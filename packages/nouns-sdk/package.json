@@ -225,7 +225,7 @@
     "@wagmi/cli": "catalog:",
     "@wagmi/core": "catalog:",
     "dotenv": "catalog:",
-    "glob": "^11.0.2",
+    "glob": "^11.1.0",
     "jsdom": "^26.1.0",
     "pngjs": "^6.0.0",
     "react": "catalog:",
