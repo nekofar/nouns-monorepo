@@ -18,7 +18,7 @@
     "clsx": "^2.1.1",
     "lucide": "catalog:",
     "lucide-react": "catalog:",
-    "next": "^15.4.8",
+    "next": "^15.4.9",
     "nextra": "4.3.0-alpha.30",
     "nextra-theme-docs": "4.3.0-alpha.30",
     "react": "catalog:",
